@@ -33,17 +33,9 @@ Transmit:
 
 | **TT Pins** | **Use** |
 | --- | --- |
-| ui_in[7:0] | Input baseband I/Q data for Receive mode
-Unused in Transmit mode |
-| uo_out[7:0] | Output baseband I/Q data for Transmit mode
-Unused in Receive mode |
-| uio[7:0] | uio[0] - Input symbol stream for Transmit mode
-uio[1] - Output symbol stream for Receive mode
-uio[2] - Transmit/!Receive
-uio[4] - CS
-uio[5] - MOSI
-uio[6] - MISO
-uio[7] - SCK |
+| ui_in[7:0] | Input baseband I/Q data for Receive mode <br> Unused in Transmit mode |
+| uo_out[7:0] | Output baseband I/Q data for Transmit mode <br> Unused in Receive mode |
+| uio[7:0] | uio[0] - Input symbol stream for Transmit mode <br> uio[1] - Output symbol stream for Receive mode <br> uio[2] - Transmit/!Receive <br> uio[4] - CS <br> uio[5] - MOSI <br> uio[6] - MISO <br> uio[7] - SCK |
 | clk | Clock |
 | rst_n | Active-low reset |
 
