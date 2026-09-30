@@ -16,8 +16,6 @@ The bit widths will likely have to be reduced after we synthesize the SPI transc
 
 Via black magic.
 
-Will add more refined explanation, rough explanation in: [https://app.notion.com/p/ECE298A-Digital-MSK-Modem-3ddc4d17240b8034a26df282e3ecc70a](https://app.notion.com/p/ECE298A-Digital-MSK-Modem-3ddc4d17240b8034a26df282e3ecc70a?pvs=21)
-
 ### References
 
 Receive:
