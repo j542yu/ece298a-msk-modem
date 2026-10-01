@@ -2,7 +2,7 @@
 
 ## Statement of Purpose
 
-Modulation and demodulation are the processes of varying properties of periodic waveforms in order to transmit and receive signals in RF. One of these methods is frequency shift keying, where signals are represented by differences in frequency. MSK {Minimum shift keying) is a type of continuous-phase frequency shift keying where the difference in frequency between a 1 and 0 is half the bit rate. MSK is particularly effective in data communications as it can provide relatively efficient spectrum usage, allowing for narrower bandwidth. It also has the property of keeping a constant envelope, enabling power amplifiers to be operated in saturation with high efficiency. 
+Modulation and demodulation are the processes of varying properties of periodic waveforms in order to transmit and receive signals in RF. One of these methods is frequency shift keying, where signals are represented by differences in frequency. MSK (Minimum shift keying) is a type of continuous-phase frequency shift keying where the difference in frequency between a 1 and 0 is half the bit rate. MSK is particularly effective in data communications as it can provide relatively efficient spectrum usage, allowing for narrower bandwidth. It also has the property of keeping a constant envelope, enabling power amplifiers to be operated in saturation with high efficiency. 
 
 ## System Diagram
 
@@ -10,11 +10,13 @@ Two separate components: transmit (modulator) and receive (demodulator). To simp
 
 The bit widths will likely have to be reduced after we synthesize the SPI transceiver and determine how much area is left to implement the remaining logic. It is also likely we will have to remove the transmit or receive section completely.
 
-![ECE298A - MSK Modem(2).png](ECE298A_-_MSK_Modem(2).png)
+![block_diagram.png](block_diagram.png)
 
 ### Why it works (or rather, should work…)
 
 Via black magic.
+
+Will add more refined explanation, rough explanation in: https://app.notion.com/p/ECE298A-Digital-MSK-Modem-3ddc4d17240b8034a26df282e3ecc70a
 
 ### References
 
@@ -38,9 +40,9 @@ Transmit:
 | rst_n | Active-low reset |
 
 ## Proposed Specifications
-
-| **Symbol rate** | 200 kbps |
+| Spec | |
 | --- | --- |
+| **Symbol rate** | 200 kbps |
 | **Clock** | 30 MHz |
 | **Bit error rate (Receive)** | < 0.1% at an Eb/N0 of 10dB |
 | **Modulator Input** | Serial 1 bit binary, SPI |
@@ -54,8 +56,8 @@ Transmit:
 
 | **Task** | **Start Date** | **End Date** | **Responsible to** |
 | --- | --- | --- | --- |
-| SPI transmitter | Sep 28 | Oct 4 |  |
-| SPI receiver | Sep 28 | Oct 4 |  |
+| SPI transmitter | Sep 28 | Oct 4 | Gracia |
+| SPI receiver | Sep 28 | Oct 4 | Judy |
 | Modulator (transmit) Verilog | Oct 5 | Oct 11 | Gracia |
 | Demodulator (receive) Verilog | Oct 5 | Oct 11 | Judy |
 | Modulator Python golden model | Oct 12 | Oct 16 | Gracia |
@@ -71,9 +73,9 @@ Transmit:
 | Parasitic extraction, back annotation, design verification with Open Road?? | Nov 23 | Nov 26 | Both |
 | Refine documentation | Nov 27 | Dec 3 | Both |
 
-![image.png](image.png)
+![gantt.png](gantt.png)
 
-![image.png](image%201.png)
+![ece298a_course_schedule.png](ece298a_course_schedule.png)
 
 Sept 28 - Oct 14: Determine feasibility (not necessarily functional but get idea of area usage) - total 2 weeks, buffered to 2.5 weeks
 
