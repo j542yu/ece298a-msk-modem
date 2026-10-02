@@ -40,17 +40,17 @@ Transmit:
 | rst_n | Active-low reset |
 
 ## Proposed Specifications
-| Spec | |
+| **Spec** | |
 | --- | --- |
 | **Symbol rate** | 200 kbps |
-| **Clock** | 30 MHz |
+| **Clock** | 12 MHz |
 | **Bit error rate (Receive)** | < 0.1% at an Eb/N0 of 10dB |
 | **Modulator Input** | Serial 1 bit binary, SPI |
 | **Demodulator input** | 4 bit I/Q (total 8 bits), transmitted serially with SPI |
 | **Output** | 4 bit I/Q (total 8 bits), transmitted serially with SPI |
 | **Sample rate** | 8 samples per symbol |
-| **Modulator Latency** | 6 clock cycles - 0.2 us |
-| **Demodulator Latency** | 10 clock cycles - 0.33 us |
+| **Modulator Latency** | 6 clock cycles |
+| **Demodulator Latency** | 10 clock cycles |
 
 ## Timeline + Division of Work
 
