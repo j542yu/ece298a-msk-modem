@@ -8,7 +8,9 @@ Modulation and demodulation are the processes of varying properties of periodic 
 
 Two separate components: transmit (modulator) and receive (demodulator). To simplify the design, we are assuming base-band I/Q data at the output of transmit and at input of receive, meaning that the signal is centred around 0 Hz instead of being shifted to some higher frequency.
 
-The bit widths will likely have to be reduced after we synthesize the SPI transceiver and determine how much area is left to implement the remaining logic. It is also likely we will have to remove the transmit or receive section completely.
+If area is insufficient, either the transmit or receive branch will be fully removed from the design.
+
+The block diagram also shows attached synchronization marker detection which is copied from what the LongJiang satellite used for frequency and timing estimation in the receive branch. Depending on area availability, we may or may not incorporate that in our design.
 
 ![block_diagram.png](block_diagram.png)
 
@@ -35,63 +37,53 @@ Transmit:
 | --- | --- |
 | ui_in[7:0] | Input baseband I/Q data for Receive mode <br> Unused in Transmit mode |
 | uo_out[7:0] | Output baseband I/Q data for Transmit mode <br> Unused in Receive mode |
-| uio[7:0] | uio[0] - Input symbol stream for Transmit mode <br> uio[1] - Output symbol stream for Receive mode <br> uio[2] - Transmit/!Receive <br> uio[4] - CS <br> uio[5] - MOSI <br> uio[6] - MISO <br> uio[7] - SCK |
+| uio[7:0] | uio[0] - Input symbol stream for Transmit mode <br> uio[1] - Output symbol stream for Receive mode <br> uio[2] - Transmit/!Receive <br> Remaining unused |
 | clk | Clock |
 | rst_n | Active-low reset |
 
 ## Proposed Specifications
-| Spec | |
+| **Spec** | |
 | --- | --- |
 | **Symbol rate** | 200 kbps |
-| **Clock** | 30 MHz |
+| **Clock** | 12 MHz |
 | **Bit error rate (Receive)** | < 0.1% at an Eb/N0 of 10dB |
-| **Modulator Input** | Serial 1 bit binary, SPI |
-| **Demodulator input** | 4 bit I/Q (total 8 bits), transmitted serially with SPI |
-| **Output** | 4 bit I/Q (total 8 bits), transmitted serially with SPI |
+| **Modulator Input** | Serial 1 bit binary |
+| **Modulator Output** | Parallel 4 bit I/Q (total 8 bits) |
+| **Demodulator Input** | Parallel 4 bit I/Q (total 8 bits) |
+| **Demodulator Output** | Serial 1 bit binary |
 | **Sample rate** | 8 samples per symbol |
-| **Modulator Latency** | 6 clock cycles - 0.2 us |
-| **Demodulator Latency** | 10 clock cycles - 0.33 us |
+| **Modulator Latency** | 6 clock cycles |
+| **Demodulator Latency** | 10 clock cycles |
 
 ## Timeline + Division of Work
 
 | **Task** | **Start Date** | **End Date** | **Responsible to** |
 | --- | --- | --- | --- |
-| SPI transmitter | Sep 28 | Oct 4 | Gracia |
-| SPI receiver | Sep 28 | Oct 4 | Judy |
 | Modulator (transmit) Verilog | Oct 5 | Oct 11 | Gracia |
 | Demodulator (receive) Verilog | Oct 5 | Oct 11 | Judy |
 | Modulator Python golden model | Oct 12 | Oct 16 | Gracia |
 | Demodulator Python golden model | Oct 12 | Oct 16 | Judy |
 | Cocotb Modulator TB | Oct 17 | Oct 23 | Gracia |
 | Cocotb Demodulator TB | Oct 17 | Oct 23 | Judy |
-| Cocotb SPI Transmitter TB | Oct 31 | Nov 6 | Gracia |
-| Cocotb SPI Receiver TB | Oct 31 | Nov 6 | Judy |
-| Debug SPI Transmitter with TB results | Nov 7 | Nov 12 | Judy |
-| Debug SPI Receiver with TB results | Nov 7 | Nov 12 | Gracia |
-| Debug + Characterize Modulator RTL with TB results | Nov 13 | Nov 22 | Judy |
-| Debug + Characterize Demodulator RTL with TB results | Nov 13 | Nov 22 | Gracia |
-| Parasitic extraction, back annotation, design verification with Open Road?? | Nov 23 | Nov 26 | Both |
+| Debug + Characterize Modulator RTL with TB results | Oct 24 | Nov 22 | Judy |
+| Debug + Characterize Demodulator RTL with TB results | Oct 24 | Nov 22 | Gracia |
+| Parasitic extraction, back annotation, design verification with Open Road | Nov 23 | Nov 26 | Both |
 | Refine documentation | Nov 27 | Dec 3 | Both |
-
-![gantt.png](gantt.png)
 
 ![ece298a_course_schedule.png](ece298a_course_schedule.png)
 
-Sept 28 - Oct 14: Determine feasibility (not necessarily functional but get idea of area usage) - total 2 weeks, buffered to 2.5 weeks
+Stage 1: Determine feasibility (not necessarily functional but get idea of area usage) - total 1 weeks, buffered to 1.5 weeks
 
-- Synthesize SPI peripheral for transmitting and receiving to see how much area is left to work with - 1 week
-    - More than 10% of area usage - cut down I/Q width to 2 bits each (4 bits total)
-    - More than 20% of area usage - remove either transmit or receive completely
 - Synthesize transmit - determine max clock frequency from transmit logic alone - 1 week in parallel with synthesizing receive
 - Synthesize receive - determine max clock frequency from receive logic alone - 1 week in parallel with synthesizing transmit
 
-Oct 15 - Nov 12: Verify functionality - total 2.5 weeks, buffered to 3 weeks
+Stage 2: Verify functionality - total 2.5 weeks, buffered to 3 weeks
 
 - Python golden model for transmit section and/or receive section (depending on what we decide to keep) - 1 week
     - For receive section, Python model needs to be able to generate I/Q samples that simulate ideal conditions and configurable noise added so that BER at a particular Eb/N0 can be determined
 - Cocotb test bench to compare Python model output with RTL output - 0.5 week
 - Debug RTL to actually meet expected outputs from Python model - 2 weeks
 
-Nov 13 - Nov 26: Parasitic extraction, back annotation, design verification with Open Road
+Stage 3: Parasitic extraction, back annotation, design verification with Open Road
 
-Nov 26 - Dec 3: Panic if design doesn’t work, relax otherwise.
+Stage 4: Panic if behind schedule, relax otherwise.
