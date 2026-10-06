@@ -17,9 +17,11 @@ module tt_um_msk_modem (
 );
 
   // All output pins must be assigned. If not used, assign to 0.
+  assign uo_out[7:1] = 0;
   assign uio_out = 0;
   assign uio_oe  = 0;
 
+  /*
   average_samples average_samples_inst(
     .clk(clk),
     .rst_n(rst_n),
@@ -27,9 +29,17 @@ module tt_um_msk_modem (
     .average(uo_out[5:0]),
     .output_ready(uo_out[6]),
     .input_hold(uo_out[7])
+  ); */
+
+  demodulator demodulator_inst(
+    .clk(clk),
+    .rst_n(rst_n),
+    .I({uio_in[4:3], ui_in[3:0]}),
+    .Q({uio_in[6:5], ui_in[7:4]}),
+    .data(uo_out[0])
   );
 
   // List all unused inputs to prevent warnings
-  wire _unused = &{ena, clk, rst_n, ui_in[7:6], 1'b0};
+  wire _unused = &{ena, clk, uio_in[7], uio_in[2:0], rst_n, 1'b0};
 
 endmodule
