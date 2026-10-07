@@ -1,14 +1,13 @@
 `default_nettype none
 
 module transmit (
-  input wire [7:0] in,
+  input wire in,
   output wire [11:0] out // 6 bit I out[5:0], 6 bit Q out[11:6]
   input wire clk
 );
 
 // Registers
 reg curr;
-reg [2:0] count = 3'b111;
 reg [2:0] sample = 0;
 
 reg [11:0] IQ_out = 0;
@@ -23,9 +22,8 @@ reg [5:0] IQ;
 // 8 samples per symbol
 // Phase accumulator
 always @(posedge clk) begin
-  curr <= in[count];
+  curr <= in;
   
-  if (sample == 3'b111) count <= count - 1;
   sample <= sample + 1;
   
   cosangle <= cosangle + {curr, 1'b0} - 1; // phase + 2*curr -1
