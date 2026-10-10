@@ -23,12 +23,12 @@ module tt_um_example (
 
   // Test
   transmit transinst(
-      input wire uio_in[0],
-      output wire {uio_out[6:5], uo_out[7:4], uio_out[4:3], uo_out[3:0]}, // 6 bit I out[5:0], 6 bit Q out[11:6]
-      input wire clk
+    .in(uio_in[0]),
+    .out({uio_out[6:5], uo_out[7:4], uio_out[4:3], uo_out[3:0]}), // 6 bit I out[5:0], 6 bit Q out[11:6]
+    .clk(clk)
   );
     
   // List all unused inputs to prevent warnings
-  wire _unused = &{ena, clk, rst_n, 1'b0};
+  wire _unused = &{ena, ui_in[7:0], uio_in[2:1], rst_n, 1'b0};
 
 endmodule
