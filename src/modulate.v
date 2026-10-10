@@ -8,7 +8,7 @@ module transmit (
 
 // Registers
 reg curr;
-reg [2:0] sample = 0;
+reg [2:0] sample = 3'b111;
 
 reg [11:0] IQ_out = 0;
 assign out = IQ_out;
@@ -22,7 +22,7 @@ reg [5:0] IQ;
 // 8 samples per symbol
 // Phase accumulator
 always @(posedge clk) begin
-  curr <= in;
+  if (sample == 3'b111) curr <= in;
   
   sample <= sample + 1;
   
@@ -34,7 +34,7 @@ always @(posedge clk) begin
   if (clk2) angle <= cosangle + 4'h8; // sine
   else angle <= cosangle; // cosine
   
-  cosLUT inst (angle, IQ);
+  cos_lut inst (angle, IQ);
   
   IQ_out[11:6] <= IQ; // Q
 end
@@ -46,7 +46,7 @@ end
 endmodule
 
 // Cosine/sine lookup table
-module cosLUT (
+module cos_lut (
   input reg [4:0] angle,
   output reg [5:0] cos
 );
