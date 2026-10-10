@@ -32,6 +32,7 @@ always @(posedge clk or negedge rst_n) begin
   if (!rst_n) begin
     sample <= 3'b111;
     clk2 <= 0;
+    Q <= 0;
   end
   else begin
 
@@ -56,7 +57,9 @@ always @(posedge clk or negedge rst_n) begin
 end
 
 always @(negedge clk2 or negedge rst_n) begin // Will need to test to see if it's posedge or negedge here
-  if (!rst_n) IQ_out <= 0;
+  if (!rst_n) begin
+    I <= 0;
+  end
   else I <= IQ;
 end
 
