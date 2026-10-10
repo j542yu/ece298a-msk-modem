@@ -2,7 +2,7 @@
 
 module transmit (
   input wire in,
-  output wire [11:0] out // 6 bit I out[5:0], 6 bit Q out[11:6]
+  output wire [11:0] out, // 6 bit I out[5:0], 6 bit Q out[11:6]
   input wire clk
 );
 
