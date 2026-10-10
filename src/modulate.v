@@ -15,9 +15,16 @@ assign out = IQ_out;
 
 reg clk2 = 0;
 
-wire [4:0] cosangle;
+reg [4:0] cosangle;
+wire [4:0] wangle;
+wire [5:0] wIQ;
 reg [4:0] angle;
 reg [5:0] IQ;
+
+assign wIQ = IQ;
+assign wangle = angle;
+
+cos_lut inst (.angle(wangle), .cos(wIQ));
 
 // 8 samples per symbol
 // Phase accumulator
@@ -31,10 +38,12 @@ always @(posedge clk) begin
   // Phase to amplitude conversion
   clk2 <= ~clk2;
   
-  if (clk2) angle <= cosangle + 4'h8; // sine
-  else angle <= cosangle; // cosine
-  
-  cos_lut inst (angle, IQ);
+  if (clk2) begin 
+    angle <= cosangle + 4'h8; // sine
+  end
+  else begin 
+    angle <= cosangle; // cosine
+  end
   
   IQ_out[11:6] <= IQ; // Q
 end

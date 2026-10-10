@@ -22,7 +22,7 @@ module tt_um_example (
   assign uio_oe  = 8'b11111000;
 
   // Test
-  transmit transinst(
+  transmit transmit_inst(
     .in(uio_in[0]),
     .out({uio_out[6:5], uo_out[7:4], uio_out[4:3], uo_out[3:0]}), // 6 bit I out[5:0], 6 bit Q out[11:6]
     .clk(clk)
