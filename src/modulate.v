@@ -3,53 +3,61 @@
 module transmit (
   input wire in,
   output wire [11:0] out, // 6 bit I out[5:0], 6 bit Q out[11:6]
-  input wire clk
+  input wire clk,
+  input wire rst_n
 );
 
 // Registers
 reg curr;
-reg [2:0] sample = 3'b111;
+reg [2:0] sample;
 
-reg [11:0] IQ_out = 0;
-assign out = IQ_out;
+reg [5:0] I;
+reg [5:0] Q;
+assign out = {Q, I};
 
-reg clk2 = 0;
+reg clk2;
 
 reg [4:0] cosangle;
 wire [4:0] wangle;
-wire [5:0] wIQ;
+wire [5:0] IQ;
 reg [4:0] angle;
-reg [5:0] IQ;
 
-assign wIQ = IQ;
 assign wangle = angle;
 
-cos_lut inst (.angle(wangle), .cos(wIQ));
+cos_lut inst (.angle(wangle), .cos(IQ));
 
 // 8 samples per symbol
 // Phase accumulator
-always @(posedge clk) begin
-  if (sample == 3'b111) curr <= in;
-  
-  sample <= sample + 1;
-  
-  cosangle <= cosangle + {curr, 1'b0} - 1; // phase + 2*curr -1
+always @(posedge clk or negedge rst_n) begin
+  if (!rst_n) begin
+    sample <= 3'b111;
+    clk2 <= 0;
+  end
+  else begin
 
-  // Phase to amplitude conversion
-  clk2 <= ~clk2;
-  
-  if (clk2) begin 
-    angle <= cosangle + 4'h8; // sine
+    if (sample == 3'b111) curr <= in;
+    
+    sample <= sample + 1;
+    
+    cosangle <= cosangle + {curr, 1'b0} - 1; // phase + 2*curr -1
+
+    // Phase to amplitude conversion
+    clk2 <= ~clk2;
+    
+    if (clk2) begin 
+      angle <= cosangle + 4'h8; // sine
+    end
+    else begin 
+      angle <= cosangle; // cosine
+    end
+    
+    Q <= IQ;
   end
-  else begin 
-    angle <= cosangle; // cosine
-  end
-  
-  IQ_out[11:6] <= IQ; // Q
 end
 
-always @(negedge clk2) begin // Will need to test to see if it's posedge or negedge here
-  IQ_out[5:0] <= IQ; // I
+always @(negedge clk2 or negedge rst_n) begin // Will need to test to see if it's posedge or negedge here
+  if (!rst_n) IQ_out <= 0;
+  else I <= IQ;
 end
 
 endmodule
