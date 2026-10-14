@@ -8,8 +8,8 @@ module transmit (
   input wire enable
 );
 
-// Registers
-reg [2:0] sample;
+// Registers and Wires
+// reg [2:0] sample;
 
 wire [11:0] wangle;
 wire [7:0] IQ;
@@ -25,14 +25,12 @@ assign out = IQ;
 // Phase accumulator
 always @(posedge clk or negedge rst_n) begin
   if (!rst_n) begin
-    sample <= 3'b111;
+    // sample <= 3'b111;
     angle <= 12'b0;
   end else if (enable) begin
-    
+    angle <= {12{in}};
   end
 end
-
-wire _unused = &{sample, in};
 
 endmodule
 
