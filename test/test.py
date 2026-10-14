@@ -4,14 +4,21 @@
 import cocotb
 from cocotb.clock import Clock
 from cocotb.triggers import ClockCycles
+from cocotb.types import LogicArray as Arr
 
+async def serial_in(dut, input): # Serial input
+    for i in input:
+        # Only change uio_in[0]
+        dut.uio_in.value = Arr(((int(dut.uio_in.value) >> 1) << 1) + int(i), 8)
+        await ClockCycles(dut.clk, 8)
+    return
 
-@cocotb.test()
-async def test_project(dut):
+@cocotb.test(timeout=None, expect_Fail=False, expect_error=False, skip=False) # Set skip to true when testing receiver
+async def test_transmit(dut):
     dut._log.info("Start")
 
-    # Set the clock period to 10 us (100 KHz)
-    clock = Clock(dut.clk, 10, unit="us")
+    # Set the clock period to 100 ps (10 MHz)
+    clock = Clock(dut.clk, 100, unit="ps")
     cocotb.start_soon(clock.start())
 
     # Reset
@@ -23,18 +30,25 @@ async def test_project(dut):
     await ClockCycles(dut.clk, 10)
     dut.rst_n.value = 1
 
-    dut._log.info("Test project behavior")
+    dut._log.info("Transmit Mode Test")
 
-    # Set the input values you want to test
-    dut.ui_in.value = 20
-    dut.uio_in.value = 30
-
-    # Wait for one clock cycle to see the output values
+    dut.uio_in.value = Arr("00000100") # Set to transmit mode
     await ClockCycles(dut.clk, 1)
 
-    # The following assersion is just an example of how to check the output values.
-    # Change it to match the actual expected output of your module:
-    # assert dut.uo_out.value == 50
+    # await serial_in(dut, Arr("1010101010"))
+    input = Arr("10101010")
+    for i in input:
+        # Only change uio_in[0]
+        dut.uio_in.value = Arr(((int(dut.uio_in.value) >> 1) << 1) + int(i), 8)
+        for i in range(8):
+            await ClockCycles(dut.clk, 1)
+            dut._log.info(dut.uo_out.value)
+            dut._log.info(dut.uio_out.value)
 
-    # Keep testing the module by changing the input values, waiting for
-    # one or more clock cycles, and asserting the expected output values.
+    await ClockCycles(dut.clk, 1)
+    dut._log.info(dut.uo_out.value)
+    dut._log.info(dut.uio_out.value)
+
+    await ClockCycles(dut.clk, 1)
+    dut._log.info(dut.uo_out.value)
+    dut._log.info(dut.uio_out.value)

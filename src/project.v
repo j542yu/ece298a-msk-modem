@@ -27,7 +27,8 @@ module tt_um_example (
     .in(uio_in[0]),
     .out({uio_out[6:5], uo_out[7:4], uio_out[4:3], uo_out[3:0]}), // 6 bit I out[5:0], 6 bit Q out[11:6]
     .clk(clk),
-    .rst_n(rst_n)
+    .rst_n(rst_n),
+    .enable(uio_in[2])
   );
     
   // List all unused inputs to prevent warnings
