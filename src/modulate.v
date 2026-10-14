@@ -9,7 +9,6 @@ module transmit (
 );
 
 // Registers
-reg curr;
 reg [2:0] sample;
 
 wire [11:0] wangle;
@@ -27,11 +26,13 @@ assign out = IQ;
 always @(posedge clk or negedge rst_n) begin
   if (!rst_n) begin
     sample <= 3'b111;
-    angle <= 11'b0;
+    angle <= 12'b0;
   end else if (enable) begin
     
   end
 end
+
+wire _unused = &{sample, in};
 
 endmodule
 
