@@ -13,7 +13,7 @@ async def serial_in(dut, input): # Serial input
         await ClockCycles(dut.clk, 8)
     return
 
-@cocotb.test(timeout=None, expect_Fail=False, expect_error=False, skip=False) # Set skip to true when testing receiver
+@cocotb.test(skip=False) # Set skip to true when testing receiver
 async def test_transmit(dut):
     dut._log.info("Start")
 

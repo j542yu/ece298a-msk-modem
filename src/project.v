@@ -20,12 +20,12 @@ module tt_um_example (
   // assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
   // assign uio_out = 0;
   assign uio_oe  = 8'b11111000;
-  assign {uio_out[7], uio_out[2:0]} = 0;
+  assign {uio_out[7:0]} = 0;
 
   // Test
   transmit transmit_inst(
     .in(uio_in[0]),
-    .out({uio_out[6:5], uo_out[7:4], uio_out[4:3], uo_out[3:0]}), // 6 bit I out[5:0], 6 bit Q out[11:6]
+    .out({uo_out[7:0]}), // 6 bit I out[5:0], 6 bit Q out[11:6]
     .clk(clk),
     .rst_n(rst_n),
     .enable(uio_in[2])
