@@ -8,27 +8,29 @@ module transmit (
   input wire enable
 );
 
+parameter I_F_OFFSET = 12'hA00; // 10 * 256,  IF/sample_freq = 10
+
 // Registers and Wires
-// reg [2:0] sample;
 
-wire [11:0] wangle;
-wire [7:0] IQ;
-reg [11:0] angle;
+reg [15:0] phase;
+reg delay;
 
-assign wangle = angle;
-
-cos_lut lut (.angle(wangle), .cos(IQ));
-
-assign out = IQ;
+cos_lut lut (.angle_in(phase[15:8]), .cos(out));
 
 // 8 samples per symbol
 // Phase accumulator
 always @(posedge clk or negedge rst_n) begin
   if (!rst_n) begin
-    // sample <= 3'b111;
-    angle <= 12'b0;
+    phase <= 15'b0;
+    delay <= 0;
   end else if (enable) begin
-    angle <= {12{in}};
+    delay <= 1; // Introduce a delay at the beginning to ensure that the input has enough time to update
+    // Sampling frequency will be chosen to allow for 8 samples per symbol?
+    if (in && delay) begin
+      phase <= phase + I_F_OFFSET + 12'h800;
+    end else if (!in && delay) begin
+      phase <= phase + I_F_OFFSET - 12'h800;
+    end
   end
 end
 

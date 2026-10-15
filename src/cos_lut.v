@@ -2,11 +2,18 @@
 
 // Cosine/sine lookup table
 module cos_lut (
-  input reg [7:0] angle,
+  input reg [7:0] angle_in,
   output reg [7:0] cos
 );
 
+reg [7:0] angle;
+
 always@(*) begin
+
+  if (angle_in[7]) begin
+    angle <= 8'hFF - angle_in + 1;
+  end else angle <= angle_in;
+
   casez(angle)
     8'b000000??: cos = 8'hFF;
     8'b0000010?: cos = 8'hFE;
