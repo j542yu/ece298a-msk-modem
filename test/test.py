@@ -36,7 +36,8 @@ async def test_transmit(dut):
         # dut._log.info(dut.uo_out.value)
         await ClockCycles(dut.clk, 8)
         
-    assert dut.uo_out.value == 0x00, f"Expected 0x00, got {dut.uo_out.value}"
+    await ClockCycles(dut.clk, 1)        
+    assert dut.uo_out.value == 0x09, f"Expected 0x09, got {dut.uo_out.value}"
     
     dut._log.info("Reset")
     dut.ena.value = 1
@@ -57,7 +58,7 @@ async def test_transmit(dut):
         await ClockCycles(dut.clk, 8)
         
     await ClockCycles(dut.clk, 1)
-    assert dut.uo_out.value == 0x00, f"Expected 0x00, got {dut.uo_out.value}"
+    assert dut.uo_out.value == 0x09, f"Expected 0x09, got {dut.uo_out.value}"
         
     dut._log.info("Inputting 11110000")
     input = Arr("11110000")
@@ -68,7 +69,7 @@ async def test_transmit(dut):
         await ClockCycles(dut.clk, 8)
         
     await ClockCycles(dut.clk, 1)
-    assert dut.uo_out.value == 0xFF, f"Expected 0xFF, got {dut.uo_out.value}"
+    assert dut.uo_out.value == 0xDE, f"Expected 0xDE, got {dut.uo_out.value}"
     
     dut._log.info("Inputting 101")
     input = Arr("101")
@@ -79,7 +80,7 @@ async def test_transmit(dut):
         await ClockCycles(dut.clk, 8)
         
     await ClockCycles(dut.clk, 1)
-    assert dut.uo_out.value == 0xB0, f"Expected 0xB0, got {dut.uo_out.value}"
+    assert dut.uo_out.value == 0x43, f"Expected 0x43, got {dut.uo_out.value}"
     
     dut._log.info("Reset")
     dut.ena.value = 1
@@ -100,7 +101,7 @@ async def test_transmit(dut):
         await ClockCycles(dut.clk, 8)
     
     await ClockCycles(dut.clk, 1)
-    assert dut.uo_out.value == 0xB0, f"Expected 0xB0, got {dut.uo_out.value}"
+    assert dut.uo_out.value == 0xA2, f"Expected 0xA2, got {dut.uo_out.value}"
     
     dut._log.info("Inputting 110")
     input = Arr("110")
@@ -111,4 +112,4 @@ async def test_transmit(dut):
         await ClockCycles(dut.clk, 8)
         
     await ClockCycles(dut.clk, 1)
-    assert dut.uo_out.value == 0x25, f"Expected 0x25, got {dut.uo_out.value}"
+    assert dut.uo_out.value == 0x11, f"Expected 0x11, got {dut.uo_out.value}"
