@@ -23,15 +23,17 @@ module tt_um_example (
   assign {uio_out[7:0]} = 0;
 
   // Test
-  transmit transmit_inst(
-    .in(uio_in[0]),
-    .out({uo_out[7:0]}), // 6 bit I out[5:0], 6 bit Q out[11:6]
-    .clk(clk),
-    .rst_n(rst_n),
-    .enable(uio_in[2])
-  );
+  // transmit transmit_inst(
+  //   .in(uio_in[0]),
+  //   .out({uo_out[7:0]}), // 6 bit I out[5:0], 6 bit Q out[11:6]
+  //   .clk(clk),
+  //   .rst_n(rst_n),
+  //   .enable(uio_in[2])
+  // );
+
+  cos_lut lut(.angle({uio_in[7:4], ui_in[7:0]}), .cos(uo_out));
     
   // List all unused inputs to prevent warnings
-  wire _unused = &{ena, ui_in[7:0], uio_in[7:1], rst_n, 1'b0};
+  wire _unused = &{ena, clk, uio_in[3:0], rst_n, 1'b0};
 
 endmodule
