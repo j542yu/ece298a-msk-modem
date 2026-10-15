@@ -31,9 +31,9 @@ module tt_um_example (
   //   .enable(uio_in[2])
   // );
 
-  cos_lut lut(.angle({uio_in[7:4], ui_in[7:0]}), .cos(uo_out));
+  cos_lut lut(.angle(ui_in), .cos(uo_out));
     
   // List all unused inputs to prevent warnings
-  wire _unused = &{ena, clk, uio_in[3:0], rst_n, 1'b0};
+  wire _unused = &{ena, clk, uio_in[7:0], rst_n, 1'b0};
 
 endmodule
