@@ -1,3 +1,4 @@
 /xschem/symbols
 /xschem/tests
 xschemrc
+.venv/
