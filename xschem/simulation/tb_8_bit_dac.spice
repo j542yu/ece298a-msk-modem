@@ -1,0 +1,86 @@
+** sch_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/tb_8_bit_dac.sch
+**.subckt tb_8_bit_dac
+x1 B[4] B[3] B[2] B[1] B[0] T[6] T[5] T[4] T[3] T[2] T[1] T[0] DAC_OUT 8_bit_dac
+**.ends
+
+* expanding   symbol:  8_bit_dac.sym # of pins=3
+** sym_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/8_bit_dac.sym
+** sch_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/8_bit_dac.sch
+.subckt 8_bit_dac B[4] B[3] B[2] B[1] B[0] T[6] T[5] T[4] T[3] T[2] T[1] T[0] DAC_OUT
+*.opin DAC_OUT
+*.ipin B[4],B[3],B[2],B[1],B[0]
+*.ipin T[6],T[5],T[4],T[3],T[2],T[1],T[0]
+x1 B[4] B[3] B[2] B[1] B[0] GND DAC_OUT r2r
+x2 DAC_OUT GND T[6] T[5] T[4] T[3] T[2] T[1] T[0] thermometer
+.ends
+
+
+* expanding   symbol:  r2r.sym # of pins=3
+** sym_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/r2r.sym
+** sch_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/r2r.sch
+.subckt r2r B[4] B[3] B[2] B[1] B[0] VREF_L R2R_OUT
+*.opin R2R_OUT
+*.ipin VREF_L
+*.ipin B[4],B[3],B[2],B[1],B[0]
+XR1 net1 net4 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR2 net2 net1 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR5 net6 net1 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR6 B[1] net6 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR3 net7 net2 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR4 B[2] net7 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR7 net3 net2 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR8 net5 net3 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR9 net8 net3 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR10 B[3] net8 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR13 net9 net4 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR14 B[0] net9 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR15 net4 net10 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR16 net10 VREF_L VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR11 R2R_OUT net5 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR12 net11 net5 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR17 B[4] net11 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+* tap: B[4:0] --> B[0]
+* tap: B[4:0] --> B[1]
+* tap: B[4:0] --> B[2]
+* tap: B[4:0] --> B[3]
+* tap: B[4:0] --> B[4]
+* tap: #net13 --> #net12
+* tap: #net15 --> #net14
+* tap: #net17 --> #net16
+* tap: #net19 --> #net18
+* tap: #net21 --> #net20
+.ends
+
+
+* expanding   symbol:  thermometer.sym # of pins=3
+** sym_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/thermometer.sym
+** sch_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/thermometer.sch
+.subckt thermometer THERM_IO VREF_L T[6] T[5] T[4] T[3] T[2] T[1] T[0]
+*.ipin T[6],T[5],T[4],T[3],T[2],T[1],T[0]
+*.iopin THERM_IO
+*.ipin VREF_L
+XR11 net1 THERM_IO VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR12 T[0] net1 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR19 net2 THERM_IO VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR20 T[1] net2 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR21 net3 THERM_IO VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR22 T[2] net3 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR17 net4 THERM_IO VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR18 T[3] net4 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR23 net5 THERM_IO VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR24 T[4] net5 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR25 net6 THERM_IO VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR26 T[5] net6 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR27 net7 THERM_IO VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR28 T[6] net7 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+* tap: T[6:0] --> T[0]
+* tap: T[6:0] --> T[1]
+* tap: T[6:0] --> T[2]
+* tap: T[6:0] --> T[3]
+* tap: T[6:0] --> T[4]
+* tap: T[6:0] --> T[5]
+* tap: T[6:0] --> T[6]
+.ends
+
+.GLOBAL GND
+.end

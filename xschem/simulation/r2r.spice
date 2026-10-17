@@ -1,0 +1,34 @@
+** sch_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/r2r.sch
+**.subckt r2r R2R_OUT VREF_L B[4],B[3],B[2],B[1],B[0]
+*.opin R2R_OUT
+*.ipin VREF_L
+*.ipin B[4],B[3],B[2],B[1],B[0]
+XR1 net1 net4 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR2 net2 net1 VREF_L ppolyf_u_3k r_width=1e-6 r_length=10e-6 m=1
+XR5 net6 net1 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR6 B[1] net6 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR3 net7 net2 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR4 B[2] net7 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR7 net3 net2 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR8 net5 net3 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR9 net8 net3 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR10 B[3] net8 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR13 net9 net4 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR14 B[0] net9 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR15 net4 net10 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR16 net10 VREF_L VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR11 R2R_OUT net5 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR12 net11 net5 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR17 B[4] net11 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+* tap: B[4:0] --> B[0]
+* tap: B[4:0] --> B[1]
+* tap: B[4:0] --> B[2]
+* tap: B[4:0] --> B[3]
+* tap: B[4:0] --> B[4]
+* tap: #net13 --> #net12
+* tap: #net15 --> #net14
+* tap: #net17 --> #net16
+* tap: #net19 --> #net18
+* tap: #net21 --> #net20
+**.ends
+.end

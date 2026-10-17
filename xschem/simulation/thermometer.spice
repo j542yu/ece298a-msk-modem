@@ -1,0 +1,28 @@
+** sch_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/thermometer.sch
+**.subckt thermometer T[6],T[5],T[4],T[3],T[2],T[1],T[0] THERM_IO VREF_L
+*.ipin T[6],T[5],T[4],T[3],T[2],T[1],T[0]
+*.iopin THERM_IO
+*.ipin VREF_L
+XR11 net1 THERM_IO VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR12 T[0] net1 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR19 net2 THERM_IO VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR20 T[1] net2 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR21 net3 THERM_IO VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR22 T[2] net3 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR17 net4 THERM_IO VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR18 T[3] net4 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR23 net5 THERM_IO VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR24 T[4] net5 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR25 net6 THERM_IO VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR26 T[5] net6 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR27 net7 THERM_IO VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR28 T[6] net7 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+* tap: T[6:0] --> T[0]
+* tap: T[6:0] --> T[1]
+* tap: T[6:0] --> T[2]
+* tap: T[6:0] --> T[3]
+* tap: T[6:0] --> T[4]
+* tap: T[6:0] --> T[5]
+* tap: T[6:0] --> T[6]
+**.ends
+.end

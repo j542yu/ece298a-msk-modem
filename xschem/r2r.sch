@@ -20,17 +20,15 @@ lab=#net3}
 N 250 -480 250 -390 {
 lab=#net4}
 N 250 -270 250 -180 {
-lab=B0}
+lab=B[0]}
 N 400 -270 400 -180 {
-lab=B1}
+lab=B[1]}
 N 550 -270 550 -180 {
-lab=B2}
+lab=B[2]}
 N 700 -270 700 -180 {
-lab=B3}
+lab=B[3]}
 N 100 -480 100 -390 {
 lab=#net4}
-N 100 -270 100 -180 {
-lab=VREF_L}
 N 250 -480 300 -480 {
 lab=#net4}
 N 350 -480 400 -480 {
@@ -46,118 +44,210 @@ lab=#net5}
 N 840 -480 840 -390 {
 lab=#net5}
 N 840 -270 840 -180 {
-lab=B4}
+lab=B[4]}
 N 800 -480 840 -480 {
 lab=#net5}
 N 940 -480 980 -480 {
 lab=R2R_OUT}
-C {/home/j542yu/Documents/ece298a-msk-modem/xschem/symbols/ppolyf_u_3k.sym} 320 -480 1 0 {name=R1
+N 80 -420 80 -360 {
+lab=VREF_L}
+N 80 -360 80 -300 {
+lab=VREF_L}
+N 230 -420 230 -300 {
+lab=VREF_L}
+N 80 -420 230 -420 {
+lab=VREF_L}
+N 380 -360 380 -300 {
+lab=VREF_L}
+N 380 -420 380 -360 {
+lab=VREF_L}
+N 230 -420 380 -420 {
+lab=VREF_L}
+N 530 -420 530 -300 {
+lab=VREF_L}
+N 380 -420 530 -420 {
+lab=VREF_L}
+N 680 -360 680 -300 {
+lab=VREF_L}
+N 680 -420 680 -360 {
+lab=VREF_L}
+N 530 -420 680 -420 {
+lab=VREF_L}
+N 820 -360 820 -300 {
+lab=VREF_L}
+N 820 -420 820 -360 {
+lab=VREF_L}
+N 680 -420 820 -420 {
+lab=VREF_L}
+N 330 -460 330 -420 {
+lab=VREF_L}
+N 470 -460 470 -420 {
+lab=VREF_L}
+N 620 -460 620 -420 {
+lab=VREF_L}
+N 770 -460 770 -420 {
+lab=VREF_L}
+N 820 -420 910 -420 {
+lab=VREF_L}
+N 910 -460 910 -420 {
+lab=VREF_L}
+N 100 -270 100 -240 {
+lab=VREF_L}
+N 70 -420 80 -420 {
+lab=VREF_L}
+N 80 -240 100 -240 {
+lab=VREF_L}
+N 70 -170 830 -170 {lab=B[4:0] bus=true}
+N 400 -270 400 -250 {
+lab=B[1]}
+N 400 -330 400 -310 {
+lab=#net6}
+N 380 -300 380 -280 {
+lab=VREF_L}
+N 550 -270 550 -250 {
+lab=B[2]}
+N 550 -330 550 -310 {
+lab=#net7}
+N 530 -300 530 -280 {
+lab=VREF_L}
+N 700 -270 700 -250 {
+lab=B[3]}
+N 700 -330 700 -310 {
+lab=#net8}
+N 680 -300 680 -280 {
+lab=VREF_L}
+N 250 -270 250 -250 {
+lab=B[0]}
+N 250 -330 250 -310 {
+lab=#net9}
+N 230 -300 230 -280 {
+lab=VREF_L}
+N 100 -330 100 -310 {
+lab=#net10}
+N 100 -270 100 -250 {
+lab=VREF_L}
+N 80 -300 80 -280 {
+lab=VREF_L}
+N 840 -270 840 -250 {
+lab=B[4]}
+N 840 -330 840 -310 {
+lab=#net11}
+N 820 -300 820 -280 {
+lab=VREF_L}
+C {symbols/ppolyf_u_3k.sym} 330 -480 3 0 {name=R1
 W=2e-6
 L=20e-6
 model=ppolyf_u_3k
 spiceprefix=X
 m=1}
 C {title.sym} 170 -40 0 0 {name=l1 author="Judy Yu, Gracia Xia"}
-C {/home/j542yu/Documents/ece298a-msk-modem/xschem/symbols/ppolyf_u_3k.sym} 470 -480 1 0 {name=R2
+C {symbols/ppolyf_u_3k.sym} 470 -480 3 0 {name=R2
 W=2e-6
 L=20e-6
 model=ppolyf_u_3k
 spiceprefix=X
 m=1}
-C {/home/j542yu/Documents/ece298a-msk-modem/xschem/symbols/ppolyf_u_3k.sym} 400 -360 0 0 {name=R5
+C {symbols/ppolyf_u_3k.sym} 400 -360 0 0 {name=R5
 W=2e-6
 L=20e-6
 model=ppolyf_u_3k
 spiceprefix=X
 m=1}
-C {/home/j542yu/Documents/ece298a-msk-modem/xschem/symbols/ppolyf_u_3k.sym} 400 -300 0 0 {name=R6
+C {symbols/ppolyf_u_3k.sym} 400 -280 0 0 {name=R6
 W=2e-6
 L=20e-6
 model=ppolyf_u_3k
 spiceprefix=X
 m=1}
-C {/home/j542yu/Documents/ece298a-msk-modem/xschem/symbols/ppolyf_u_3k.sym} 550 -360 0 0 {name=R3
+C {symbols/ppolyf_u_3k.sym} 550 -360 0 0 {name=R3
 W=2e-6
 L=20e-6
 model=ppolyf_u_3k
 spiceprefix=X
 m=1}
-C {/home/j542yu/Documents/ece298a-msk-modem/xschem/symbols/ppolyf_u_3k.sym} 550 -300 0 0 {name=R4
+C {symbols/ppolyf_u_3k.sym} 550 -280 0 0 {name=R4
 W=2e-6
 L=20e-6
 model=ppolyf_u_3k
 spiceprefix=X
 m=1}
-C {/home/j542yu/Documents/ece298a-msk-modem/xschem/symbols/ppolyf_u_3k.sym} 620 -480 1 0 {name=R7
+C {symbols/ppolyf_u_3k.sym} 620 -480 3 0 {name=R7
 W=2e-6
 L=20e-6
 model=ppolyf_u_3k
 spiceprefix=X
 m=1}
-C {/home/j542yu/Documents/ece298a-msk-modem/xschem/symbols/ppolyf_u_3k.sym} 770 -480 1 0 {name=R8
+C {symbols/ppolyf_u_3k.sym} 770 -480 3 0 {name=R8
 W=2e-6
 L=20e-6
 model=ppolyf_u_3k
 spiceprefix=X
 m=1}
-C {/home/j542yu/Documents/ece298a-msk-modem/xschem/symbols/ppolyf_u_3k.sym} 700 -360 0 0 {name=R9
+C {symbols/ppolyf_u_3k.sym} 700 -360 0 0 {name=R9
 W=2e-6
 L=20e-6
 model=ppolyf_u_3k
 spiceprefix=X
 m=1}
-C {/home/j542yu/Documents/ece298a-msk-modem/xschem/symbols/ppolyf_u_3k.sym} 700 -300 0 0 {name=R10
+C {symbols/ppolyf_u_3k.sym} 700 -280 0 0 {name=R10
 W=2e-6
 L=20e-6
 model=ppolyf_u_3k
 spiceprefix=X
 m=1}
-C {/home/j542yu/Documents/ece298a-msk-modem/xschem/symbols/ppolyf_u_3k.sym} 250 -360 0 0 {name=R13
+C {symbols/ppolyf_u_3k.sym} 250 -360 0 0 {name=R13
 W=2e-6
 L=20e-6
 model=ppolyf_u_3k
 spiceprefix=X
 m=1}
-C {/home/j542yu/Documents/ece298a-msk-modem/xschem/symbols/ppolyf_u_3k.sym} 250 -300 0 0 {name=R14
+C {symbols/ppolyf_u_3k.sym} 250 -280 0 0 {name=R14
 W=2e-6
 L=20e-6
 model=ppolyf_u_3k
 spiceprefix=X
 m=1}
-C {/home/j542yu/Documents/ece298a-msk-modem/xschem/symbols/ppolyf_u_3k.sym} 100 -360 0 1 {name=R15
+C {symbols/ppolyf_u_3k.sym} 100 -360 2 1 {name=R15
 W=2e-6
 L=20e-6
 model=ppolyf_u_3k
 spiceprefix=X
 m=1}
-C {/home/j542yu/Documents/ece298a-msk-modem/xschem/symbols/ppolyf_u_3k.sym} 100 -300 0 1 {name=R16
+C {symbols/ppolyf_u_3k.sym} 100 -280 2 1 {name=R16
 W=2e-6
 L=20e-6
 model=ppolyf_u_3k
 spiceprefix=X
 m=1}
-C {ipin.sym} 250 -180 0 0 {name=p1 lab=B0}
-C {ipin.sym} 400 -180 0 0 {name=p2 lab=B1}
-C {ipin.sym} 550 -180 0 0 {name=p3 lab=B2}
-C {ipin.sym} 700 -180 0 0 {name=p4 lab=B3}
-C {opin.sym} 980 -480 2 1 {name=p5 lab=R2R_OUT}
-C {ipin.sym} 100 -180 0 0 {name=p6 lab=VREF_L}
-C {/home/j542yu/Documents/ece298a-msk-modem/xschem/symbols/ppolyf_u_3k.sym} 910 -480 1 0 {name=R11
+C {opin.sym} 980 -480 2 1 {name=p3 lab=R2R_OUT sim_pinnumber=3}
+C {ipin.sym} 80 -240 0 0 {name=p2 lab=VREF_L sim_pinnumber=2}
+C {symbols/ppolyf_u_3k.sym} 910 -480 3 0 {name=R11
 W=2e-6
 L=20e-6
 model=ppolyf_u_3k
 spiceprefix=X
 m=1}
-C {ipin.sym} 840 -180 0 0 {name=p7 lab=B4}
-C {/home/j542yu/Documents/ece298a-msk-modem/xschem/symbols/ppolyf_u_3k.sym} 840 -360 0 0 {name=R12
+C {symbols/ppolyf_u_3k.sym} 840 -360 0 0 {name=R12
 W=2e-6
 L=20e-6
 model=ppolyf_u_3k
 spiceprefix=X
 m=1}
-C {/home/j542yu/Documents/ece298a-msk-modem/xschem/symbols/ppolyf_u_3k.sym} 840 -300 0 0 {name=R17
+C {symbols/ppolyf_u_3k.sym} 840 -280 0 0 {name=R17
 W=2e-6
 L=20e-6
 model=ppolyf_u_3k
 spiceprefix=X
 m=1}
+C {lab_pin.sym} 70 -420 2 1 {name=p8 sig_type=std_logic lab=VREF_L}
+C {bus_tap.sym} 240 -170 0 0 {name=l2 lab=[0]}
+C {bus_tap.sym} 390 -170 0 0 {name=l3 lab=[1]}
+C {bus_tap.sym} 540 -170 0 0 {name=l4 lab=[2]}
+C {bus_tap.sym} 690 -170 0 0 {name=l5 lab=[3]}
+C {bus_tap.sym} 830 -170 0 0 {name=l6 lab=[4]}
+C {bus_tap.sym} 400 240 0 0 {name=l7 lab=[0]}
+C {bus_tap.sym} 550 240 0 0 {name=l8 lab=[1]}
+C {bus_tap.sym} 700 240 0 0 {name=l9 lab=[2]}
+C {bus_tap.sym} 850 240 0 0 {name=l10 lab=[3]}
+C {bus_tap.sym} 1000 240 0 0 {name=l11 lab=[4]}
+C {ipin.sym} 70 -170 0 0 {name=p1 lab=B[4:0] sim_pinnumber=1}
