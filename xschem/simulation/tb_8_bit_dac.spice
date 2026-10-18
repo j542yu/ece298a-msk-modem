@@ -1,6 +1,34 @@
 ** sch_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/tb_8_bit_dac.sch
-**.subckt tb_8_bit_dac
-x1 B[4] B[3] B[2] B[1] B[0] T[6] T[5] T[4] T[3] T[2] T[1] T[0] DAC_OUT 8_bit_dac
+**.subckt tb_8_bit_dac B[4],B[3],B[2],B[1],B[0] T[6],T[5],T[4],T[3],T[2],T[1],T[0]
+*+ B_R[7],B_R[6],B_R[5],B_R[4],B_R[3],B_R[2],B_R[1],B_R[0] DAC_OUT_SEG DAC_OUT_R2R
+*.ipin B[4],B[3],B[2],B[1],B[0]
+*.ipin T[6],T[5],T[4],T[3],T[2],T[1],T[0]
+*.ipin B_R[7],B_R[6],B_R[5],B_R[4],B_R[3],B_R[2],B_R[1],B_R[0]
+*.ipin DAC_OUT_SEG
+*.ipin DAC_OUT_R2R
+x1 B[4] B[3] B[2] B[1] B[0] T[6] T[5] T[4] T[3] T[2] T[1] T[0] DAC_OUT_SEG 8_bit_dac
+x2 B_R[7] B_R[6] B_R[5] B_R[4] B_R[3] B_R[2] B_R[1] B_R[0] GND DAC_OUT_R2R full_r2r
+**** begin user architecture code
+
+.include design.ngspice
+.lib sm141064.ngspice ff
+.lib sm141064.ngspice res_ff
+
+
+.option wnflag=1
+
+.control
+    tran 10n 256u
+    write tb_8_bit_dac.raw
+.endc
+
+
+
+.include dac_sine_1.0us_5_3.spice
+
+.include dac_sine_1.0us_8_0.spice
+
+**** end user architecture code
 **.ends
 
 * expanding   symbol:  8_bit_dac.sym # of pins=3
@@ -12,6 +40,50 @@ x1 B[4] B[3] B[2] B[1] B[0] T[6] T[5] T[4] T[3] T[2] T[1] T[0] DAC_OUT 8_bit_dac
 *.ipin T[6],T[5],T[4],T[3],T[2],T[1],T[0]
 x1 B[4] B[3] B[2] B[1] B[0] GND DAC_OUT r2r
 x2 DAC_OUT GND T[6] T[5] T[4] T[3] T[2] T[1] T[0] thermometer
+.ends
+
+
+* expanding   symbol:  /home/j542yu/Documents/ece298a-msk-modem/xschem/full_r2r.sym # of pins=3
+** sym_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/full_r2r.sym
+** sch_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/full_r2r.sch
+.subckt full_r2r B_R[7] B_R[6] B_R[5] B_R[4] B_R[3] B_R[2] B_R[1] B_R[0] VREF_L FULL_R2R_OUT
+*.opin FULL_R2R_OUT
+*.ipin VREF_L
+*.ipin B_R[7],B_R[6],B_R[5],B_R[4],B_R[3],B_R[2],B_R[1],B_R[0]
+XR1 net1 net4 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR2 net2 net1 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR5 net7 net1 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR6 B_R[1] net7 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR3 net8 net2 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR4 B_R[2] net8 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR7 net3 net2 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR8 net5 net3 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR9 net9 net3 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR10 B_R[3] net9 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR13 net10 net4 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR14 B_R[0] net10 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR15 net4 net11 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR16 net11 VREF_L VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR11 net6 net5 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR12 net12 net5 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR17 B_R[4] net12 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+* tap: B_R[7:0] --> B_R[0]
+* tap: B_R[7:0] --> B_R[1]
+* tap: B_R[7:0] --> B_R[2]
+* tap: B_R[7:0] --> B_R[3]
+* tap: B_R[7:0] --> B_R[4]
+XR18 net13 net6 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR19 net15 net6 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR20 B_R[5] net15 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR21 net14 net13 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR22 net16 net13 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR23 B_R[6] net16 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+* tap: B_R[7:0] --> B_R[5]
+* tap: B_R[7:0] --> B_R[6]
+XR24 FULL_R2R_OUT net14 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+* tap: B_R[7:0] --> B_R[7]
+XR25 net17 net14 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR26 B_R[7] net17 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
 .ends
 
 
@@ -44,11 +116,6 @@ XR17 B[4] net11 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
 * tap: B[4:0] --> B[2]
 * tap: B[4:0] --> B[3]
 * tap: B[4:0] --> B[4]
-* tap: #net13 --> #net12
-* tap: #net15 --> #net14
-* tap: #net17 --> #net16
-* tap: #net19 --> #net18
-* tap: #net21 --> #net20
 .ends
 
 

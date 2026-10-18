@@ -245,9 +245,4 @@ C {bus_tap.sym} 390 -170 0 0 {name=l3 lab=[1]}
 C {bus_tap.sym} 540 -170 0 0 {name=l4 lab=[2]}
 C {bus_tap.sym} 690 -170 0 0 {name=l5 lab=[3]}
 C {bus_tap.sym} 830 -170 0 0 {name=l6 lab=[4]}
-C {bus_tap.sym} 400 240 0 0 {name=l7 lab=[0]}
-C {bus_tap.sym} 550 240 0 0 {name=l8 lab=[1]}
-C {bus_tap.sym} 700 240 0 0 {name=l9 lab=[2]}
-C {bus_tap.sym} 850 240 0 0 {name=l10 lab=[3]}
-C {bus_tap.sym} 1000 240 0 0 {name=l11 lab=[4]}
 C {ipin.sym} 70 -170 0 0 {name=p1 lab=B[4:0] sim_pinnumber=1}
