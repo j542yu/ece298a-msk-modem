@@ -2,3 +2,4 @@
 /xschem/tests
 xschemrc
 .venv/
+/xschem/simulation/*.ngspice
