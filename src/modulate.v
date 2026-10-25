@@ -26,11 +26,11 @@ end
 always @(posedge clk or negedge rst_n) begin
   if (!rst_n) begin
     phase <= 16'b0;
-  end else if (enable) begin
+  end else if (delay) begin
     // Sampling frequency will be chosen to allow for 8 samples per symbol?
-    if (in && delay) begin
+    if (in) begin
       phase <= phase + I_F_OFFSET + 16'h0800;
-    end else if (!in && delay) begin
+    end else begin
       phase <= phase + I_F_OFFSET - 16'h0800;
     end
   end
