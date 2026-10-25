@@ -2,7 +2,7 @@
 
 module transmit (
   input wire in,
-  output reg [7:0] out,
+  output reg [7:0] out, // Correct output occurs one clock cycle after the input signal completes
   input wire clk,
   input wire rst_n,
   input wire enable
@@ -24,7 +24,7 @@ always @(posedge clk or negedge rst_n) begin
     phase <= 16'b0;
     delay <= 0;
   end else if (enable) begin
-    delay <= 1; // Introduce a delay at the beginning to ensure that the input has enough time to update
+    delay <= 1; // Introduce a delay at the beginning to ensure that the input has enough time to update, otherwise errors occur at edges
     // Sampling frequency will be chosen to allow for 8 samples per symbol?
     if (in && delay) begin
       phase <= phase + I_F_OFFSET + 16'h0800;
