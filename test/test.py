@@ -38,11 +38,27 @@ async def phase_accumulator_test(dut):
 
     assert dut.uo_out.value == 0x06, f"Expected 0x06, got {dut.uo_out.value}" # All values are off by one clock cycle due to a delay
     
+    dut._log.info("Disable transmit")
     dut.uio_in.value = 0 # Checking that value no longer changes after transmission is disabled
     await ClockCycles(dut.clk, 1)
     assert dut.uo_out.value == 0x09, f"Expected 0x09, got {dut.uo_out.value}"
     await ClockCycles(dut.clk, 10)
     assert dut.uo_out.value == 0x09, f"Expected 0x09, got {dut.uo_out.value}"
+    
+    dut._log.info("Enable transmit")
+    dut.uio_in.value = Arr("00000100")
+    await ClockCycles(dut.clk, 1)
+    dut._log.info(dut.uo_out.value)
+    
+    dut._log.info("Inputting 11")
+    input = Arr("11")
+    for i in input:
+        # Only change uio_in[0]
+        dut.uio_in.value = Arr(((int(dut.uio_in.value) >> 1) << 1) + int(i), 8)
+        dut._log.info(dut.uo_out.value)
+        await ClockCycles(dut.clk, 8)
+        
+    assert dut.uo_out.value == 0x25, f"Expected 0x25, got {dut.uo_out.value}"
     
     dut._log.info("Reset")
     dut.ena.value = 1
