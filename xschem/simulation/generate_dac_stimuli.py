@@ -5,14 +5,14 @@ import math
 V_LOW = 0.0
 V_HIGH = 3.3
 
-DWELL = 1e-6       # Time per DAC code: 1 us
+DWELL = 0.5e-6       # Time per DAC code: 1 us
 EDGE = 1e-9        # Transition ramp: 1 ns
 
 NUM_R2R_BITS = 8
 NUM_THERM_BITS = 0
 
 # Select: "sweep", "sine", "ramp", "triangle", "alternating",
-WAVEFORM = "ramp"
+WAVEFORM = "sine"
 
 # Sine and triangle parameters
 SAMPLES_PER_PERIOD = 64
@@ -162,18 +162,21 @@ def main():
         ""
     ]
 
+    print("Enter positive integer for starting numbering of voltage sources")
+    V_start_num = int(input())
+
     # Generate sources for all binary R-2R inputs
     for i in range(NUM_R2R_BITS):
         lines.append(
-            generate_source(f"V{i+1}", f"B[{i}]", i, codes)
+            generate_source(f"V{V_start_num+i}", f"B_{NUM_R2R_BITS}_{NUM_THERM_BITS}[{i}]", i, codes)
         )
 
     # Generate sources for all thermometer inputs
     for j in range((1 << NUM_THERM_BITS) - 1):
         lines.append(
             generate_source(
-                f"V{j+1+NUM_R2R_BITS}",
-                f"T[{j}]",
+                f"V{V_start_num+j+NUM_R2R_BITS}",
+                f"T_{NUM_R2R_BITS}_{NUM_THERM_BITS}[{j}]",
                 j + NUM_R2R_BITS,
                 codes
             )
