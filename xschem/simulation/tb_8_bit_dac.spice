@@ -2,7 +2,7 @@
 **.subckt tb_8_bit_dac B_8_0[7],B_8_0[6],B_8_0[5],B_8_0[4],B_8_0[3],B_8_0[2],B_8_0[1],B_8_0[0]
 *+ DAC_OUT_5_3_SEG DAC_OUT_FULL_R2R T_6_2[2],T_6_2[1],T_6_2[0] B_6_2[5],B_6_2[4],B_6_2[3],B_6_2[2],B_6_2[1],B_6_2[0]
 *+ DAC_OUT_6_2_SEG T_5_3[6],T_5_3[5],T_5_3[4],T_5_3[3],T_5_3[2],T_5_3[1],T_5_3[0]
-*+ B_5_3[4],B_5_3[3],B_5_3[2],B_5_3[1],B_5_3[0]
+*+ B_5_3[4],B_5_3[3],B_5_3[2],B_5_3[1],B_5_3[0] DAC_OUT
 *.ipin B_8_0[7],B_8_0[6],B_8_0[5],B_8_0[4],B_8_0[3],B_8_0[2],B_8_0[1],B_8_0[0]
 *.opin DAC_OUT_5_3_SEG
 *.opin DAC_OUT_FULL_R2R
@@ -11,23 +11,25 @@
 *.opin DAC_OUT_6_2_SEG
 *.ipin T_5_3[6],T_5_3[5],T_5_3[4],T_5_3[3],T_5_3[2],T_5_3[1],T_5_3[0]
 *.ipin B_5_3[4],B_5_3[3],B_5_3[2],B_5_3[1],B_5_3[0]
+*.opin DAC_OUT
 x2 B_8_0[7] B_8_0[6] B_8_0[5] B_8_0[4] B_8_0[3] B_8_0[2] B_8_0[1] B_8_0[0] GND DAC_OUT_FULL_R2R
 + 8_0_dac
 x1 DAC_OUT_5_3_SEG GND B_5_3[4] B_5_3[3] B_5_3[2] B_5_3[1] B_5_3[0] T_5_3[6] T_5_3[5] T_5_3[4]
 + T_5_3[3] T_5_3[2] T_5_3[1] T_5_3[0] 5_3_dac
 x3 DAC_OUT_6_2_SEG GND B_6_2[5] B_6_2[4] B_6_2[3] B_6_2[2] B_6_2[1] B_6_2[0] T_6_2[2] T_6_2[1]
 + T_6_2[0] 6_2_dac
+x4 T_6_2[2] T_6_2[1] T_6_2[0] B_6_2[5] B_6_2[4] B_6_2[3] B_6_2[2] B_6_2[1] B_6_2[0] DAC_OUT dac
 **** begin user architecture code
 
 .include design.ngspice
-.lib sm141064.ngspice typical
-.lib sm141064.ngspice res_typical
+.lib sm141064.ngspice ff
+.lib sm141064.ngspice res_ff
 
 
 .option wnflag=1
 
 .control
-    tran 1n 128u
+    tran 3n 128u
     write tb_8_bit_dac.raw
 .endc
 
@@ -49,40 +51,40 @@ x3 DAC_OUT_6_2_SEG GND B_6_2[5] B_6_2[4] B_6_2[3] B_6_2[2] B_6_2[1] B_6_2[0] T_6
 *.opin FULL_R2R_OUT
 *.ipin VREF_L
 *.ipin B[7],B[6],B[5],B[4],B[3],B[2],B[1],B[0]
-XR1 net1 net4 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
-XR2 net2 net1 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
-XR5 net7 net1 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
-XR6 B[1] net7 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
-XR3 net8 net2 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
-XR4 B[2] net8 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
-XR7 net3 net2 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
-XR8 net5 net3 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
-XR9 net9 net3 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
-XR10 B[3] net9 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
-XR13 net10 net4 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
-XR14 B[0] net10 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
-XR15 net4 net11 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
-XR16 net11 VREF_L VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
-XR11 net6 net5 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
-XR12 net12 net5 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
-XR17 B[4] net12 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR1 net1 net4 VREF_L ppolyf_u_3k r_width=2e-6 r_length=60e-6 m=1
+XR2 net2 net1 VREF_L ppolyf_u_3k r_width=2e-6 r_length=60e-6 m=1
+XR5 net7 net1 VREF_L ppolyf_u_3k r_width=2e-6 r_length=60e-6 m=1
+XR6 B[1] net7 VREF_L ppolyf_u_3k r_width=2e-6 r_length=60e-6 m=1
+XR3 net8 net2 VREF_L ppolyf_u_3k r_width=2e-6 r_length=60e-6 m=1
+XR4 B[2] net8 VREF_L ppolyf_u_3k r_width=2e-6 r_length=60e-6 m=1
+XR7 net3 net2 VREF_L ppolyf_u_3k r_width=2e-6 r_length=60e-6 m=1
+XR8 net5 net3 VREF_L ppolyf_u_3k r_width=2e-6 r_length=60e-6 m=1
+XR9 net9 net3 VREF_L ppolyf_u_3k r_width=2e-6 r_length=60e-6 m=1
+XR10 B[3] net9 VREF_L ppolyf_u_3k r_width=2e-6 r_length=60e-6 m=1
+XR13 net10 net4 VREF_L ppolyf_u_3k r_width=2e-6 r_length=60e-6 m=1
+XR14 B[0] net10 VREF_L ppolyf_u_3k r_width=2e-6 r_length=60e-6 m=1
+XR15 net4 net11 VREF_L ppolyf_u_3k r_width=2e-6 r_length=60e-6 m=1
+XR16 net11 VREF_L VREF_L ppolyf_u_3k r_width=2e-6 r_length=60e-6 m=1
+XR11 net6 net5 VREF_L ppolyf_u_3k r_width=2e-6 r_length=60e-6 m=1
+XR12 net12 net5 VREF_L ppolyf_u_3k r_width=2e-6 r_length=60e-6 m=1
+XR17 B[4] net12 VREF_L ppolyf_u_3k r_width=2e-6 r_length=60e-6 m=1
 * tap: B[7:0] --> B[0]
 * tap: B[7:0] --> B[1]
 * tap: B[7:0] --> B[2]
 * tap: B[7:0] --> B[3]
 * tap: B[7:0] --> B[4]
-XR18 net13 net6 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
-XR19 net15 net6 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
-XR20 B[5] net15 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
-XR21 net14 net13 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
-XR22 net16 net13 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
-XR23 B[6] net16 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR18 net13 net6 VREF_L ppolyf_u_3k r_width=2e-6 r_length=60e-6 m=1
+XR19 net15 net6 VREF_L ppolyf_u_3k r_width=2e-6 r_length=60e-6 m=1
+XR20 B[5] net15 VREF_L ppolyf_u_3k r_width=2e-6 r_length=60e-6 m=1
+XR21 net14 net13 VREF_L ppolyf_u_3k r_width=2e-6 r_length=60e-6 m=1
+XR22 net16 net13 VREF_L ppolyf_u_3k r_width=2e-6 r_length=60e-6 m=1
+XR23 B[6] net16 VREF_L ppolyf_u_3k r_width=2e-6 r_length=60e-6 m=1
 * tap: B[7:0] --> B[5]
 * tap: B[7:0] --> B[6]
-XR24 FULL_R2R_OUT net14 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR24 FULL_R2R_OUT net14 VREF_L ppolyf_u_3k r_width=2e-6 r_length=60e-6 m=1
 * tap: B[7:0] --> B[7]
-XR25 net17 net14 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
-XR26 B[7] net17 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
+XR25 net17 net14 VREF_L ppolyf_u_3k r_width=2e-6 r_length=60e-6 m=1
+XR26 B[7] net17 VREF_L ppolyf_u_3k r_width=2e-6 r_length=60e-6 m=1
 .ends
 
 
@@ -94,42 +96,42 @@ XR26 B[7] net17 VREF_L ppolyf_u_3k r_width=2e-6 r_length=20e-6 m=1
 *.ipin VREF_L
 *.ipin B[4],B[3],B[2],B[1],B[0]
 *.ipin T[6],T[5],T[4],T[3],T[2],T[1],T[0]
-XR1 net1 net4 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR2 net2 net1 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR5 net6 net1 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR6 B[1] net6 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR3 net7 net2 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR4 B[2] net7 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR7 net3 net2 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR8 net5 net3 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR9 net8 net3 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR10 B[3] net8 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR13 net9 net4 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR14 B[0] net9 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR15 net4 net10 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR16 net10 VREF_L VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR11 5_3_DAC_OUT net5 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR12 net11 net5 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR17 B[4] net11 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
+XR1 net1 net4 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR2 net2 net1 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR5 net6 net1 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR6 B[1] net6 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR3 net7 net2 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR4 B[2] net7 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR7 net3 net2 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR8 net5 net3 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR9 net8 net3 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR10 B[3] net8 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR13 net9 net4 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR14 B[0] net9 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR15 net4 net10 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR16 net10 VREF_L VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR11 5_3_DAC_OUT net5 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR12 net11 net5 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR17 B[4] net11 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
 * tap: B[4:0] --> B[0]
 * tap: B[4:0] --> B[1]
 * tap: B[4:0] --> B[2]
 * tap: B[4:0] --> B[3]
 * tap: B[4:0] --> B[4]
-XR18 net12 5_3_DAC_OUT VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR19 T[0] net12 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR20 net13 5_3_DAC_OUT VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR21 T[1] net13 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR22 net14 5_3_DAC_OUT VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR23 T[2] net14 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR24 net15 5_3_DAC_OUT VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR25 T[3] net15 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR26 net16 5_3_DAC_OUT VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR27 T[4] net16 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR28 net17 5_3_DAC_OUT VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR29 T[5] net17 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR30 net18 5_3_DAC_OUT VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR31 T[6] net18 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
+XR18 net12 5_3_DAC_OUT VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR19 T[0] net12 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR20 net13 5_3_DAC_OUT VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR21 T[1] net13 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR22 net14 5_3_DAC_OUT VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR23 T[2] net14 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR24 net15 5_3_DAC_OUT VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR25 T[3] net15 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR26 net16 5_3_DAC_OUT VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR27 T[4] net16 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR28 net17 5_3_DAC_OUT VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR29 T[5] net17 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR30 net18 5_3_DAC_OUT VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR31 T[6] net18 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
 * tap: T[6:0] --> T[0]
 * tap: T[6:0] --> T[1]
 * tap: T[6:0] --> T[2]
@@ -148,41 +150,100 @@ XR31 T[6] net18 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
 *.ipin B[5],B[4],B[3],B[2],B[1],B[0]
 *.ipin T[2],T[1],T[0]
 *.opin 6_2_DAC_OUT
-XR1 net1 net4 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR2 net2 net1 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR5 net7 net1 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR6 B[1] net7 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR3 net8 net2 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR4 B[2] net8 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR7 net3 net2 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR8 net5 net3 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR9 net9 net3 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR10 B[3] net9 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR13 net10 net4 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR14 B[0] net10 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR15 net4 net11 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR16 net11 VREF_L VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR11 net6 net5 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR12 net12 net5 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR17 B[4] net12 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
+XR1 net1 net4 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR2 net2 net1 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR5 net7 net1 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR6 B[1] net7 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR3 net8 net2 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR4 B[2] net8 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR7 net3 net2 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR8 net5 net3 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR9 net9 net3 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR10 B[3] net9 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR13 net10 net4 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR14 B[0] net10 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR15 net4 net11 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR16 net11 VREF_L VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR11 net6 net5 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR12 net12 net5 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR17 B[4] net12 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
 * tap: B[5:0] --> B[0]
 * tap: B[5:0] --> B[1]
 * tap: B[5:0] --> B[2]
 * tap: B[5:0] --> B[3]
 * tap: B[5:0] --> B[4]
-XR18 6_2_DAC_OUT net6 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR19 net13 net6 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR20 B[5] net13 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
+XR18 6_2_DAC_OUT net6 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR19 net13 net6 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR20 B[5] net13 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
 * tap: B[5:0] --> B[5]
-XR21 net14 6_2_DAC_OUT VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR22 T[0] net14 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR23 net15 6_2_DAC_OUT VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR24 T[1] net15 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR25 net16 6_2_DAC_OUT VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR26 T[2] net16 VREF_L ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
+XR21 net14 6_2_DAC_OUT VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR22 T[0] net14 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR23 net15 6_2_DAC_OUT VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR24 T[1] net15 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR25 net16 6_2_DAC_OUT VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
+XR26 T[2] net16 VREF_L ppolyf_u_1k r_width=2e-6 r_length=60e-6 m=1
 * tap: T[2:0] --> T[0]
 * tap: T[2:0] --> T[1]
 * tap: T[2:0] --> T[2]
+.ends
+
+
+* expanding   symbol:  /home/j542yu/Documents/ece298a-msk-modem/xschem/dac.sym # of pins=3
+** sym_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/dac.sym
+** sch_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/dac.sch
+.subckt dac T[2] T[1] T[0] B[5] B[4] B[3] B[2] B[1] B[0] DAC_OUT
+*.ipin B[5],B[4],B[3],B[2],B[1],B[0]
+*.ipin T[2],T[1],T[0]
+*.opin DAC_OUT
+X1R_R1 net1 net2 1R
+X2R_R0 B[0] net1 2R
+X2R_Rg net1 GND 2R
+X2R_R1 B[1] net2 2R
+X1R_R2 net2 net3 1R
+X2R_R2 B[2] net3 2R
+X1R_R3 net3 net4 1R
+X2R_R3 B[3] net4 2R
+X1R_R4 net4 net5 1R
+X2R_R4 B[4] net5 2R
+X1R_R5 net5 net6 1R
+X2R_R5 B[5] net6 2R
+X1R_R6 net6 DAC_OUT 1R
+X2R_R6 T[0] DAC_OUT 2R
+X2R_R7 T[1] DAC_OUT 2R
+X2R_R8 T[2] DAC_OUT 2R
+* tap: B[5:0] --> B[0]
+* tap: B[5:0] --> B[1]
+* tap: B[5:0] --> B[2]
+* tap: B[5:0] --> B[3]
+* tap: B[5:0] --> B[4]
+* tap: B[5:0] --> B[5]
+* tap: T[2:0] --> T[0]
+* tap: T[2:0] --> T[1]
+* tap: T[2:0] --> T[2]
+.ends
+
+
+* expanding   symbol:  /home/j542yu/Documents/ece298a-msk-modem/xschem/1R.sym # of pins=2
+** sym_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/1R.sym
+** sch_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/1R.sch
+.subckt 1R 1R_1 1R_2
+*.iopin 1R_1
+*.iopin 1R_2
+XR1 net1 1R_1 GND ppolyf_u_1k r_width=2e-6 r_length=30e-6 m=1
+XR29 1R_2 net1 GND ppolyf_u_1k r_width=2e-6 r_length=30e-6 m=1
+.ends
+
+
+* expanding   symbol:  /home/j542yu/Documents/ece298a-msk-modem/xschem/2R.sym # of pins=2
+** sym_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/2R.sym
+** sch_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/2R.sch
+.subckt 2R 2R_1 2R_2
+*.iopin 2R_1
+*.iopin 2R_2
+XR1 net1 2R_1 GND ppolyf_u_1k r_width=2e-6 r_length=30e-6 m=1
+XR29 net2 net1 GND ppolyf_u_1k r_width=2e-6 r_length=30e-6 m=1
+XR2 net3 net2 GND ppolyf_u_1k r_width=2e-6 r_length=30e-6 m=1
+XR3 2R_2 net3 GND ppolyf_u_1k r_width=2e-6 r_length=30e-6 m=1
 .ends
 
 .GLOBAL GND

@@ -1,7 +1,7 @@
 magic
 tech gf180mcuD
 magscale 1 10
-timestamp 1793655986
+timestamp 1793824113
 << metal1 >>
 rect 5140 5730 5690 8440
 rect 4660 5690 5690 5730
@@ -1700,7 +1700,7 @@ flabel space 43952 3916 49952 4316 0 FreeSans 1600 0 0 0 R62
 flabel space 18416 6796 24416 7196 0 FreeSans 1600 0 0 0 R62
 flabel space 24800 6796 30800 7196 0 FreeSans 1600 0 0 0 R61
 flabel space 37568 3916 43568 4316 0 FreeSans 1600 0 0 0 R61
-flabel metal4 50336 3916 56336 4316 0 FreeSans 1600 0 0 0 R6
+flabel space 50336 3916 56336 4316 0 FreeSans 1600 0 0 0 R6
 flabel space 12032 6796 18032 7196 0 FreeSans 1600 0 0 0 R6
 flabel space 12032 6316 18032 6716 0 FreeSans 1600 0 0 0 R51
 flabel space 50336 4396 56336 4796 0 FreeSans 1600 0 0 0 R51
@@ -1717,9 +1717,6 @@ flabel space 18416 3916 24416 4316 0 FreeSans 1600 0 0 0 R32
 flabel space 24800 3916 30800 4316 0 FreeSans 1600 0 0 0 R31
 flabel space 37568 6796 43568 7196 0 FreeSans 1600 0 0 0 R31
 flabel space 50336 6796 56336 7196 0 FreeSans 1600 0 0 0 R4
-flabel space 43952 7276 49952 7676 0 FreeSans 1600 0 0 0 R71
-flabel space 24800 3436 30800 3836 0 FreeSans 1600 0 0 0 R71
-flabel space 18416 3436 24416 3836 0 FreeSans 1600 0 0 0 R72
 flabel space 24800 7276 30800 7676 0 FreeSans 1600 0 0 0 R81
 flabel space 18416 7276 24416 7676 0 FreeSans 1600 0 0 0 R82
 flabel space 37568 3436 43568 3836 0 FreeSans 1600 0 0 0 R81
@@ -1747,12 +1744,10 @@ flabel metal3 s 39680 5360 45730 5750 0 FreeSans 1600 0 0 0 R21,R21
 flabel metal3 s 38480 6320 44260 6720 0 FreeSans 1600 0 0 0 R32,R32
 flabel metal1 s 43550 6800 43990 7200 0 FreeSans 800 0 0 0 R32,R31
 flabel metal3 s 35770 3900 39300 4310 0 FreeSans 1600 0 0 0 R31,R31
-flabel metal2 s 26870 4280 27300 11380 0 FreeSans 1600 0 0 0 R31,B[3]
 flabel metal4 s 27790 6800 38710 7180 0 FreeSans 1600 0 0 0 R4,R4
 flabel metal1 s 56140 6300 56490 7220 0 FreeSans 800 0 0 0 R4,R42
 flabel metal4 s 27350 3900 45650 4310 0 FreeSans 1600 0 0 0 R42,R42
 flabel metal1 s 11890 4390 12260 5280 0 FreeSans 800 0 0 0 R42,R41
-flabel metal4 37568 7276 43568 7676 0 FreeSans 1600 0 0 0 R72
 flabel metal4 s 26750 7270 45850 7680 0 FreeSans 1600 0 0 0 R41,R41
 flabel metal2 s 55410 5710 55930 6340 0 FreeSans 800 0 0 0 R42,R5
 flabel metal4 s 35160 3430 39960 3820 0 FreeSans 1600 0 0 0 R5,R5
@@ -1764,11 +1759,8 @@ flabel metal2 s 12350 5850 12730 6820 0 FreeSans 800 0 0 0 R52,R6
 flabel metal3 s 34120 2910 41050 3340 0 FreeSans 1600 0 0 0 R6,R6
 flabel metal1 s 49940 3910 50360 4330 0 FreeSans 800 0 0 0 R6,R62
 flabel metal1 s 49700 3420 50180 4310 0 FreeSans 800 0 0 0 R6,R82
-flabel space 43952 7276 49952 7676 0 FreeSans 1600 0 0 0 R72
-flabel metal4 37568 7276 43568 7676 0 FreeSans 1600 0 0 0 R71
 flabel metal4 s 33890 2910 44300 3330 0 FreeSans 1600 0 0 0 R82,R82
 flabel metal1 s 24410 7270 24810 7680 0 FreeSans 800 0 0 0 R82,R81
-flabel metal2 s 43080 3840 43640 11550 0 FreeSans 1600 0 0 0 R81,T[2]
 flabel metal4 s 32230 2250 38460 2650 0 FreeSans 1600 0 0 0 R62,R62
 flabel metal3 s 26110 2860 33350 3320 0 FreeSans 1600 0 0 0 R81,R81
 flabel metal3 s 32230 1730 38440 2120 0 FreeSans 1600 0 0 0 R61,R61
@@ -1776,24 +1768,27 @@ flabel metal3 s 19550 8490 43890 9050 0 FreeSans 1600 0 0 0 R72,R72
 flabel metal1 s 24410 3420 24810 3830 0 FreeSans 800 0 0 0 R72,R71
 flabel metal2 s 41550 2120 42130 7320 0 FreeSans 1600 0 0 0 R71,R71
 flabel metal2 s 4150 5390 4710 5723 0 FreeSans 1600 0 0 0 VGND
-port 10 nsew
-flabel metal4 s 16930 6680 17420 11850 0 FreeSans 1600 0 0 0 B[5]
+port 9 nsew
+flabel space 37568 7276 43568 7676 0 FreeSans 1600 0 0 0 R71
+flabel space 43952 7276 49952 7676 0 FreeSans 1600 0 0 0 R72
+flabel space 24800 3436 30800 3836 0 FreeSans 1600 0 0 0 R71
+flabel space 18416 3436 24416 3836 0 FreeSans 1600 0 0 0 R72
+flabel metal4 s 16970 9160 17370 9490 0 FreeSans 1600 0 0 0 B[5]
 port 5 nsew
-flabel metal4 s 18260 6680 18670 11840 0 FreeSans 1600 0 0 0 B[1]
+flabel metal4 18290 9170 18640 9500 0 FreeSans 1600 0 0 0 B[1]
 port 1 nsew
-flabel metal4 s 26870 9500 27300 9550 0 FreeSans 1600 0 0 0 B[3]
-port 11 nsew
-flabel metal4 s 27430 6220 27840 11380 0 FreeSans 1600 0 0 0 B[0]
+flabel metal4 26910 9240 27240 9500 0 FreeSans 1600 0 0 0 B[3]
+port 3 nsew
+flabel metal4 27450 9210 27820 9510 0 FreeSans 1600 0 0 0 B[0]
 port 0 nsew
-flabel metal4 s 37470 7640 38030 11500 0 FreeSans 1600 0 0 0 T[1]
+flabel metal4 s 37500 9170 37990 9510 0 FreeSans 1600 0 0 0 T[1]
 port 7 nsew
-flabel metal4 s 42420 4270 42970 11550 0 FreeSans 1600 0 0 0 T[0]
+flabel metal4 s 42500 9240 42910 9500 0 FreeSans 1600 0 0 0 T[0]
 port 6 nsew
-flabel metal4 s 43080 9490 43660 9530 0 FreeSans 1600 0 0 0 T[2]
-port 12 nsew
-flabel metal4 s 46300 5230 46770 11580 0 FreeSans 1600 0 0 0 B[2]
+flabel metal4 s 43120 9200 43590 9490 0 FreeSans 1600 0 0 0 T[2]
+port 8 nsew
+flabel metal4 s 46350 9210 46710 9510 0 FreeSans 1600 0 0 0 B[2]
 port 2 nsew
-flabel metal4 s 50760 6200 51160 11550 0 FreeSans 1600 0 0 0 B[4]
-<< properties >>
-string FIXED_BBOX 0 0 69328 65072
+flabel metal4 s 50810 9220 51110 9500 0 FreeSans 1600 0 0 0 B[4]
+port 4 nsew
 << end >>
