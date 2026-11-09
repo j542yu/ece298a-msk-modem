@@ -1,34 +1,42 @@
 from pathlib import Path
 import math
 
-# DAC stimulus parameters
-V_LOW = 0.0
-V_HIGH = 3.3
+# F_S is output rate of digital portion of modulator
+F_S = 50e6
+DWELL = 1 / F_S
 
-DWELL = 0.5e-6       # Time per DAC code: 1 us
-EDGE = 1e-9        # Transition ramp: 1 ns
-
-NUM_R2R_BITS = 8
-NUM_THERM_BITS = 0
-
-# Select: "sweep", "sine", "ramp", "triangle", "alternating",
-WAVEFORM = "sine"
-
-# Sine and triangle parameters
-SAMPLES_PER_PERIOD = 64
-NUM_PERIODS = 4
-
-# Ramp parameter
-RAMP_SAMPLES = 256
-
-OUTPUT = Path(
-    f"dac_{WAVEFORM}_{DWELL*1e6}us_"
-    f"{NUM_R2R_BITS}_{NUM_THERM_BITS}.spice"
-)
+# DAC parameters
+NUM_R2R_BITS = 6
+NUM_THERM_BITS = 2
 
 NUM_BITS = NUM_R2R_BITS + NUM_THERM_BITS
 MAX_CODE = (1 << NUM_BITS) - 1
 
+V_HIGH = 3.3
+V_LOW = 0
+
+# MSK parameters
+F_IF = 2e6
+
+# Samples/symbol in digital portion of modulator
+M = 8
+
+# Stimulus parameters
+NUM_SYMBOLS = 100
+EDGE = 1e-9
+
+# Derived waveform parameters
+F_MIN = F_IF - F_S / (4 * M)
+F_MAX = F_IF + F_S / (4 * M)
+
+if not (0 < F_MIN < F_MAX < F_S / 2):
+    raise ValueError("MSK frequencies must be between DC and Nyquist")
+
+OUTPUT = Path(
+    f"dac_sine_sampling-{F_S/1e6}MHz_"
+    f"if-{F_IF/1e6}MHz_"
+    f"{NUM_R2R_BITS}_{NUM_THERM_BITS}.spice"
+)
 
 def dac_inputs_seg(code):
     """Return B inputs followed by thermometer T inputs"""
@@ -50,60 +58,32 @@ def spice_voltage(value):
     return V_HIGH if value else V_LOW
 
 
-def generate_codes():
-    """Generate the digital DAC code sequence for the selected waveform"""
+def generate_sine_codes():
+    # Alternate between minimum and maximum MSK frequencies
+    phase = 0.0
+    codes = []
 
-    if WAVEFORM == "sweep":
-        # Every code exactly once: useful for static linearity tests
-        return list(range(MAX_CODE + 1))
+    for symbol in range(NUM_SYMBOLS):
 
-    elif WAVEFORM == "sine":
-        # Full-scale sine, quantized to integer DAC codes
-        # Starts at midscale and repeats NUM_PERIODS times
-        count = SAMPLES_PER_PERIOD * NUM_PERIODS
-        return [
-            round(
-                MAX_CODE / 2
-                * (1 + math.sin(
-                    2 * math.pi * n / SAMPLES_PER_PERIOD
-                ))
+        # Alternate frequency every symbol
+        frequency = F_MIN if symbol % 2 == 0 else F_MAX
+
+        # Constant phase increment throughout this symbol
+        phase_increment = 2 * math.pi * frequency / F_S
+
+        for _ in range(M):
+
+            # Convert cosine amplitude into an 8-bit offset-binary code
+            code = round(
+                MAX_CODE / 2 * (1 + math.cos(phase))
             )
-            for n in range(count)
-        ]
 
-    elif WAVEFORM == "ramp":
-        # Uniformly spaced codes from zero to full scale
-        if RAMP_SAMPLES < 2:
-            raise ValueError("RAMP_SAMPLES must be at least 2")
+            codes.append(code)
 
-        return [
-            round(MAX_CODE * n / (RAMP_SAMPLES - 1))
-            for n in range(RAMP_SAMPLES)
-        ]
+            # Accumulate phase, preserving continuity between symbols
+            phase = (phase + phase_increment) % (2 * math.pi)
 
-    elif WAVEFORM == "triangle":
-        # Repeating linear rise and fall
-        count = SAMPLES_PER_PERIOD * NUM_PERIODS
-        codes = []
-
-        for n in range(count):
-            phase = (n % SAMPLES_PER_PERIOD) / SAMPLES_PER_PERIOD
-            value = 1 - abs(2 * phase - 1)
-            codes.append(round(MAX_CODE * value))
-
-        return codes
-
-    elif WAVEFORM == "alternating":
-        # Repeated major bit-pattern transitions
-        # For an 8-bit DAC: 0x55 <-> 0xAA
-        return [
-            (0x55 & MAX_CODE) if n % 2 == 0
-            else (0xAA & MAX_CODE)
-            for n in range(32)
-        ]
-
-    else:
-        raise ValueError(f"Unknown waveform: {WAVEFORM}")
+    return codes
 
 
 def generate_source(name, node, bit_index, codes):
@@ -150,10 +130,9 @@ def main():
     if EDGE < 0 or EDGE >= DWELL:
         raise ValueError("EDGE must satisfy 0 <= EDGE < DWELL")
 
-    codes = generate_codes()
+    codes = generate_sine_codes()
 
     lines = [
-        f"* Automatically generated DAC stimulus: {WAVEFORM}",
         f"* DAC bits: {NUM_BITS}",
         f"* Number of code intervals: {len(codes)}",
         f"* Dwell: {DWELL} s",
@@ -184,7 +163,6 @@ def main():
 
     OUTPUT.write_text("\n".join(lines) + "\n")
 
-    print(f"Waveform: {WAVEFORM}")
     print(f"Codes generated: {len(codes)}")
     print(f"Duration: {len(codes) * DWELL:.6g} s")
     print(f"Wrote {OUTPUT.resolve()}")
