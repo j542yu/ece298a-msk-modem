@@ -25,8 +25,8 @@ def check(dut, val):
 async def phase_accumulator_test(dut):
     dut._log.info("Start")
 
-    # Set the clock period to 100 ps (10 MHz)
-    clock = Clock(dut.clk, 100, unit="ps")
+    # Set the clock period to 20 ns (50 MHz)
+    clock = Clock(dut.clk, 20, unit="ns")
     cocotb.start_soon(clock.start())
 
     # Reset
