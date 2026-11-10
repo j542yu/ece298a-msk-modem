@@ -88,7 +88,7 @@ async def stream(dut, input):
         # dut._log.info(dut.uo_out.value)
         await ClockCycles(dut.clk, 8)
 
-@cocotb.test(skip=True)
+@cocotb.test(skip=False)
 async def mod_6_2_test(dut):
     dut._log.info("Start")
 
@@ -250,7 +250,7 @@ async def mod_6_2_test(dut):
     
     check_6_2(dut, 0x5D)
 
-@cocotb.test(skip=False)    
+@cocotb.test(skip=True)    
 async def mod_5_3_test(dut):
     dut._log.info("Start")
 
