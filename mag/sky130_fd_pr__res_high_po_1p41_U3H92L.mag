@@ -1,0 +1,150 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1794328397
+<< xpolycontact >>
+rect -1464 8444 -1182 8876
+rect -1464 -8876 -1182 -8444
+rect -1086 8444 -804 8876
+rect -1086 -8876 -804 -8444
+rect -708 8444 -426 8876
+rect -708 -8876 -426 -8444
+rect -330 8444 -48 8876
+rect -330 -8876 -48 -8444
+rect 48 8444 330 8876
+rect 48 -8876 330 -8444
+rect 426 8444 708 8876
+rect 426 -8876 708 -8444
+rect 804 8444 1086 8876
+rect 804 -8876 1086 -8444
+rect 1182 8444 1464 8876
+rect 1182 -8876 1464 -8444
+<< ppolyres >>
+rect -1464 -8444 -1182 8444
+rect -1086 -8444 -804 8444
+rect -708 -8444 -426 8444
+rect -330 -8444 -48 8444
+rect 48 -8444 330 8444
+rect 426 -8444 708 8444
+rect 804 -8444 1086 8444
+rect 1182 -8444 1464 8444
+<< viali >>
+rect -1448 8461 -1198 8858
+rect -1070 8461 -820 8858
+rect -692 8461 -442 8858
+rect -314 8461 -64 8858
+rect 64 8461 314 8858
+rect 442 8461 692 8858
+rect 820 8461 1070 8858
+rect 1198 8461 1448 8858
+rect -1448 -8858 -1198 -8461
+rect -1070 -8858 -820 -8461
+rect -692 -8858 -442 -8461
+rect -314 -8858 -64 -8461
+rect 64 -8858 314 -8461
+rect 442 -8858 692 -8461
+rect 820 -8858 1070 -8461
+rect 1198 -8858 1448 -8461
+<< metal1 >>
+rect -1454 8858 -1192 8870
+rect -1454 8461 -1448 8858
+rect -1198 8461 -1192 8858
+rect -1454 8449 -1192 8461
+rect -1076 8858 -814 8870
+rect -1076 8461 -1070 8858
+rect -820 8461 -814 8858
+rect -1076 8449 -814 8461
+rect -698 8858 -436 8870
+rect -698 8461 -692 8858
+rect -442 8461 -436 8858
+rect -698 8449 -436 8461
+rect -320 8858 -58 8870
+rect -320 8461 -314 8858
+rect -64 8461 -58 8858
+rect -320 8449 -58 8461
+rect 58 8858 320 8870
+rect 58 8461 64 8858
+rect 314 8461 320 8858
+rect 58 8449 320 8461
+rect 436 8858 698 8870
+rect 436 8461 442 8858
+rect 692 8461 698 8858
+rect 436 8449 698 8461
+rect 814 8858 1076 8870
+rect 814 8461 820 8858
+rect 1070 8461 1076 8858
+rect 814 8449 1076 8461
+rect 1192 8858 1454 8870
+rect 1192 8461 1198 8858
+rect 1448 8461 1454 8858
+rect 1192 8449 1454 8461
+rect -1454 -8461 -1192 -8449
+rect -1454 -8858 -1448 -8461
+rect -1198 -8858 -1192 -8461
+rect -1454 -8870 -1192 -8858
+rect -1076 -8461 -814 -8449
+rect -1076 -8858 -1070 -8461
+rect -820 -8858 -814 -8461
+rect -1076 -8870 -814 -8858
+rect -698 -8461 -436 -8449
+rect -698 -8858 -692 -8461
+rect -442 -8858 -436 -8461
+rect -698 -8870 -436 -8858
+rect -320 -8461 -58 -8449
+rect -320 -8858 -314 -8461
+rect -64 -8858 -58 -8461
+rect -320 -8870 -58 -8858
+rect 58 -8461 320 -8449
+rect 58 -8858 64 -8461
+rect 314 -8858 320 -8461
+rect 58 -8870 320 -8858
+rect 436 -8461 698 -8449
+rect 436 -8858 442 -8461
+rect 692 -8858 698 -8461
+rect 436 -8870 698 -8858
+rect 814 -8461 1076 -8449
+rect 814 -8858 820 -8461
+rect 1070 -8858 1076 -8461
+rect 814 -8870 1076 -8858
+rect 1192 -8461 1454 -8449
+rect 1192 -8858 1198 -8461
+rect 1448 -8858 1454 -8461
+rect 1192 -8870 1454 -8858
+<< labels >>
+rlabel xpolycontact -1323 8841 -1323 8841 0 R1_0
+port 1 nsew
+rlabel xpolycontact -1323 -8841 -1323 -8841 0 R2_0
+port 2 nsew
+rlabel xpolycontact -945 8841 -945 8841 0 R1_1
+port 3 nsew
+rlabel xpolycontact -945 -8841 -945 -8841 0 R2_1
+port 4 nsew
+rlabel xpolycontact -567 8841 -567 8841 0 R1_2
+port 5 nsew
+rlabel xpolycontact -567 -8841 -567 -8841 0 R2_2
+port 6 nsew
+rlabel xpolycontact -189 8841 -189 8841 0 R1_3
+port 7 nsew
+rlabel xpolycontact -189 -8841 -189 -8841 0 R2_3
+port 8 nsew
+rlabel xpolycontact 189 8841 189 8841 0 R1_4
+port 9 nsew
+rlabel xpolycontact 189 -8841 189 -8841 0 R2_4
+port 10 nsew
+rlabel xpolycontact 567 8841 567 8841 0 R1_5
+port 11 nsew
+rlabel xpolycontact 567 -8841 567 -8841 0 R2_5
+port 12 nsew
+rlabel xpolycontact 945 8841 945 8841 0 R1_6
+port 13 nsew
+rlabel xpolycontact 945 -8841 945 -8841 0 R2_6
+port 14 nsew
+rlabel xpolycontact 1323 8841 1323 8841 0 R1_7
+port 15 nsew
+rlabel xpolycontact 1323 -8841 1323 -8841 0 R2_7
+port 16 nsew
+<< properties >>
+string gencell sky130_fd_pr__res_high_po_1p41
+string library sky130
+string parameters w 1.410 l 84.6 m 1 nx 8 wmin 1.410 lmin 0.50 class resistor rho 319.8 val 19.464k dummy 0 dw 0.0 term 194.82 sterm 0.0 caplen 0 guard 0 glc 0 grc 0 gtc 0 gbc 0 compatible {sky130_fd_pr__res_high_po_0p35  sky130_fd_pr__res_high_po_0p69 sky130_fd_pr__res_high_po_1p41  sky130_fd_pr__res_high_po_2p85 sky130_fd_pr__res_high_po_5p73} snake 0 full_metal 0 wmax 1.410 n_guard 0 hv_guard 0 vias 1 viagb 0 viagt 0 viagl 0 viagr 0 doports 1
+<< end >>

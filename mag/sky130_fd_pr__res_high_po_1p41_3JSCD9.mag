@@ -1,0 +1,61 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1794327346
+<< pwell >>
+rect -9001 -9042 9001 9042
+<< psubdiff >>
+rect -8965 8972 -8869 9006
+rect 8869 8972 8965 9006
+rect -8965 8910 -8931 8972
+rect 8931 8910 8965 8972
+rect -8965 -8972 -8931 -8910
+rect 8931 -8972 8965 -8910
+rect -8965 -9006 -8869 -8972
+rect 8869 -9006 8965 -8972
+<< psubdiffcont >>
+rect -8869 8972 8869 9006
+rect -8965 -8910 -8931 8910
+rect 8931 -8910 8965 8910
+rect -8869 -9006 8869 -8972
+<< xpolycontact >>
+rect -8835 8444 -8553 8876
+rect -8835 -8876 -8553 -8444
+rect 2883 8444 3165 8876
+rect 2883 -8876 3165 -8444
+rect 8553 8444 8835 8876
+rect 8553 -8876 8835 -8444
+<< ppolyres >>
+rect -8835 -8444 -8553 8444
+rect 2883 -8444 3165 8444
+rect 8553 -8444 8835 8444
+<< locali >>
+rect -8965 8972 -8869 9006
+rect 8869 8972 8965 9006
+rect -8965 8910 -8931 8972
+rect 8931 8910 8965 8972
+rect -8965 -8972 -8931 -8910
+rect 8931 -8972 8965 -8910
+rect -8965 -9006 -8869 -8972
+rect 8869 -9006 8965 -8972
+<< labels >>
+rlabel psubdiffcont 0 -8989 0 -8989 0 B
+port 1 nsew
+rlabel xpolycontact -8694 8841 -8694 8841 0 R1_0
+port 2 nsew
+rlabel xpolycontact -8694 -8841 -8694 -8841 0 R2_0
+port 3 nsew
+rlabel xpolycontact 3024 8841 3024 8841 0 R1_31
+port 64 nsew
+rlabel xpolycontact 3024 -8841 3024 -8841 0 R2_31
+port 65 nsew
+rlabel xpolycontact 8694 8841 8694 8841 0 R1_46
+port 94 nsew
+rlabel xpolycontact 8694 -8841 8694 -8841 0 R2_46
+port 95 nsew
+<< properties >>
+string FIXED_BBOX -8948 -8989 8948 8989
+string gencell sky130_fd_pr__res_high_po_1p41
+string library sky130
+string parameters w 1.410 l 84.6 m 1 nx 47 wmin 1.410 lmin 0.50 class resistor rho 319.8 val 19.464k dummy 0 dw 0.0 term 194.82 sterm 0.0 caplen 0 guard 1 glc 1 grc 1 gtc 1 gbc 1 compatible {sky130_fd_pr__res_high_po_0p35  sky130_fd_pr__res_high_po_0p69 sky130_fd_pr__res_high_po_1p41  sky130_fd_pr__res_high_po_2p85 sky130_fd_pr__res_high_po_5p73} snake 0 full_metal 1 wmax 1.410 n_guard 0 hv_guard 0 vias 0 viagb 0 viagt 0 viagl 0 viagr 0 doports 1
+<< end >>

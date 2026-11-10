@@ -1,0 +1,71 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1794328853
+<< error_s >>
+rect 11755 18432 14119 18434
+rect 4581 18430 6945 18432
+rect 9117 18430 11481 18432
+rect 11755 18430 17142 18432
+rect 2411 578 2693 582
+rect 2789 578 3071 582
+rect 3167 578 3449 582
+rect 3545 578 3827 582
+rect 3923 578 4205 582
+rect 4301 578 4583 582
+<< metal1 >>
+rect 1269 0 1551 1000
+rect 3545 -4 3827 996
+rect 5811 2 6093 1002
+rect 8069 0 8351 1000
+rect 10347 2 10629 1002
+rect 11847 24 12129 1024
+rect 12223 24 12505 1024
+rect 12615 24 12897 1024
+rect 15630 14 15912 1014
+rect 16010 14 16292 1014
+rect 16386 14 16668 1014
+rect 16762 14 17044 1014
+<< metal2 >>
+rect 11037 570 15614 1082
+rect 13797 29 14307 570
+use dac_r2r_5_bits  dac_r2r_5_bits_0
+timestamp 1794328490
+transform 1 0 -10 0 1 0
+box 0 -4 11877 19073
+use dac_therm_3_bits  dac_therm_3_bits_0
+timestamp 1794328490
+transform 1 0 11706 0 1 24
+box 0 -16 5346 19385
+use sky130_fd_pr__res_high_po_1p41_3JSCD9  sky130_fd_pr__res_high_po_1p41_3JSCD9_0
+timestamp 1794327346
+transform 1 0 8593 0 1 9458
+box -9001 -9042 9001 9042
+<< labels >>
+flabel metal1 1269 0 1551 1000 0 FreeSans 1600 0 0 0 B[0]
+port 1 nsew
+flabel metal1 3545 -4 3827 996 0 FreeSans 1600 0 0 0 B[1]
+port 2 nsew
+flabel metal1 5811 2 6093 1002 0 FreeSans 1600 0 0 0 B[2]
+port 3 nsew
+flabel metal1 8069 0 8351 1000 0 FreeSans 1600 0 0 0 B[3]
+port 4 nsew
+flabel metal1 10347 2 10629 1002 0 FreeSans 1600 0 0 0 B[4]
+port 5 nsew
+flabel metal1 11847 24 12129 1024 0 FreeSans 1600 0 0 0 T[0]
+port 6 nsew
+flabel metal1 12223 24 12505 1024 0 FreeSans 1600 0 0 0 T[1]
+port 7 nsew
+flabel metal1 12615 24 12897 1024 0 FreeSans 1600 0 0 0 T[2]
+port 9 nsew
+flabel metal1 15630 14 15912 1014 0 FreeSans 1600 0 0 0 T[3]
+port 10 nsew
+flabel metal1 16010 14 16292 1014 0 FreeSans 1600 0 0 0 T[4]
+port 11 nsew
+flabel metal1 16386 14 16668 1014 0 FreeSans 1600 0 0 0 T[5]
+port 12 nsew
+flabel metal1 16762 14 17044 1014 0 FreeSans 1600 0 0 0 T[6]
+port 14 nsew
+flabel metal2 13797 29 14307 1082 0 FreeSans 1600 0 0 0 OUT
+port 16 nsew
+<< end >>
