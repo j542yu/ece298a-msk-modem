@@ -1,8 +1,8 @@
 `default_nettype none
 
-module transmit (
+module transmit_6_2 (
   input wire in,
-  output reg [7:0] out, // Correct output occurs one clock cycle after the input signal completes
+  output wire [8:0] out, // Correct output occurs one clock cycle after the input signal completes
   input wire clk,
   input wire rst_n,
   input wire enable
@@ -14,8 +14,11 @@ parameter I_F_OFFSET = 16'h0A3D; // 0.04 * 256,  IF/sample_freq = 0.04, 8 sample
 
 reg [15:0] phase;
 reg delay_en; // Shifted enable to ensure that input has enough time to update and avoid errors at the beginning of transmission
+reg [7:0] cos_out;
 
-cos_lut lut (.angle_in(phase[15:8]), .cos(out));
+cos_lut lut (.angle_in(phase[15:8]), .cos(cos_out));
+
+assign out = { {cos_out[7] & cos_out[6]}, {cos_out[7] & !cos_out[6]}, {!cos_out[7] & cos_out[6]}, {cos_out[5:0]}};
 
 always @(posedge clk or negedge rst_n) begin
   if (!rst_n) delay_en <= 0;

@@ -19,14 +19,35 @@ module tt_um_example (
   // All output pins must be assigned. If not used, assign to 0.
   // assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
   // assign uio_out = 0;
-  assign uio_oe  = 8'b11111000;
-  assign uio_out[7:1] = 0;
 
-  wire [7:0] t_out;
-  assign uio_out[0] = t_out[7];
-  assign uo_out = { {t_out[6:2]}, {t_out[1] & t_out[0]}, {t_out[1] & !t_out[0]}, {!t_out[1] & t_out[0]} }; // 6 bit binary + 3 bit thermometer coding
+  assign uio_oe = 8'b11111110;
 
-  transmit transmit_inst(
+  // 6_2
+  // assign uio_out[7:2] = 0;
+  // assign uio_out[0] = 0;
+
+  // wire [8:0] t_out;
+  // assign uio_out[1]= t_out[8];
+  // assign uo_out = t_out[7:0];
+
+  // transmit_6_2 transmit_inst(
+  //   .in(uio_in[0]),
+  //   .out(t_out),
+  //   .clk(clk),
+  //   .rst_n(rst_n),
+  //   .enable(uio_in[2])
+  // );
+
+
+  // 5_3
+  assign uio_out[7:5] = 0;
+  assign uio_out[0] = 0;
+
+  wire [11:0] t_out;
+  assign uio_out[4:1] = t_out[11:8];
+  assign uo_out = t_out[7:0];
+
+  transmit_5_3 transmit_inst(
     .in(uio_in[0]),
     .out(t_out),
     .clk(clk),
