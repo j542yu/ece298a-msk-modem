@@ -1,0 +1,89 @@
+** sch_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/tb_dac.sch
+**.subckt tb_dac B_5_3[4],B_5_3[3],B_5_3[2],B_5_3[1],B_5_3[0]
+*+ T_5_3[6],T_5_3[5],T_5_3[4],T_5_3[3],T_5_3[2],T_5_3[1],T_5_3[0] DAC_5_3_OUT
+*.ipin B_5_3[4],B_5_3[3],B_5_3[2],B_5_3[1],B_5_3[0]
+*.ipin T_5_3[6],T_5_3[5],T_5_3[4],T_5_3[3],T_5_3[2],T_5_3[1],T_5_3[0]
+*.opin DAC_5_3_OUT
+x1 DAC_5_3_OUT B_5_3[4] B_5_3[3] B_5_3[2] B_5_3[1] B_5_3[0] T_5_3[6] T_5_3[5] T_5_3[4] T_5_3[3]
++ T_5_3[2] T_5_3[1] T_5_3[0] dac_seg_5_3
+**** begin user architecture code
+
+.option wnflag=1
+
+.control
+    tran 100p 16us
+    write tb_dac.raw
+.endc
+
+
+
+.include dac_sine_sampling-50.0MHz_if-3.5MHz_5_3.spice
+
+.lib /usr/local/share/pdk/sky130B/libs.tech/combined/sky130.lib.spice tt
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  dac_seg_5_3.sym # of pins=3
+** sym_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/dac_seg_5_3.sym
+** sch_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/dac_seg_5_3.sch
+.subckt dac_seg_5_3 DAC_OUT B[4] B[3] B[2] B[1] B[0] T[6] T[5] T[4] T[3] T[2] T[1] T[0]
+*.ipin B[4],B[3],B[2],B[1],B[0]
+*.ipin T[6],T[5],T[4],T[3],T[2],T[1],T[0]
+*.opin DAC_OUT
+x1 net2 net1 B[0] dac_sub_r2r
+x2 net3 net2 B[1] dac_sub_r2r
+x3 net4 net3 B[2] dac_sub_r2r
+x4 net5 net4 B[3] dac_sub_r2r
+x5 DAC_OUT net5 B[4] dac_sub_r2r
+* tap: B[4:0] --> B[0]
+* tap: B[4:0] --> B[1]
+* tap: B[4:0] --> B[2]
+* tap: B[4:0] --> B[3]
+* tap: B[4:0] --> B[4]
+XR1 net6 net1 net7 sky130_fd_pr__res_high_po_1p41 L=42.3 mult=1 m=1
+XR4 GND net6 net8 sky130_fd_pr__res_high_po_1p41 L=42.3 mult=1 m=1
+x6 DAC_OUT T[0] dac_sub_therm
+x7 DAC_OUT T[1] dac_sub_therm
+x8 DAC_OUT T[2] dac_sub_therm
+x9 DAC_OUT T[3] dac_sub_therm
+x10 DAC_OUT T[4] dac_sub_therm
+x11 DAC_OUT T[5] dac_sub_therm
+x12 DAC_OUT T[6] dac_sub_therm
+* tap: T[6:0] --> T[0]
+* tap: T[6:0] --> T[1]
+* tap: T[6:0] --> T[2]
+* tap: T[6:0] --> T[3]
+* tap: T[6:0] --> T[4]
+* tap: T[6:0] --> T[5]
+* tap: T[6:0] --> T[6]
+.ends
+
+
+* expanding   symbol:  dac_sub_r2r.sym # of pins=3
+** sym_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/dac_sub_r2r.sym
+** sch_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/dac_sub_r2r.sch
+.subckt dac_sub_r2r R_node_out R_node_in in
+*.ipin in
+*.iopin R_node_out
+*.iopin R_node_in
+XR1 net1 R_node_in GND sky130_fd_pr__res_high_po_1p41 L=42.3 mult=1 m=1
+XR2 net2 R_node_in GND sky130_fd_pr__res_high_po_1p41 L=42.3 mult=1 m=1
+XR3 net3 R_node_in GND sky130_fd_pr__res_high_po_1p41 L=42.3 mult=1 m=1
+XR4 in net1 GND sky130_fd_pr__res_high_po_1p41 L=42.3 mult=1 m=1
+XR5 R_node_out net2 GND sky130_fd_pr__res_high_po_1p41 L=42.3 mult=1 m=1
+XR6 R_node_out net3 GND sky130_fd_pr__res_high_po_1p41 L=42.3 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  dac_sub_therm.sym # of pins=2
+** sym_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/dac_sub_therm.sym
+** sch_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/dac_sub_therm.sch
+.subckt dac_sub_therm R_node in
+*.ipin in
+*.iopin R_node
+XR1 net1 R_node GND sky130_fd_pr__res_high_po_1p41 L=42.3 mult=1 m=1
+XR4 in net1 GND sky130_fd_pr__res_high_po_1p41 L=42.3 mult=1 m=1
+.ends
+
+.GLOBAL GND
+.end
