@@ -1,0 +1,17 @@
+magic
+tech sky130B
+timestamp 1794344388
+<< metal1 >>
+rect 2 8659 332 8875
+rect 0 -180 141 220
+rect 189 -2 519 214
+use sky130_fd_pr__res_high_po_1p41_VXVYX6  sky130_fd_pr__res_high_po_1p41_VXVYX6_0
+timestamp 1794344348
+transform 1 0 165 0 1 4438
+box -165 -4438 165 4438
+<< labels >>
+flabel metal1 189 -2 519 214 0 FreeSans 800 0 0 0 R_node
+port 1 nsew
+flabel metal1 0 -180 141 220 0 FreeSans 800 0 0 0 VGND
+port 3 nsew
+<< end >>

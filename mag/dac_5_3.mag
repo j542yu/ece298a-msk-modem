@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1794328853
+timestamp 1794345556
 << error_s >>
 rect 11755 18432 14119 18434
 rect 4581 18430 6945 18432
@@ -33,14 +33,18 @@ use dac_r2r_5_bits  dac_r2r_5_bits_0
 timestamp 1794328490
 transform 1 0 -10 0 1 0
 box 0 -4 11877 19073
+use dac_termination_res  dac_termination_res_0
+timestamp 1794344388
+transform 1 0 -606 0 1 582
+box 0 -360 1038 17752
 use dac_therm_3_bits  dac_therm_3_bits_0
 timestamp 1794328490
 transform 1 0 11706 0 1 24
 box 0 -16 5346 19385
-use sky130_fd_pr__res_high_po_1p41_3JSCD9  sky130_fd_pr__res_high_po_1p41_3JSCD9_0
-timestamp 1794327346
-transform 1 0 8593 0 1 9458
-box -9001 -9042 9001 9042
+use sky130_fd_pr__res_high_po_1p41_X8MYE3  sky130_fd_pr__res_high_po_1p41_X8MYE3_0
+timestamp 1794344849
+transform 1 0 8225 0 1 9458
+box -9379 -9042 9379 9042
 << labels >>
 flabel metal1 1269 0 1551 1000 0 FreeSans 1600 0 0 0 B[0]
 port 1 nsew
