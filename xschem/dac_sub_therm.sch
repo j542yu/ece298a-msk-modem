@@ -5,20 +5,23 @@ K {}
 V {}
 S {}
 E {}
-N 230 -130 230 -70 {
+N 90 -210 90 -150 {
 lab=GND}
-N 250 -200 250 -160 {
+N 110 -280 110 -240 {
 lab=R_node}
-C {sky130_fd_pr/res_high_po_1p41.sym} 250 -130 0 0 {name=R1
-L=42.3
-model=res_high_po_1p41
+C {gnd.sym} 90 -150 0 1 {name=l1 lab=GND}
+C {ipin.sym} 110 -120 3 0 {name=p1 lab=in}
+C {iopin.sym} 110 -280 0 0 {name=p3 lab=R_node}
+C {symbols/ppolyf_u_1k.sym} 110 -150 0 0 {name=R7
+W=20e-6
+L=2e-6
+model=ppolyf_u_1k
 spiceprefix=X
-mult=1}
-C {sky130_fd_pr/res_high_po_1p41.sym} 250 -70 0 0 {name=R4
-L=42.3
-model=res_high_po_1p41
+m=1}
+C {symbols/ppolyf_u_1k.sym} 110 -210 0 0 {name=R1
+W=20e-6
+L=2e-6
+model=ppolyf_u_1k
 spiceprefix=X
-mult=1}
-C {gnd.sym} 230 -70 0 1 {name=l1 lab=GND}
-C {ipin.sym} 250 -40 3 0 {name=p1 lab=in}
-C {iopin.sym} 250 -200 0 0 {name=p3 lab=R_node}
+m=1}
+C {title.sym} 170 -50 0 0 {name=l2 author="Judy Yu, Gracia Xia"}

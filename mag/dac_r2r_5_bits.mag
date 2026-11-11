@@ -1,50 +1,30 @@
 magic
-tech sky130A
-magscale 1 2
-timestamp 1794345617
+tech gf180mcuD
+magscale 1 10
+timestamp 1794362881
 << metal1 >>
-rect 10777 1038 11877 1078
-rect 10777 606 10797 1038
-rect 11837 606 11877 1038
-rect 10777 566 11877 606
-<< via1 >>
-rect 10797 606 11837 1038
-<< metal2 >>
-rect 10777 1038 11877 1078
-rect 10777 606 10797 1038
-rect 11837 606 11877 1038
-rect 10777 566 11877 606
+rect 1922 419 2922 465
+rect 5293 419 6093 465
+rect 7682 419 8682 465
+rect 10567 419 11567 465
 use dac_sub_r2r  dac_sub_r2r_0
-timestamp 1794328305
-transform 1 0 -13979 0 1 -4342
-box 13979 4342 16700 23413
+timestamp 1794362773
+transform 1 0 -106 0 1 220
+box 106 -101 2906 4690
 use dac_sub_r2r  dac_sub_r2r_1
-timestamp 1794328305
-transform 1 0 -11703 0 1 -4346
-box 13979 4342 16700 23413
+timestamp 1794362773
+transform 1 0 2774 0 1 220
+box 106 -101 2906 4690
 use dac_sub_r2r  dac_sub_r2r_2
-timestamp 1794328305
-transform 1 0 -9435 0 1 -4338
-box 13979 4342 16700 23413
+timestamp 1794362773
+transform 1 0 5654 0 1 220
+box 106 -101 2906 4690
 use dac_sub_r2r  dac_sub_r2r_3
-timestamp 1794328305
-transform 1 0 -7179 0 1 -4342
-box 13979 4342 16700 23413
+timestamp 1794362773
+transform 1 0 8539 0 1 220
+box 106 -101 2906 4690
 use dac_sub_r2r  dac_sub_r2r_4
-timestamp 1794328305
-transform 1 0 -4901 0 1 -4340
-box 13979 4342 16700 23413
-<< labels >>
-flabel space 1279 0 1561 1000 0 FreeSans 1600 0 0 0 B[0]
-port 0 nsew
-flabel space 3557 -4 3839 996 0 FreeSans 1600 0 0 0 B[1]
-port 1 nsew
-flabel space 5837 -2 6119 998 0 FreeSans 1600 0 0 0 B[2]
-port 2 nsew
-flabel space 8113 8 8395 1008 0 FreeSans 1600 0 0 0 B[3]
-port 3 nsew
-flabel space 10403 16 10685 1016 0 FreeSans 1600 0 0 0 B[4]
-port 5 nsew
-flabel via1 10797 606 11837 1038 0 FreeSans 1600 0 0 0 r2r_out
-port 8 nsew
+timestamp 1794362773
+transform 1 0 11424 0 1 220
+box 106 -101 2906 4690
 << end >>

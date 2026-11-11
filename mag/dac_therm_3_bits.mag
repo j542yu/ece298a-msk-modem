@@ -1,40 +1,15 @@
 magic
-tech sky130A
-magscale 1 2
-timestamp 1794328490
+tech gf180mcuD
+magscale 1 10
+timestamp 1794362495
 << metal1 >>
-rect 1243 1002 3863 1042
-rect 1243 570 1263 1002
-rect 3843 570 3863 1002
-rect 1243 530 3863 570
-<< via1 >>
-rect 1263 570 3843 1002
-<< metal2 >>
-rect 1243 1002 3863 1042
-rect 1243 570 1263 1002
-rect 3843 570 3863 1002
-rect 1243 530 3863 570
+rect -627 300 223 346
 use dac_sub_therm1  dac_sub_therm1_0
-timestamp 1794328357
-transform 1 0 -13979 0 1 -4362
-box 13979 4362 16700 23413
+timestamp 1794362495
+transform 1 0 -336 0 1 111
+box 176 -111 2976 4761
 use dac_sub_therm2  dac_sub_therm2_0
-timestamp 1794328397
-transform 1 0 -11712 0 1 -4364
-box 13540 4354 17053 23749
-<< labels >>
-flabel space 141 0 423 1000 0 FreeSans 1600 0 0 0 T[0]
-port 0 nsew
-flabel space 517 0 799 1000 0 FreeSans 1600 0 0 0 T[1]
-port 1 nsew
-flabel space 909 0 1191 1000 0 FreeSans 1600 0 0 0 T[3]
-port 2 nsew
-flabel space 3932 -16 4214 984 0 FreeSans 1600 0 0 0 T[4]
-port 3 nsew
-flabel space 4312 -16 4594 984 0 FreeSans 1600 0 0 0 T[5]
-port 4 nsew
-flabel space 4688 -16 4970 984 0 FreeSans 1600 0 0 0 T[6]
-port 5 nsew
-flabel space 5064 -16 5346 984 0 FreeSans 1600 0 0 0 T[7]
-port 6 nsew
+timestamp 1794362495
+transform 1 0 -4176 0 1 111
+box 176 -111 3936 5061
 << end >>

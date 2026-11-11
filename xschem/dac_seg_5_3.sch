@@ -13,6 +13,8 @@ N 1120 -460 1990 -460 {
 lab=DAC_OUT}
 N 1080 -260 1920 -260 {bus=true
 lab=T[6:0]}
+N 170 -430 170 -370 {
+lab=GND}
 C {dac_sub_r2r.sym} 350 -430 0 0 {name=x1}
 C {dac_sub_r2r.sym} 520 -430 0 0 {name=x2}
 C {dac_sub_r2r.sym} 690 -430 0 0 {name=x3}
@@ -24,16 +26,6 @@ C {bus_tap.sym} 630 -380 0 0 {name=l3 lab=[2]}
 C {bus_tap.sym} 800 -380 0 0 {name=l4 lab=[3]}
 C {bus_tap.sym} 970 -380 0 0 {name=l5 lab=[4]}
 C {ipin.sym} 260 -380 0 0 {name=p1 lab=B[4:0]}
-C {sky130_fd_pr/res_high_po_1p41.sym} 150 -430 0 1 {name=R1
-L=42.3
-model=res_high_po_1p41
-spiceprefix=X
-mult=1}
-C {sky130_fd_pr/res_high_po_1p41.sym} 150 -370 0 1 {name=R4
-L=42.3
-model=res_high_po_1p41
-spiceprefix=X
-mult=1}
 C {gnd.sym} 150 -340 0 0 {name=l6 lab=GND}
 C {title.sym} 200 -70 0 0 {name=l7 author="Judy Yu, Gracia Xia"}
 C {dac_sub_therm.sym} 1150 -370 0 0 {name=x6}
@@ -52,3 +44,16 @@ C {bus_tap.sym} 1800 -260 0 0 {name=l13 lab=[5]}
 C {bus_tap.sym} 1920 -260 0 0 {name=l14 lab=[6]}
 C {ipin.sym} 1080 -260 0 0 {name=p2 lab=T[6:0]}
 C {opin.sym} 1990 -460 0 0 {name=p3 lab=DAC_OUT}
+C {symbols/ppolyf_u_1k.sym} 150 -370 0 1 {name=R2
+W=20e-6
+L=2e-6
+model=ppolyf_u_1k
+spiceprefix=X
+m=1}
+C {symbols/ppolyf_u_1k.sym} 150 -430 0 1 {name=R3
+W=20e-6
+L=2e-6
+model=ppolyf_u_1k
+spiceprefix=X
+m=1}
+C {gnd.sym} 170 -370 0 0 {name=l15 lab=GND}

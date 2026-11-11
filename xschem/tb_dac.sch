@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 140 -610 940 -210 {flags=graph
-y1=-1.35264
-y2=4.61933
+y1=-0.10954
+y2=1.08619
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.90866e-06
-x2=9.75832e-06
+x1=1.74875e-07
+x2=2.9949e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -35,12 +35,16 @@ C {dac_seg_5_3.sym} 320 -690 0 0 {name=x1}
 C {code_shown.sym} 1000 -430 0 0 {name=SIM only_toplevel=false value=".option wnflag=1
 
 .control
-    tran 100p 16us
+    tran 100p 7us
     write tb_dac.raw
 .endc
 "}
-C {code_shown.sym} 1000 -270 0 0 {name=STIMULI only_toplevel=false value=".include dac_sine_sampling-50.0MHz_if-3.5MHz_5_3.spice"}
+C {code_shown.sym} 1000 -270 0 0 {name=STIMULI only_toplevel=false value=".include dac_ramp_sampling-50.0MHz_3.3V_5_3.spice
+
+.include dac_dnl_inl_plots_5_3.spice"}
 C {ipin.sym} 170 -700 0 0 {name=p1 lab=B_5_3[4:0]}
 C {ipin.sym} 170 -680 0 0 {name=p2 lab=T_5_3[6:0]}
 C {opin.sym} 470 -700 0 0 {name=p3 lab=DAC_5_3_OUT}
-C {sky130_fd_pr/corner.sym} 980 -600 0 0 {name=CORNER only_toplevel=true corner=tt}
+C {code_shown.sym} 1000 -530 0 0 {name=CORNER only_toplevel=false value=".include /usr/local/share/pdk/gf180mcuD/libs.tech/ngspice/design.ngspice
+.lib /usr/local/share/pdk/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical
+.lib /usr/local/share/pdk/gf180mcuD/libs.tech/ngspice/sm141064.ngspice res_typical"}

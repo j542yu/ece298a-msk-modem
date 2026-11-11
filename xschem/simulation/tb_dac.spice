@@ -11,15 +11,21 @@ x1 DAC_5_3_OUT B_5_3[4] B_5_3[3] B_5_3[2] B_5_3[1] B_5_3[0] T_5_3[6] T_5_3[5] T_
 .option wnflag=1
 
 .control
-    tran 100p 16us
+    tran 100p 7us
     write tb_dac.raw
 .endc
 
 
 
-.include dac_sine_sampling-50.0MHz_if-3.5MHz_5_3.spice
+.include dac_ramp_sampling-50.0MHz_3.3V_5_3.spice
 
-.lib /usr/local/share/pdk/sky130B/libs.tech/combined/sky130.lib.spice tt
+.include dac_dnl_inl_plots_5_3.spice
+
+
+.include /usr/local/share/pdk/gf180mcuD/libs.tech/ngspice/design.ngspice
+.lib /usr/local/share/pdk/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical
+.lib /usr/local/share/pdk/gf180mcuD/libs.tech/ngspice/sm141064.ngspice res_typical
+
 **** end user architecture code
 **.ends
 
@@ -40,8 +46,6 @@ x5 DAC_OUT net5 B[4] dac_sub_r2r
 * tap: B[4:0] --> B[2]
 * tap: B[4:0] --> B[3]
 * tap: B[4:0] --> B[4]
-XR1 net6 net1 net7 sky130_fd_pr__res_high_po_1p41 L=42.3 mult=1 m=1
-XR4 GND net6 net8 sky130_fd_pr__res_high_po_1p41 L=42.3 mult=1 m=1
 x6 DAC_OUT T[0] dac_sub_therm
 x7 DAC_OUT T[1] dac_sub_therm
 x8 DAC_OUT T[2] dac_sub_therm
@@ -56,6 +60,8 @@ x12 DAC_OUT T[6] dac_sub_therm
 * tap: T[6:0] --> T[4]
 * tap: T[6:0] --> T[5]
 * tap: T[6:0] --> T[6]
+XR2 GND net6 GND ppolyf_u_1k r_width=20e-6 r_length=2e-6 m=1
+XR3 net6 net1 GND ppolyf_u_1k r_width=20e-6 r_length=2e-6 m=1
 .ends
 
 
@@ -66,12 +72,12 @@ x12 DAC_OUT T[6] dac_sub_therm
 *.ipin in
 *.iopin R_node_out
 *.iopin R_node_in
-XR1 net1 R_node_in GND sky130_fd_pr__res_high_po_1p41 L=42.3 mult=1 m=1
-XR2 net2 R_node_in GND sky130_fd_pr__res_high_po_1p41 L=42.3 mult=1 m=1
-XR3 net3 R_node_in GND sky130_fd_pr__res_high_po_1p41 L=42.3 mult=1 m=1
-XR4 in net1 GND sky130_fd_pr__res_high_po_1p41 L=42.3 mult=1 m=1
-XR5 R_node_out net2 GND sky130_fd_pr__res_high_po_1p41 L=42.3 mult=1 m=1
-XR6 R_node_out net3 GND sky130_fd_pr__res_high_po_1p41 L=42.3 mult=1 m=1
+XR7 in net1 GND ppolyf_u_1k r_width=20e-6 r_length=2e-6 m=1
+XR1 net1 R_node_in GND ppolyf_u_1k r_width=20e-6 r_length=2e-6 m=1
+XR2 net2 R_node_in GND ppolyf_u_1k r_width=20e-6 r_length=2e-6 m=1
+XR3 R_node_out net2 GND ppolyf_u_1k r_width=20e-6 r_length=2e-6 m=1
+XR4 net3 R_node_in GND ppolyf_u_1k r_width=20e-6 r_length=2e-6 m=1
+XR5 R_node_out net3 GND ppolyf_u_1k r_width=20e-6 r_length=2e-6 m=1
 .ends
 
 
@@ -81,8 +87,8 @@ XR6 R_node_out net3 GND sky130_fd_pr__res_high_po_1p41 L=42.3 mult=1 m=1
 .subckt dac_sub_therm R_node in
 *.ipin in
 *.iopin R_node
-XR1 net1 R_node GND sky130_fd_pr__res_high_po_1p41 L=42.3 mult=1 m=1
-XR4 in net1 GND sky130_fd_pr__res_high_po_1p41 L=42.3 mult=1 m=1
+XR7 in net1 GND ppolyf_u_1k r_width=20e-6 r_length=2e-6 m=1
+XR1 net1 R_node GND ppolyf_u_1k r_width=20e-6 r_length=2e-6 m=1
 .ends
 
 .GLOBAL GND

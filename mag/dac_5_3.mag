@@ -1,75 +1,94 @@
 magic
-tech sky130A
-magscale 1 2
-timestamp 1794345556
+tech gf180mcuD
+magscale 1 10
+timestamp 1794363693
 << error_s >>
-rect 11755 18432 14119 18434
-rect 4581 18430 6945 18432
-rect 9117 18430 11481 18432
-rect 11755 18430 17142 18432
-rect 2411 578 2693 582
-rect 2789 578 3071 582
-rect 3167 578 3449 582
-rect 3545 578 3827 582
-rect 3923 578 4205 582
-rect 4301 578 4583 582
+rect 14366 528 14376 4528
+<< pwell >>
+rect 14379 4741 14753 4921
+rect 4299 119 4673 419
+rect 7179 119 7553 419
+rect 10064 119 10438 419
+rect 12949 119 13323 419
+rect 14360 170 14770 300
+rect 14859 119 15233 419
+rect 15339 119 15713 419
+rect 15819 119 16193 419
+rect 16299 119 16673 419
+<< psubdiff >>
+rect 14379 4900 14753 4921
+rect 14379 4800 14420 4900
+rect 14720 4800 14753 4900
+rect 14379 4741 14753 4800
+rect 14360 265 14770 300
+rect 14360 200 14390 265
+rect 14750 200 14770 265
+rect 14360 170 14770 200
+<< psubdiffcont >>
+rect 14420 4800 14720 4900
+rect 14390 200 14750 265
 << metal1 >>
-rect 1269 0 1551 1000
-rect 3545 -4 3827 996
-rect 5811 2 6093 1002
-rect 8069 0 8351 1000
-rect 10347 2 10629 1002
-rect 11847 24 12129 1024
-rect 12223 24 12505 1024
-rect 12615 24 12897 1024
-rect 15630 14 15912 1014
-rect 16010 14 16292 1014
-rect 16386 14 16668 1014
-rect 16762 14 17044 1014
-<< metal2 >>
-rect 11037 570 15614 1082
-rect 13797 29 14307 570
+rect 14379 4900 14753 4921
+rect 14379 4800 14420 4900
+rect 14720 4800 14753 4900
+rect -1661 4591 -1287 4637
+rect -981 4591 -181 4637
+rect 14379 4591 14753 4800
+rect -1661 419 -861 465
+rect -501 419 299 465
+rect 1419 119 1793 419
+rect 4299 119 4673 419
+rect 7179 119 7553 419
+rect 10064 119 10438 419
+rect 12949 119 13323 419
+rect 14379 300 14753 439
+rect 14360 265 14770 300
+rect 14360 200 14390 265
+rect 14750 200 14770 265
+rect 14360 170 14770 200
+rect 14859 119 15233 419
+rect 15339 119 15713 419
+rect 15819 119 16193 419
+rect 16299 119 16673 419
 use dac_r2r_5_bits  dac_r2r_5_bits_0
-timestamp 1794328490
-transform 1 0 -10 0 1 0
-box 0 -4 11877 19073
-use dac_termination_res  dac_termination_res_0
-timestamp 1794344388
-transform 1 0 -606 0 1 582
-box 0 -360 1038 17752
+timestamp 1794362881
+transform 1 0 -34 0 1 0
+box 0 119 14330 4910
 use dac_therm_3_bits  dac_therm_3_bits_0
-timestamp 1794328490
-transform 1 0 11706 0 1 24
-box 0 -16 5346 19385
-use sky130_fd_pr__res_high_po_1p41_X8MYE3  sky130_fd_pr__res_high_po_1p41_X8MYE3_0
-timestamp 1794344849
-transform 1 0 8225 0 1 9458
-box -9379 -9042 9379 9042
+timestamp 1794362495
+transform 1 0 18846 0 1 119
+box -4000 0 2640 5172
+use ppolyf_u_1k_9VNAQZ  ppolyf_u_1k_9VNAQZ_0
+timestamp 1794362495
+transform 1 0 -554 0 1 2528
+box -440 -2122 440 2122
+use ppolyf_u_1k_GR4QPH  ppolyf_u_1k_GR4QPH_0
+timestamp 1794362495
+transform 1 0 10246 0 1 2528
+box -11956 -2358 11956 2358
 << labels >>
-flabel metal1 1269 0 1551 1000 0 FreeSans 1600 0 0 0 B[0]
+flabel metal1 1419 119 1793 419 0 FreeSans 1600 0 0 0 B[0]
+port 0 nsew
+flabel metal1 4299 119 4673 419 0 FreeSans 1600 0 0 0 B[1]
 port 1 nsew
-flabel metal1 3545 -4 3827 996 0 FreeSans 1600 0 0 0 B[1]
+flabel metal1 7179 119 7553 419 0 FreeSans 1600 0 0 0 B[2]
 port 2 nsew
-flabel metal1 5811 2 6093 1002 0 FreeSans 1600 0 0 0 B[2]
+flabel metal1 10064 119 10438 419 0 FreeSans 1600 0 0 0 B[3]
 port 3 nsew
-flabel metal1 8069 0 8351 1000 0 FreeSans 1600 0 0 0 B[3]
+flabel metal1 12949 119 13323 419 0 FreeSans 1600 0 0 0 B[4]
 port 4 nsew
-flabel metal1 10347 2 10629 1002 0 FreeSans 1600 0 0 0 B[4]
+flabel metal1 14859 119 15233 419 0 FreeSans 1600 0 0 0 T[0]
 port 5 nsew
-flabel metal1 11847 24 12129 1024 0 FreeSans 1600 0 0 0 T[0]
+flabel metal1 15339 119 15713 419 0 FreeSans 1600 0 0 0 T[1]
 port 6 nsew
-flabel metal1 12223 24 12505 1024 0 FreeSans 1600 0 0 0 T[1]
+flabel metal1 15819 119 16193 419 0 FreeSans 1600 0 0 0 T[2]
 port 7 nsew
-flabel metal1 12615 24 12897 1024 0 FreeSans 1600 0 0 0 T[2]
+flabel metal1 16299 119 16673 419 0 FreeSans 1600 0 0 0 T[3]
+port 8 nsew
+flabel metal1 20139 119 20513 419 0 FreeSans 1600 0 0 0 T[4]
 port 9 nsew
-flabel metal1 15630 14 15912 1014 0 FreeSans 1600 0 0 0 T[3]
+flabel metal1 20619 119 20993 419 0 FreeSans 1600 0 0 0 T[5]
 port 10 nsew
-flabel metal1 16010 14 16292 1014 0 FreeSans 1600 0 0 0 T[4]
-port 11 nsew
-flabel metal1 16386 14 16668 1014 0 FreeSans 1600 0 0 0 T[5]
+flabel metal1 21099 119 21473 419 0 FreeSans 1600 0 0 0 T[6]
 port 12 nsew
-flabel metal1 16762 14 17044 1014 0 FreeSans 1600 0 0 0 T[6]
-port 14 nsew
-flabel metal2 13797 29 14307 1082 0 FreeSans 1600 0 0 0 OUT
-port 16 nsew
 << end >>
