@@ -26,7 +26,7 @@ project:
 pinout:
   # Inputs
   ui[0]: "Input stream"
-  ui[1]: ""
+  ui[1]: "Enable"
   ui[2]: ""
   ui[3]: ""
   ui[4]: ""
@@ -45,8 +45,8 @@ pinout:
   uo[7]: "Thermometer"
 
   # Bidirectional pins
-  uio[0]: "Transmit Enable"
-  uio[1]: "Thermometer"
+  uio[0]: "Thermometer"
+  uio[1]: ""
   uio[2]: ""
   uio[3]: ""
   uio[4]: ""
