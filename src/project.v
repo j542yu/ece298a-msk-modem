@@ -20,25 +20,24 @@ module tt_um_example (
   // assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
   // assign uio_out = 0;
 
-  assign uio_oe = 8'b11111110;
+  assign uio_oe = 8'b11111111;
   
   // 5_3
-  assign uio_out[7:5] = 0;
-  assign uio_out[0] = 0;
+  assign uio_out[7:4] = 0;
 
   wire [11:0] t_out;
-  assign uio_out[4:1] = t_out[11:8];
+  assign uio_out[3:0] = t_out[11:8];
   assign uo_out = t_out[7:0];
 
   transmit_5_3 transmit_inst(
-    .in(uio_in[0]),
+    .in(ui_in[0]),
     .out(t_out),
     .clk(clk),
     .rst_n(rst_n),
-    .enable(uio_in[2])
+    .enable(ui_in[1])
   );
     
   // List all unused inputs to prevent warnings
-  wire _unused = &{ena, uio_in[7:1], ui_in[7:0], 1'b0};
+  wire _unused = &{ena, uio_in[7:0], ui_in[7:2], 1'b0};
 
 endmodule
