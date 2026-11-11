@@ -1,7 +1,7 @@
 magic
 tech gf180mcuD
 magscale 1 10
-timestamp 1794362773
+timestamp 1794377923
 << metal1 >>
 rect 120 4611 2889 4690
 rect 120 4610 1951 4611
@@ -21,4 +21,14 @@ use ppolyf_u_1k_RUZ9QZ  ppolyf_u_1k_RUZ9QZ_0
 timestamp 1794362495
 transform 1 0 1506 0 1 2308
 box -1400 -2122 1400 2122
+<< labels >>
+flabel metal1 1559 -101 1933 199 0 FreeSans 1600 0 0 0 in
+port 2 nsew
+flabel metal1 2039 199 2889 245 0 FreeSans 800 0 0 0 R_node_out
+port 3 nsew
+flabel metal1 127 199 1464 245 0 FreeSans 800 0 0 0 R_node_in
+port 1 nsew
+flabel metal1 1079 4371 1933 4417 0 FreeSans 800 0 0 0 net1
+flabel metal1 599 4471 2430 4551 0 FreeSans 800 0 0 0 net2
+flabel metal1 120 4611 2889 4690 0 FreeSans 800 0 0 0 net3
 << end >>

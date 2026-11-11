@@ -6,10 +6,9 @@ V {}
 S {}
 E {}
 N 90 -210 90 -150 {
-lab=GND}
+lab=#net1}
 N 110 -280 110 -240 {
 lab=R_node}
-C {gnd.sym} 90 -150 0 1 {name=l1 lab=GND}
 C {ipin.sym} 110 -120 3 0 {name=p1 lab=in}
 C {iopin.sym} 110 -280 0 0 {name=p3 lab=R_node}
 C {symbols/ppolyf_u_1k.sym} 110 -150 0 0 {name=R7
@@ -25,3 +24,4 @@ model=ppolyf_u_1k
 spiceprefix=X
 m=1}
 C {title.sym} 170 -50 0 0 {name=l2 author="Judy Yu, Gracia Xia"}
+C {iopin.sym} 90 -150 0 1 {name=p2 lab=VGND}

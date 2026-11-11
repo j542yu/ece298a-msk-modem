@@ -18,18 +18,17 @@ lab=R_node_in}
 N 460 -450 460 -390 {
 lab=R_node_out}
 N 370 -370 430 -370 {
-lab=GND}
+lab=VGND}
 N 370 -430 430 -430 {
-lab=GND}
+lab=VGND}
 N 260 -360 260 -300 {
-lab=GND}
+lab=VGND}
 C {title.sym} 160 -50 0 0 {name=l1 author="Judy Yu, Gracia Xia"}
 C {ipin.sym} 280 -240 3 0 {name=p1 lab=in}
 C {iopin.sym} 530 -420 0 0 {name=p2 lab=R_node_out}
 C {iopin.sym} 280 -420 0 1 {name=p3 lab=R_node_in}
-C {gnd.sym} 260 -300 0 1 {name=l2 lab=GND}
-C {lab_pin.sym} 400 -370 3 0 {name=p4 sig_type=std_logic lab=GND}
-C {lab_pin.sym} 400 -430 3 0 {name=p5 sig_type=std_logic lab=GND}
+C {lab_pin.sym} 400 -370 3 0 {name=p4 sig_type=std_logic lab=VGND}
+C {lab_pin.sym} 400 -430 3 0 {name=p5 sig_type=std_logic lab=VGND}
 C {symbols/ppolyf_u_1k.sym} 280 -300 0 0 {name=R7
 W=2e-6
 L=20e-6
@@ -66,3 +65,4 @@ L=20e-6
 model=ppolyf_u_1k
 spiceprefix=X
 m=1}
+C {iopin.sym} 260 -300 0 1 {name=p6 lab=VGND}

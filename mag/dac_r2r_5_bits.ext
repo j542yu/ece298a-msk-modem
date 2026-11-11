@@ -1,4 +1,4 @@
-timestamp 1794362881
+timestamp 1794377923
 version 8.3
 tech gf180mcuD
 style ngspice()
@@ -15,50 +15,52 @@ node "m1_5293_419#" 2 359.324 5293 419 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 node "m1_1922_419#" 2 446.148 1922 419 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 46000 2092 0 0 0 0 0 0 0 0
 substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 cap "m1_7682_419#" "m1_5293_419#" 1.18021
-cap "dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_40_n2122#" "dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" 0.000862548
-cap "dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_40_n2122#" "dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" 0.105883
-cap "dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_40_n2122#" "dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n1400_n2122#" 0.0101068
-cap "dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_40_n2122#" "dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_1000_n2122#" 0.105883
-cap "dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_40_n2122#" "dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_1000_n2122#" 0.000862548
-cap "dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_1000_n2122#" "dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" -0.590105
-cap "dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" "dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_40_n2122#" 0.104339
-cap "dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" "dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n1400_n2122#" -0.590105
-cap "dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_40_n2122#" "dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n1400_n2122#" 0.0101068
-cap "dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_40_n2122#" "dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" 0.000801682
-cap "dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n1400_n2122#" "dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_40_n2122#" 0.00932262
-cap "dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" "dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_40_n2122#" 0.104339
-cap "dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" "dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_40_n2122#" 0.000801682
-cap "dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_40_n2122#" "dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_1000_n2122#" 0.00932262
-cap "dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_520_2000#" 0.0075714
-cap "dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n440_2000#" "dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_520_2000#" 0.000985465
-cap "dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" "dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_1000_2000#" 67.5106
-cap "dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" "dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_520_2000#" 0.0201797
-cap "dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_1000_2000#" "dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" 77.2058
-cap "dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" 0.0201797
-cap "dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" 0.0075714
-cap "dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n440_2000#" "dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" 0.000985465
-cap "dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" "dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_1000_2000#" 154.387
-cap "dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n440_2000#" 0.000923808
-cap "dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" 0.00751053
-cap "dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" "dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" 0.0199176
-cap "dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_1000_2000#" "dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" 146.332
-cap "dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" 0.00751053
-cap "dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" "dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" 0.0199176
-cap "dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n440_2000#" 0.000923808
-cap "dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_1000_2000#" "dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" 146.332
+cap "dac_sub_r2r_1/R_node_in" "dac_sub_r2r_0/in" 0.105883
+cap "dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_40_n2122#" "dac_sub_r2r_1/R_node_in" 0.000862548
+cap "dac_sub_r2r_1/R_node_in" "dac_sub_r2r_1/in" 0.0101068
+cap "dac_sub_r2r_1/in" "dac_sub_r2r_2/R_node_in" 0.105883
+cap "dac_sub_r2r_2/R_node_in" "dac_sub_r2r_2/in" 0.000862548
+cap "dac_sub_r2r_2/R_node_in" "dac_sub_r2r_2/R_node_out" -0.590105
+cap "dac_sub_r2r_2/in" "dac_sub_r2r_3/R_node_in" 0.104339
+cap "dac_sub_r2r_2/R_node_in" "dac_sub_r2r_3/R_node_in" -0.590105
+cap "dac_sub_r2r_2/R_node_in" "dac_sub_r2r_2/in" 0.0101068
+cap "dac_sub_r2r_3/in" "dac_sub_r2r_3/R_node_in" 0.000801682
+cap "dac_sub_r2r_3/R_node_in" "dac_sub_r2r_3/in" 0.00932262
+cap "dac_sub_r2r_4/R_node_in" "dac_sub_r2r_3/in" 0.104339
+cap "dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_40_n2122#" "dac_sub_r2r_4/R_node_in" 0.000801682
+cap "dac_sub_r2r_4/R_node_in" "dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_40_n2122#" 0.00932262
+cap "dac_sub_r2r_0/net2" "dac_sub_r2r_1/net1" 0.000985465
+cap "dac_sub_r2r_0/net2" "dac_sub_r2r_1/net2" 0.0075714
+cap "dac_sub_r2r_0/net2" "dac_sub_r2r_1/net3" 0.0201797
+cap "dac_sub_r2r_0/net3" "dac_sub_r2r_1/net3" 67.5106
+cap "dac_sub_r2r_0/net3" "dac_sub_r2r_1/net3" 77.2058
+cap "dac_sub_r2r_2/net2" "dac_sub_r2r_1/net2" 0.0075714
+cap "dac_sub_r2r_2/net1" "dac_sub_r2r_1/net2" 0.000985465
+cap "dac_sub_r2r_2/net3" "dac_sub_r2r_1/net2" 0.0201797
+cap "dac_sub_r2r_2/net3" "dac_sub_r2r_1/net3" 154.387
+cap "dac_sub_r2r_2/net2" "dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" 0.00751053
+cap "dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" "dac_sub_r2r_2/net2" 0.0199176
+cap "dac_sub_r2r_2/net2" "dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n440_2000#" 0.000923808
+cap "dac_sub_r2r_3/net3" "dac_sub_r2r_2/net3" 146.332
+cap "dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" "dac_sub_r2r_3/net2" 0.0199176
+cap "dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n440_2000#" "dac_sub_r2r_3/net2" 0.000923808
+cap "dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_sub_r2r_3/net2" 0.00751053
+cap "dac_sub_r2r_4/net3" "dac_sub_r2r_3/net3" 146.332
 merge "dac_sub_r2r_4/VSUBS" "dac_sub_r2r_3/VSUBS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 merge "dac_sub_r2r_3/VSUBS" "dac_sub_r2r_2/VSUBS"
 merge "dac_sub_r2r_2/VSUBS" "dac_sub_r2r_0/VSUBS"
 merge "dac_sub_r2r_0/VSUBS" "dac_sub_r2r_1/VSUBS"
 merge "dac_sub_r2r_1/VSUBS" "VSUBS"
-merge "dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_1000_n2122#" "dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n1400_n2122#" -375.147 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -32936 -1616 0 0 0 0 0 0 0 0
+merge "dac_sub_r2r_4/R_node_in" "dac_sub_r2r_3/R_node_out" -458.64 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -41906 -2006 0 0 0 0 0 0 0 0
+merge "dac_sub_r2r_3/R_node_out" "m1_10567_419#"
+merge "dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_1000_n2122#" "dac_sub_r2r_2/R_node_in" -375.147 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -32936 -1616 0 0 0 0 0 0 0 0
+merge "dac_sub_r2r_2/R_node_in" "dac_sub_r2r_1/R_node_out"
+merge "dac_sub_r2r_1/R_node_out" "dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n1400_n2122#"
 merge "dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n1400_n2122#" "m1_5293_419#"
-merge "dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_1000_n2122#" "dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n1400_n2122#" -458.64 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -41906 -2006 0 0 0 0 0 0 0 0
-merge "dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n1400_n2122#" "dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#"
-merge "dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" "m1_10567_419#"
-merge "dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_1000_n2122#" "dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n1400_n2122#" -457.418 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -41906 -2006 0 0 0 0 0 0 0 0
-merge "dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n1400_n2122#" "dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#"
-merge "dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" "m1_7682_419#"
-merge "dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_1000_n2122#" "dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" -445.304 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -42136 -2016 0 0 0 0 0 0 0 0
-merge "dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" "dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n1400_n2122#"
+merge "dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_1000_n2122#" "dac_sub_r2r_3/R_node_in" -457.418 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -41906 -2006 0 0 0 0 0 0 0 0
+merge "dac_sub_r2r_3/R_node_in" "dac_sub_r2r_2/R_node_out"
+merge "dac_sub_r2r_2/R_node_out" "m1_7682_419#"
+merge "dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_1000_n2122#" "dac_sub_r2r_1/R_node_in" -445.304 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -42136 -2016 0 0 0 0 0 0 0 0
+merge "dac_sub_r2r_1/R_node_in" "dac_sub_r2r_0/R_node_out"
+merge "dac_sub_r2r_0/R_node_out" "dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n1400_n2122#"
 merge "dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n1400_n2122#" "m1_1922_419#"

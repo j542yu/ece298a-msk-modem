@@ -1,4 +1,4 @@
-set project [lindex $argv $argc-1]
+set project [file rootname [lindex $argv end]]
 load $project.mag
 flatten tt_um_flat
 load tt_um_flat

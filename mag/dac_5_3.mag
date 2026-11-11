@@ -1,12 +1,11 @@
 magic
 tech gf180mcuD
 magscale 1 10
-timestamp 1794374713
+timestamp 1794414854
 << error_s >>
 rect 14366 528 14376 4528
 << pwell >>
 rect 14379 4741 14753 4921
-rect -981 419 -607 465
 rect 4299 119 4673 419
 rect 7179 119 7553 419
 rect 10064 119 10438 419
@@ -34,11 +33,13 @@ rect 14859 5192 18589 5291
 rect 14859 5191 17359 5192
 rect -20 4831 2749 4910
 rect -20 4830 1811 4831
-rect -1661 4591 -1287 4637
+rect -1673 4637 -1627 4746
+rect -1673 4591 -1287 4637
 rect -992 4591 -116 4637
 rect -20 4610 354 4830
 rect 459 4691 2290 4771
 rect 459 4591 833 4691
+rect -1673 550 -1627 4591
 rect 1880 4590 2290 4691
 rect 2381 4611 2749 4831
 rect 2860 4831 5629 4910
@@ -92,13 +93,14 @@ rect 19648 4591 20513 4637
 rect 20620 4590 20990 4691
 rect 21090 4590 21460 4891
 rect 21579 4591 22129 4637
-rect -2810 465 -1650 550
+rect -2810 465 -1627 550
 rect -2810 419 -861 465
 rect -512 419 1324 465
 rect 1888 419 4204 465
 rect 4768 419 7084 465
 rect 7648 419 9969 465
-rect -2810 330 -1650 419
+rect -2810 330 -1627 419
+rect -1673 310 -1627 330
 rect 1419 119 1793 419
 rect 4299 119 4673 419
 rect 7179 119 7553 419
@@ -139,12 +141,12 @@ rect 13418 33 18609 39
 rect 13418 19 14418 33
 rect 16799 29 17609 33
 rect 17699 -444 18147 33
-use dac_r2r_5_bits  dac_r2r_5_bits_0
-timestamp 1794362881
+use dac_r2r_5_bits  dac_r2r_5_bits_0 ~/Documents/ece298a-msk-modem/mag
+timestamp 1794377923
 transform 1 0 -34 0 1 0
 box 0 119 14330 4910
 use dac_therm_3_bits  dac_therm_3_bits_0
-timestamp 1794362495
+timestamp 1794379465
 transform 1 0 18846 0 1 119
 box -4000 0 2640 5172
 use ppolyf_u_1k_9VNAQZ  ppolyf_u_1k_9VNAQZ_0
@@ -168,10 +170,6 @@ flabel metal1 12949 119 13323 419 0 FreeSans 1600 0 0 0 B[4]
 port 4 nsew
 flabel metal1 14859 119 15233 419 0 FreeSans 1600 0 0 0 T[0]
 port 5 nsew
-flabel metal2 17699 -444 18147 479 0 FreeSans 1600 0 0 0 DAC_5_3_OUT
-port 14 nsew
-flabel metal1 -2810 330 -1650 550 0 FreeSans 1600 0 0 0 GND
-port 16 nsew
 flabel metal1 20139 119 20513 419 0 FreeSans 1600 0 0 0 T[4]
 port 9 nsew
 flabel metal1 15339 119 15713 419 0 FreeSans 1600 0 0 0 T[1]
@@ -213,4 +211,8 @@ flabel metal1 16288 4591 17164 4637 0 FreeSans 800 0 0 0 2R_T3,2R_T3
 flabel metal1 19179 4691 20990 4791 0 FreeSans 800 0 0 0 2R_T5,2R_T5
 flabel metal1 19648 4591 20513 4637 0 FreeSans 800 0 0 0 2R_T4,2R_T4
 flabel metal1 18699 4891 21460 4991 0 FreeSans 800 0 0 0 2R_T6,2R_T6
+flabel metal1 -2810 330 -1650 550 0 FreeSans 1600 0 0 0 VGND
+port 16 nsew
+flabel metal2 17699 -444 18147 479 0 FreeSans 1600 0 0 0 DAC_OUT
+port 14 nsew
 << end >>

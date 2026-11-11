@@ -1,6 +1,16 @@
 
 Circuit 1 cell ppolyf_u_1k and Circuit 2 cell ppolyf_u_1k are black boxes.
-Equate elements:  no current cell.
+Warning: Equate pins:  cell ppolyf_u_1k is a placeholder, treated as a black box.
+Warning: Equate pins:  cell ppolyf_u_1k is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: ppolyf_u_1k                     |Circuit 2: ppolyf_u_1k                     
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
 Device classes ppolyf_u_1k and ppolyf_u_1k are equivalent.
 Flattening unmatched subcell ppolyf_u_1k_RUZ9QZ in circuit dac_sub_r2r (0)(1 instance)
 
@@ -17,23 +27,23 @@ NET mismatches: Class fragments follow (with fanout counts):
 Circuit 1: dac_sub_r2r                     |Circuit 2: dac_sub_r2r                     
 
 ---------------------------------------------------------------------------------------
-Net: m1_588_4371#                          |Net: R_node_in                             
-  ppolyf_u_1k/(1|2) = 2                    |  ppolyf_u_1k/(1|2) = 2                    
+Net: R_node_in                             |Net: R_node_in                             
+  ppolyf_u_1k/(1|2) = 3                    |  ppolyf_u_1k/(1|2) = 2                    
                                            |                                           
-Net: m1_1079_4371#                         |Net: GND                                   
+Net: net1                                  |Net: VGND                                  
   ppolyf_u_1k/(1|2) = 2                    |  ppolyf_u_1k/3 = 2                        
                                            |                                           
-Net: m1_2039_199#                          |Net: in                                    
+Net: in                                    |Net: in                                    
+  ppolyf_u_1k/(1|2) = 1                    |  ppolyf_u_1k/(1|2) = 1                    
+                                           |                                           
+Net: R_node_out                            |Net: R_node_out                            
   ppolyf_u_1k/(1|2) = 2                    |  ppolyf_u_1k/(1|2) = 1                    
                                            |                                           
-Net: m1_120_4390#                          |Net: R_node_out                            
-  ppolyf_u_1k/(1|2) = 2                    |  ppolyf_u_1k/(1|2) = 1                    
+Net: net2                                  |(no matching net)                          
+  ppolyf_u_1k/(1|2) = 2                    |                                           
                                            |                                           
-Net: m1_127_199#                           |(no matching net)                          
-  ppolyf_u_1k/(1|2) = 3                    |                                           
-                                           |                                           
-Net: m1_1559_n101#                         |(no matching net)                          
-  ppolyf_u_1k/(1|2) = 1                    |                                           
+Net: net3                                  |(no matching net)                          
+  ppolyf_u_1k/(1|2) = 2                    |                                           
                                            |                                           
 Net: VSUBS                                 |(no matching net)                          
   ppolyf_u_1k/3 = 6                        |                                           
@@ -86,101 +96,39 @@ Flattening unmatched subcell dac_sub_therm in circuit dac_5_3 (1)(7 instances)
 Class dac_5_3 (0):  Merged 2 parallel devices.
 Class dac_5_3 (0):  Merged 23 series devices.
 Class dac_5_3 (0):  Merged 5 parallel devices.
-Class dac_5_3 (1):  Merged 1 parallel devices.
+Class dac_5_3 (1):  Merged 2 parallel devices.
 Class dac_5_3 (1):  Merged 8 series devices.
 Subcircuit summary:
 Circuit 1: dac_5_3                         |Circuit 2: dac_5_3                         
 -------------------------------------------|-------------------------------------------
-ppolyf_u_1k (49->19)                       |ppolyf_u_1k (49->20) **Mismatch**          
-Number of devices: 19 **Mismatch**         |Number of devices: 20 **Mismatch**         
-Number of nets: 19 **Mismatch**            |Number of nets: 33 **Mismatch**            
+ppolyf_u_1k (49->19)                       |ppolyf_u_1k (49->19)                       
+Number of devices: 19                      |Number of devices: 19                      
+Number of nets: 19                         |Number of nets: 19                         
 ---------------------------------------------------------------------------------------
-NET mismatches: Class fragments follow (with fanout counts):
-Circuit 1: dac_5_3                         |Circuit 2: dac_5_3                         
-
----------------------------------------------------------------------------------------
-Net: GND                                   |Net: GND                                   
-  ppolyf_u_1k/(1|2) = 3                    |  ppolyf_u_1k/(1|2) = 3                    
-  ppolyf_u_1k/3 = 19                       |  ppolyf_u_1k/3 = 2                        
-                                           |                                           
-(no matching net)                          |Net: dac_sub_therm:6/GND                   
-                                           |  ppolyf_u_1k/3 = 1                        
-                                           |                                           
-(no matching net)                          |Net: dac_sub_therm:7/GND                   
-                                           |  ppolyf_u_1k/3 = 1                        
-                                           |                                           
-(no matching net)                          |Net: dac_sub_therm:8/GND                   
-                                           |  ppolyf_u_1k/3 = 1                        
-                                           |                                           
-(no matching net)                          |Net: dac_sub_therm:9/GND                   
-                                           |  ppolyf_u_1k/3 = 1                        
-                                           |                                           
-(no matching net)                          |Net: dac_sub_therm:10/GND                  
-                                           |  ppolyf_u_1k/3 = 1                        
-                                           |                                           
-(no matching net)                          |Net: dac_sub_therm:11/GND                  
-                                           |  ppolyf_u_1k/3 = 1                        
-                                           |                                           
-(no matching net)                          |Net: dac_sub_therm:12/GND                  
-                                           |  ppolyf_u_1k/3 = 1                        
-                                           |                                           
-(no matching net)                          |Net: net8                                  
-                                           |  ppolyf_u_1k/3 = 1                        
-                                           |                                           
-(no matching net)                          |Net: net2                                  
-                                           |  ppolyf_u_1k/(1|2) = 2                    
-                                           |                                           
-(no matching net)                          |Net: dac_sub_r2r:1/GND                     
-                                           |  ppolyf_u_1k/3 = 2                        
-                                           |                                           
-(no matching net)                          |Net: dac_sub_r2r:2/GND                     
-                                           |  ppolyf_u_1k/3 = 2                        
-                                           |                                           
-(no matching net)                          |Net: dac_sub_r2r:3/GND                     
-                                           |  ppolyf_u_1k/3 = 2                        
-                                           |                                           
-(no matching net)                          |Net: dac_sub_r2r:4/GND                     
-                                           |  ppolyf_u_1k/3 = 2                        
-                                           |                                           
-(no matching net)                          |Net: dac_sub_r2r:5/GND                     
-                                           |  ppolyf_u_1k/3 = 2                        
----------------------------------------------------------------------------------------
-DEVICE mismatches: Class fragments follow (with node fanout counts):
-Circuit 1: dac_5_3                         |Circuit 2: dac_5_3                         
-
----------------------------------------------------------------------------------------
-Instance: ppolyf_u_1k_GR4QPH_0/ppolyf_u_1k |Instance: ppolyf_u_1k:R4                   
-  (1,2) = (22,22)                          |  (1,2) = (5,2)                            
-  3 = 22                                   |  3 = 5                                    
-                                           |                                           
-(no matching instance)                     |Instance: ppolyf_u_1k:R7                   
-                                           |  (1,2) = (5,2)                            
-                                           |  3 = 1                                    
-                                           |                                           
----------------------------------------------------------------------------------------
-Netlists do not match.
-Port matching may fail to disambiguate symmetries.
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
 
 Subcircuit pins:
 Circuit 1: dac_5_3                         |Circuit 2: dac_5_3                         
 -------------------------------------------|-------------------------------------------
-GND                                        |(no pin, node is net8)                     
+DAC_5_3_OUT                                |DAC_5_3_OUT                                
 B[0]                                       |B[0]                                       
-B[3]                                       |B[3]                                       
+B[4]                                       |B[4]                                       
 B[1]                                       |B[1]                                       
 B[2]                                       |B[2]                                       
-B[4]                                       |B[4]                                       
-T[3]                                       |T[6] **Mismatch**                          
-T[2]                                       |T[5] **Mismatch**                          
-T[1]                                       |T[4] **Mismatch**                          
-T[6]                                       |T[3] **Mismatch**                          
-T[4]                                       |T[2] **Mismatch**                          
-T[0]                                       |T[1] **Mismatch**                          
-T[5]                                       |T[0] **Mismatch**                          
-DAC_5_3_OUT                                |DAC_5_3_OUT                                
-(no pin, node is GND)                      |GND                                        
+B[3]                                       |B[3]                                       
+T[3]                                       |T[3]                                       
+T[2]                                       |T[2]                                       
+T[1]                                       |T[1]                                       
+T[0]                                       |T[0]                                       
+T[6]                                       |T[6]                                       
+T[5]                                       |T[5]                                       
+T[4]                                       |T[4]                                       
+VGND                                       |VGND                                       
 ---------------------------------------------------------------------------------------
-Cell pin lists for dac_5_3 and dac_5_3 altered to match.
+Cell pin lists are equivalent.
 Device classes dac_5_3 and dac_5_3 are equivalent.
 
-Final result: Top level cell failed pin matching.
+Final result: Circuits match uniquely.
+.

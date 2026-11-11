@@ -1,12 +1,26 @@
 ** sch_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/tb_dac.sch
 **.subckt tb_dac B_5_3[4],B_5_3[3],B_5_3[2],B_5_3[1],B_5_3[0]
-*+ T_5_3[6],T_5_3[5],T_5_3[4],T_5_3[3],T_5_3[2],T_5_3[1],T_5_3[0] DAC_OUT
+*+ T_5_3[6],T_5_3[5],T_5_3[4],T_5_3[3],T_5_3[2],T_5_3[1],T_5_3[0] DAC_SCH_OUT DAC_PARAX_OUT
 *.ipin B_5_3[4],B_5_3[3],B_5_3[2],B_5_3[1],B_5_3[0]
 *.ipin T_5_3[6],T_5_3[5],T_5_3[4],T_5_3[3],T_5_3[2],T_5_3[1],T_5_3[0]
-*.opin DAC_OUT
-x1 DAC_OUT B_5_3[4] B_5_3[3] B_5_3[2] B_5_3[1] B_5_3[0] T_5_3[6] T_5_3[5] T_5_3[4] T_5_3[3] T_5_3[2]
-+ T_5_3[1] T_5_3[0] dac_5_3
-x2 B0 B1 B2 B3 B4 T0 T1 T2 T3 T4 T5 T6 dac_5_3_out 0 dac_5_3.mag_parax
+*.opin DAC_SCH_OUT
+*.opin DAC_PARAX_OUT
+x1 DAC_SCH_OUT B_5_3[4] B_5_3[3] B_5_3[2] B_5_3[1] B_5_3[0] T_5_3[6] T_5_3[5] T_5_3[4] T_5_3[3]
++ T_5_3[2] T_5_3[1] T_5_3[0] GND dac_5_3
+x2 B_5_3[0] B_5_3[1] B_5_3[2] B_5_3[3] B_5_3[4] T_5_3[0] T_5_3[1] T_5_3[2] T_5_3[3] T_5_3[4]
++ T_5_3[5] T_5_3[6] DAC_PARAX_OUT GND dac_5_3_parax
+* tap: B_5_3[4:0] --> B_5_3[0]
+* tap: B_5_3[4:0] --> B_5_3[1]
+* tap: B_5_3[4:0] --> B_5_3[2]
+* tap: B_5_3[4:0] --> B_5_3[3]
+* tap: B_5_3[4:0] --> B_5_3[4]
+* tap: T_5_3[6:0] --> T_5_3[0]
+* tap: T_5_3[6:0] --> T_5_3[1]
+* tap: T_5_3[6:0] --> T_5_3[2]
+* tap: T_5_3[6:0] --> T_5_3[3]
+* tap: T_5_3[6:0] --> T_5_3[4]
+* tap: T_5_3[6:0] --> T_5_3[5]
+* tap: T_5_3[6:0] --> T_5_3[6]
 **** begin user architecture code
 
 .option wnflag=1
@@ -18,9 +32,7 @@ x2 B0 B1 B2 B3 B4 T0 T1 T2 T3 T4 T5 T6 dac_5_3_out 0 dac_5_3.mag_parax
 
 
 
-.include dac_ramp_sampling-50.0MHz_3.3V_5_3.spice
-
-.include sim_dac_ramp.spice
+.include /home/j542yu/Documents/ece298a-msk-modem/xschem/simulation/dac_ramp_sampling-50.0MHz_3.3V_5_3.spice
 
 
 .include /usr/local/share/pdk/gf180mcuD/libs.tech/ngspice/design.ngspice
@@ -28,35 +40,36 @@ x2 B0 B1 B2 B3 B4 T0 T1 T2 T3 T4 T5 T6 dac_5_3_out 0 dac_5_3.mag_parax
 .lib /usr/local/share/pdk/gf180mcuD/libs.tech/ngspice/sm141064.ngspice res_typical
 
 
-.include /home/j542yu/Documents/ece298a-msk-modem/mag/dac_5_3.mag.sim.spice
+.include /home/j542yu/Documents/ece298a-msk-modem/mag/dac_5_3.sim.spice
 
 **** end user architecture code
 **.ends
 
-* expanding   symbol:  dac_5_3.sym # of pins=3
+* expanding   symbol:  dac_5_3.sym # of pins=4
 ** sym_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/dac_5_3.sym
 ** sch_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/dac_5_3.sch
-.subckt dac_5_3 DAC_5_3_OUT B[4] B[3] B[2] B[1] B[0] T[6] T[5] T[4] T[3] T[2] T[1] T[0]
+.subckt dac_5_3 DAC_OUT B[4] B[3] B[2] B[1] B[0] T[6] T[5] T[4] T[3] T[2] T[1] T[0] VGND
 *.ipin B[4],B[3],B[2],B[1],B[0]
 *.ipin T[6],T[5],T[4],T[3],T[2],T[1],T[0]
-*.opin DAC_5_3_OUT
-x1 net3 net1 B[0] dac_sub_r2r
-x2 net4 net3 B[1] dac_sub_r2r
-x3 net5 net4 B[2] dac_sub_r2r
-x4 net6 net5 B[3] dac_sub_r2r
-x5 DAC_5_3_OUT net6 B[4] dac_sub_r2r
+*.opin DAC_OUT
+*.iopin VGND
+x1 net2 net1 B[0] VGND dac_sub_r2r
+x2 net3 net2 B[1] VGND dac_sub_r2r
+x3 net4 net3 B[2] VGND dac_sub_r2r
+x4 net5 net4 B[3] VGND dac_sub_r2r
+x5 DAC_OUT net5 B[4] VGND dac_sub_r2r
 * tap: B[4:0] --> B[0]
 * tap: B[4:0] --> B[1]
 * tap: B[4:0] --> B[2]
 * tap: B[4:0] --> B[3]
 * tap: B[4:0] --> B[4]
-x6 DAC_5_3_OUT T[0] dac_sub_therm
-x7 DAC_5_3_OUT T[1] dac_sub_therm
-x8 DAC_5_3_OUT T[2] dac_sub_therm
-x9 DAC_5_3_OUT T[3] dac_sub_therm
-x10 DAC_5_3_OUT T[4] dac_sub_therm
-x11 DAC_5_3_OUT T[5] dac_sub_therm
-x12 DAC_5_3_OUT T[6] dac_sub_therm
+x6 DAC_OUT T[0] VGND dac_sub_therm
+x7 DAC_OUT T[1] VGND dac_sub_therm
+x8 DAC_OUT T[2] VGND dac_sub_therm
+x9 DAC_OUT T[3] VGND dac_sub_therm
+x10 DAC_OUT T[4] VGND dac_sub_therm
+x11 DAC_OUT T[5] VGND dac_sub_therm
+x12 DAC_OUT T[6] VGND dac_sub_therm
 * tap: T[6:0] --> T[0]
 * tap: T[6:0] --> T[1]
 * tap: T[6:0] --> T[2]
@@ -64,38 +77,44 @@ x12 DAC_5_3_OUT T[6] dac_sub_therm
 * tap: T[6:0] --> T[4]
 * tap: T[6:0] --> T[5]
 * tap: T[6:0] --> T[6]
-XR2 GND net7 GND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR3 net7 net1 GND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR4 GND net2 GND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR5 GND net2 GND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR7 GND net2 net8 ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
+XR2 VGND net6 VGND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
+XR3 net6 net1 VGND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
+XR4 VGND VGND VGND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
+XR5 VGND VGND VGND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
+XR7 VGND VGND VGND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
 .ends
 
 
-* expanding   symbol:  dac_sub_r2r.sym # of pins=3
+* expanding   symbol:  dac_5_3_parax.sym # of pins=14
+** sym_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/dac_5_3_parax.sym
+.include /home/j542yu/Documents/ece298a-msk-modem/mag/dac_5_3.sim.spice
+
+* expanding   symbol:  dac_sub_r2r.sym # of pins=4
 ** sym_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/dac_sub_r2r.sym
 ** sch_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/dac_sub_r2r.sch
-.subckt dac_sub_r2r R_node_out R_node_in in
+.subckt dac_sub_r2r R_node_out R_node_in in VGND
 *.ipin in
 *.iopin R_node_out
 *.iopin R_node_in
-XR7 in net1 GND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR1 net1 R_node_in GND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR2 net2 R_node_in GND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR3 R_node_out net2 GND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR4 net3 R_node_in GND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR5 R_node_out net3 GND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
+*.iopin VGND
+XR7 in net1 VGND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
+XR1 net1 R_node_in VGND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
+XR2 net2 R_node_in VGND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
+XR3 R_node_out net2 VGND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
+XR4 net3 R_node_in VGND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
+XR5 R_node_out net3 VGND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
 .ends
 
 
-* expanding   symbol:  dac_sub_therm.sym # of pins=2
+* expanding   symbol:  dac_sub_therm.sym # of pins=3
 ** sym_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/dac_sub_therm.sym
 ** sch_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/dac_sub_therm.sch
-.subckt dac_sub_therm R_node in
+.subckt dac_sub_therm R_node in VGND
 *.ipin in
 *.iopin R_node
-XR7 in net1 GND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
-XR1 net1 R_node GND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
+*.iopin VGND
+XR7 in net1 VGND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
+XR1 net1 R_node VGND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
 .ends
 
 .GLOBAL GND

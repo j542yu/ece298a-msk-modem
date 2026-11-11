@@ -1,7 +1,7 @@
 # Load the cell
-set project [lindex $argv $argc-1]
-box 0 0 0 0
-load $project.mag
+set project [file rootname [lindex $argv end]]
+
+load $project
 
 # Preserve all labels attached to extracted nets
 extract do aliases

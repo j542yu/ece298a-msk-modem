@@ -1,4 +1,4 @@
-timestamp 1794362495
+timestamp 1794379465
 version 8.3
 tech gf180mcuD
 style ngspice()
@@ -8,12 +8,13 @@ use dac_sub_therm2 dac_sub_therm2_0 1 0 -4176 0 1 111
 use dac_sub_therm1 dac_sub_therm1_0 1 0 -336 0 1 111
 node "m1_n627_300#" 2 381.946 -627 300 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 39100 1792 0 0 0 0 0 0 0 0
 substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-cap "dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_40_n2122#" "dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_n1400_n2122#" 0.0101068
-cap "dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_1000_2000#" "dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_n440_2000#" 0.000741207
+cap "dac_sub_therm1_0/T[4]" "dac_sub_therm2_0/DAC_5_3_OUT" 0.0101068
 cap "dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_1000_2000#" "dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_n920_2000#" 0.00733225
-cap "dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_n1400_2000#" "dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_1000_2000#" 0.0191608
-cap "dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_n1400_2000#" "dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_1480_2000#" 188.29
+cap "dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_1000_2000#" "dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_n440_2000#" 0.000741207
+cap "dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_1480_2000#" "dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_n1400_2000#" 188.29
+cap "dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_1000_2000#" "dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_n1400_2000#" 0.0191608
 merge "dac_sub_therm1_0/VSUBS" "dac_sub_therm2_0/VSUBS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 merge "dac_sub_therm2_0/VSUBS" "VSUBS"
-merge "dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_n1400_n2122#" "dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_1480_n2122#" -397.642 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -35236 -1716 0 0 0 0 0 0 0 0
-merge "dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_1480_n2122#" "m1_n627_300#"
+merge "dac_sub_therm1_0/DAC_5_3_OUT" "dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_n1400_n2122#" -397.642 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -35236 -1716 0 0 0 0 0 0 0 0
+merge "dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_n1400_n2122#" "dac_sub_therm2_0/DAC_5_3_OUT"
+merge "dac_sub_therm2_0/DAC_5_3_OUT" "m1_n627_300#"
