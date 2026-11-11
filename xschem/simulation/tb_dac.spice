@@ -1,12 +1,10 @@
 ** sch_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/tb_dac.sch
-**.subckt tb_dac B_5_3[4],B_5_3[3],B_5_3[2],B_5_3[1],B_5_3[0]
-*+ T_5_3[6],T_5_3[5],T_5_3[4],T_5_3[3],T_5_3[2],T_5_3[1],T_5_3[0] DAC_SCH_OUT DAC_PARAX_OUT
+**.subckt tb_dac DAC_PARAX_OUT B_5_3[4],B_5_3[3],B_5_3[2],B_5_3[1],B_5_3[0]
+*+ T_5_3[6],T_5_3[5],T_5_3[4],T_5_3[3],T_5_3[2],T_5_3[1],T_5_3[0] DAC_SCH_OUT
+*.opin DAC_PARAX_OUT
 *.ipin B_5_3[4],B_5_3[3],B_5_3[2],B_5_3[1],B_5_3[0]
 *.ipin T_5_3[6],T_5_3[5],T_5_3[4],T_5_3[3],T_5_3[2],T_5_3[1],T_5_3[0]
 *.opin DAC_SCH_OUT
-*.opin DAC_PARAX_OUT
-x1 DAC_SCH_OUT B_5_3[4] B_5_3[3] B_5_3[2] B_5_3[1] B_5_3[0] T_5_3[6] T_5_3[5] T_5_3[4] T_5_3[3]
-+ T_5_3[2] T_5_3[1] T_5_3[0] GND dac_5_3
 x2 B_5_3[0] B_5_3[1] B_5_3[2] B_5_3[3] B_5_3[4] T_5_3[0] T_5_3[1] T_5_3[2] T_5_3[3] T_5_3[4]
 + T_5_3[5] T_5_3[6] DAC_PARAX_OUT GND dac_5_3_parax
 * tap: B_5_3[4:0] --> B_5_3[0]
@@ -21,29 +19,32 @@ x2 B_5_3[0] B_5_3[1] B_5_3[2] B_5_3[3] B_5_3[4] T_5_3[0] T_5_3[1] T_5_3[2] T_5_3
 * tap: T_5_3[6:0] --> T_5_3[4]
 * tap: T_5_3[6:0] --> T_5_3[5]
 * tap: T_5_3[6:0] --> T_5_3[6]
+x1 DAC_SCH_OUT B_5_3[4] B_5_3[3] B_5_3[2] B_5_3[1] B_5_3[0] T_5_3[6] T_5_3[5] T_5_3[4] T_5_3[3]
++ T_5_3[2] T_5_3[1] T_5_3[0] GND dac_5_3
 **** begin user architecture code
 
 .option wnflag=1
 
 .control
-    tran 200p 7us
+    tran 10p 7us
     write tb_dac.raw
 .endc
 
 
 
-.include /home/j542yu/Documents/ece298a-msk-modem/xschem/simulation/dac_ramp_sampling-50.0MHz_3.3V_5_3.spice
+.include dac_ramp_sampling-50.0MHz_3.3V_5_3.spice
 
 
 .include /usr/local/share/pdk/gf180mcuD/libs.tech/ngspice/design.ngspice
 .lib /usr/local/share/pdk/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical
 .lib /usr/local/share/pdk/gf180mcuD/libs.tech/ngspice/sm141064.ngspice res_typical
 
-
-.include /home/j542yu/Documents/ece298a-msk-modem/mag/dac_5_3.sim.spice
-
 **** end user architecture code
 **.ends
+
+* expanding   symbol:  dac_5_3_parax.sym # of pins=14
+** sym_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/dac_5_3_parax.sym
+.include /home/j542yu/Documents/ece298a-msk-modem/mag/dac_5_3.sim.spice
 
 * expanding   symbol:  dac_5_3.sym # of pins=4
 ** sym_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/dac_5_3.sym
@@ -84,10 +85,6 @@ XR5 VGND VGND VGND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
 XR7 VGND VGND VGND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
 .ends
 
-
-* expanding   symbol:  dac_5_3_parax.sym # of pins=14
-** sym_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/dac_5_3_parax.sym
-.include /home/j542yu/Documents/ece298a-msk-modem/mag/dac_5_3.sim.spice
 
 * expanding   symbol:  dac_sub_r2r.sym # of pins=4
 ** sym_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/dac_sub_r2r.sym
