@@ -1,0 +1,358 @@
+timestamp 1794374713
+version 8.3
+tech gf180mcuD
+style ngspice()
+scale 1000 1 0.5
+resistclasses 1000000 3250000 6300 7000 6300 7000 7300 1000000 60000 185000 60000 185000 6300 7000 6300 7000 6800 7300 350000 310000 1000000 90 90 90 90 40
+use ppolyf_u_1k_GR4QPH ppolyf_u_1k_GR4QPH_0 1 0 10246 0 1 2528
+use ppolyf_u_1k_9VNAQZ ppolyf_u_1k_9VNAQZ_0 1 0 -554 0 1 2528
+use dac_therm_3_bits dac_therm_3_bits_0 1 0 18846 0 1 119
+use dac_r2r_5_bits dac_r2r_5_bits_0 1 0 -34 0 1 0
+port "T[6]" 12 21099 119 21473 419 m1
+port "T[5]" 10 20619 119 20993 419 m1
+port "T[4]" 9 20139 119 20513 419 m1
+port "T[3]" 8 16299 119 16673 419 m1
+port "T[2]" 7 15819 119 16193 419 m1
+port "T[1]" 6 15339 119 15713 419 m1
+port "T[0]" 5 14859 119 15233 419 m1
+port "DAC_5_3_OUT" 14 17699 -444 18147 479 m2
+port "B[4]" 4 12949 119 13323 419 m1
+port "B[3]" 3 10064 119 10438 419 m1
+port "B[2]" 2 7179 119 7553 419 m1
+port "B[1]" 1 4299 119 4673 419 m1
+port "B[0]" 0 1419 119 1793 419 m1
+port "GND" 16 -2810 330 -1650 550 m1
+node "2R_31,2R_32,2R_41,2R_42,2R_4_uq0" 0 0 10533 419 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "2R_31,2R_32,2R_41,2R_42,2R_4" 0 0 10533 419 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "2R_0,2R_0" 0 0 928 4591 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "T[6]" 0 452.84 21099 119 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 224400 1948 0 0 0 0 0 0 0 0
+node "T[5]" 0 357.227 20619 119 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 224400 1948 0 0 0 0 0 0 0 0
+node "T[4]" 0 452.84 20139 119 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 224400 1948 0 0 0 0 0 0 0 0
+node "T[3]" 0 389.098 16299 119 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 224400 1948 0 0 0 0 0 0 0 0
+node "T[2]" 0 357.227 15819 119 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 224400 1948 0 0 0 0 0 0 0 0
+node "T[1]" 0 357.227 15339 119 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 224400 1948 0 0 0 0 0 0 0 0
+node "T[0]" 0 519.213 14859 119 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 224400 1948 0 0 0 0 0 0 0 0
+node "m1_21579_419#" 1 253.544 21579 419 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 25300 1192 0 0 0 0 0 0 0 0
+node "DAC_5_3_OUT" 2 4098.23 17699 -444 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 684400 5022 2543575 12276 0 0 0 0 0 0
+node "B[4]" 0 299.039 12949 119 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 112200 1348 0 0 0 0 0 0 0 0
+node "B[3]" 0 347.963 10064 119 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 112200 1348 0 0 0 0 0 0 0 0
+node "B[2]" 0 347.963 7179 119 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 112200 1348 0 0 0 0 0 0 0 0
+node "B[1]" 0 347.963 4299 119 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 112200 1348 0 0 0 0 0 0 0 0
+node "B[0]" 0 347.963 1419 119 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 112200 1348 0 0 0 0 0 0 0 0
+node "2R_21,2R22,2R_31,2R_32,2R_3" 5 1008.41 7648 419 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 106766 4734 0 0 0 0 0 0 0 0
+node "2R_11,2R_12,2R_21,2R_22,2R_2" 5 1003.13 4768 419 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 106536 4724 0 0 0 0 0 0 0 0
+node "2R_01,2R_02,2R_11,2R_12,2R_1" 5 1003.13 1888 419 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 106536 4724 0 0 0 0 0 0 0 0
+node "2R_0G,2R_01,2R_02,2R_0" 4 796.352 -512 419 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 84456 3764 0 0 0 0 0 0 0 0
+node "GND" 1 1064.34 -2810 330 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 291494 4338 0 0 0 0 0 0 0 0
+node "m1_21579_4591#" 1 246.412 21579 4591 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 25300 1192 0 0 0 0 0 0 0 0
+node "2R_T4,2R_T4" 2 220.049 19648 4591 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 39790 1822 0 0 0 0 0 0 0 0
+node "2R_T5,2R_T5" 1 491.157 19179 4591 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255870 4224 0 0 0 0 0 0 0 0
+node "2R_T6,2R_T6" 2 1304.26 18699 4591 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 499670 6924 0 0 0 0 0 0 0 0
+node "2R_T3,2R_T3" 2 252.703 16288 4591 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 40296 1844 0 0 0 0 0 0 0 0
+node "2R_T2,2R_T2" 1 608.507 15819 4591 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 328480 4604 0 0 0 0 0 0 0 0
+node "2R_T1,2R_T1" 2 880.998 15339 4591 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 583090 7344 0 0 0 0 0 0 0 0
+node "2R_4,2R_4" 2 222.316 12458 4591 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 40296 1844 0 0 0 0 0 0 0 0
+node "2R_41,2R_41" 2 449.138 11989 4591 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 225290 4224 0 0 0 0 0 0 0 0
+node "2R_42,2R_42" 2 1243.61 11510 4610 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 382365 6578 0 0 0 0 0 0 0 0
+node "2R_3,2R_3" 2 222.316 9573 4591 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 40296 1844 0 0 0 0 0 0 0 0
+node "2R_31,2R_31" 2 448.224 9104 4591 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 225290 4224 0 0 0 0 0 0 0 0
+node "2R_32,2R_32" 2 1110.62 8625 4610 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 382365 6578 0 0 0 0 0 0 0 0
+node "2R_2,2R2" 2 222.316 6688 4591 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 40296 1844 0 0 0 0 0 0 0 0
+node "2R_21,2R21" 2 447.738 6219 4591 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 225290 4224 0 0 0 0 0 0 0 0
+node "2R_22,2R22" 2 1110.57 5740 4610 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 383822 6578 0 0 0 0 0 0 0 0
+node "2R_1,2R_1" 2 222.316 3808 4591 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 40296 1844 0 0 0 0 0 0 0 0
+node "2R_11,2R_11" 2 447.734 3339 4591 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 225290 4224 0 0 0 0 0 0 0 0
+node "2R_12,2R_12" 2 1110.08 2860 4610 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 383822 6578 0 0 0 0 0 0 0 0
+node "2R_01,2R_01" 2 614.326 459 4591 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 225290 4224 0 0 0 0 0 0 0 0
+node "2R_0G,2R_0G" 2 382.45 -992 4591 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 40296 1844 0 0 0 0 0 0 0 0
+node "m1_n1661_4591#" 1 173.26 -1661 4591 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 17204 840 0 0 0 0 0 0 0 0
+node "2R_02,2R_02" 2 1152.9 -20 4610 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 383822 6578 0 0 0 0 0 0 0 0
+node "2R_T0,2R_T0" 3 2000.48 14859 4591 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 817338 10062 0 0 0 0 0 0 0 0
+substrate "a_14360_170#" 0 0 14360 170 ppd 0 0 0 0 0 0 120620 2188 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 228706 2766 0 0 0 0 0 0 0 0
+cap "2R_11,2R_11" "2R_12,2R_12" 1654.59
+cap "2R_22,2R22" "2R_12,2R_12" 119.932
+cap "2R_T2,2R_T2" "2R_T3,2R_T3" 288.095
+cap "2R_01,2R_02,2R_11,2R_12,2R_1" "2R_11,2R_12,2R_21,2R_22,2R_2" 3.36381
+cap "2R_4,2R_4" "2R_41,2R_41" 856.717
+cap "2R_T1,2R_T1" "2R_T3,2R_T3" 0.66778
+cap "2R_0G,2R_0G" "2R_01,2R_01" 1.36235
+cap "2R_T1,2R_T1" "2R_T0,2R_T0" 1655.16
+cap "2R_3,2R_3" "2R_31,2R_31" 856.717
+cap "2R_11,2R_11" "2R_01,2R_01" 0.740835
+cap "2R_T5,2R_T5" "2R_T6,2R_T6" 990.068
+cap "2R_11,2R_11" "2R_22,2R22" 0.0723429
+cap "2R_0G,2R_01,2R_02,2R_0" "GND" 5.4972
+cap "2R_02,2R_02" "2R_12,2R_12" 119.932
+cap "T[4]" "DAC_5_3_OUT" 0.468364
+cap "2R_22,2R22" "2R_32,2R_32" 114.274
+cap "2R_32,2R_32" "2R_31,2R_31" 1632.23
+cap "2R_11,2R_11" "2R_21,2R21" 0.740835
+cap "2R_21,2R21" "2R_22,2R22" 1654.59
+cap "2R_42,2R_42" "2R_31,2R_31" 0.0717027
+cap "2R_T5,2R_T5" "2R_T4,2R_T4" 837.565
+cap "2R_21,2R21" "2R_31,2R_31" 0.737287
+cap "2R_41,2R_41" "2R_31,2R_31" 0.737287
+cap "2R_42,2R_42" "2R_32,2R_32" 114.274
+cap "2R_1,2R_1" "2R_11,2R_11" 856.717
+cap "2R_21,2R21" "2R_32,2R_32" 0.0717027
+cap "T[1]" "DAC_5_3_OUT" 321.01
+cap "2R_42,2R_42" "2R_41,2R_41" 1632.23
+cap "2R_01,2R_02,2R_11,2R_12,2R_1" "2R_0G,2R_01,2R_02,2R_0" 3.36381
+cap "T[3]" "T[2]" 253.2
+cap "2R_0G,2R_0G" "2R_02,2R_02" 12.7189
+cap "2R_02,2R_02" "2R_01,2R_01" 1654.59
+cap "2R_21,2R22,2R_31,2R_32,2R_3" "2R_11,2R_12,2R_21,2R_22,2R_2" 3.36381
+cap "2R_0G,2R_0G" "m1_n1661_4591#" 6.53878
+cap "T[5]" "T[6]" 253.2
+cap "T[1]" "T[0]" 253.2
+cap "T[4]" "T[5]" 253.2
+cap "DAC_5_3_OUT" "T[0]" 341.239
+cap "2R_T1,2R_T1" "2R_T2,2R_T2" 1089.15
+cap "m1_21579_4591#" "2R_T6,2R_T6" 17.0968
+cap "2R_2,2R2" "2R_21,2R21" 856.717
+cap "DAC_5_3_OUT" "T[3]" 492.421
+cap "2R_T0,2R_T0" "2R_T6,2R_T6" 162.048
+cap "T[1]" "T[2]" 253.2
+cap "B[4]" "DAC_5_3_OUT" 177.264
+cap "DAC_5_3_OUT" "T[2]" 321.177
+cap "2R_01,2R_01" "2R_12,2R_12" 0.0723429
+cap "ppolyf_u_1k_9VNAQZ_0/a_n440_n2122#" "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_n1400_n2122#" -2.88769
+cap "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_n1400_n2122#" -1.68191
+cap "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_n1400_n2122#" 4.97369
+cap "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" 3.43475
+cap "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_n1400_n2122#" "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" -1.68191
+cap "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_40_n2122#" 27.5614
+cap "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_40_n2122#" "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_n1400_n2122#" 0.0101068
+cap "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" 6.2673
+cap "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_1000_n2122#" "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" -3.36381
+cap "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" 2.60951
+cap "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_1000_n2122#" "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" 0.245339
+cap "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_40_n2122#" 27.5614
+cap "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" 7.09253
+cap "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_1000_n2122#" 0.245339
+cap "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_1000_n2122#" -3.36381
+cap "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" 2.60951
+cap "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_40_n2122#" 27.5614
+cap "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" 7.20404
+cap "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" 2.60951
+cap "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_40_n2122#" "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" 27.5614
+cap "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_1000_n2122#" "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" 0.245339
+cap "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" 7.20404
+cap "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_40_n2122#" "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" 5.10052
+cap "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_1000_n2122#" 2.48744
+cap "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_40_n2122#" "ppolyf_u_1k_GR4QPH_0/a_4120_n2122#" 16.7269
+cap "ppolyf_u_1k_GR4QPH_0/a_4120_n2122#" "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" 8.35986
+cap "ppolyf_u_1k_GR4QPH_0/a_4120_n2122#" "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_1000_n2122#" 0.245339
+cap "ppolyf_u_1k_GR4QPH_0/a_4120_n2122#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1400_n2122#" 3.2413
+cap "ppolyf_u_1k_GR4QPH_0/a_4120_n2122#" "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" 71.3963
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1400_n2122#" "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" 7.78046
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n920_n2122#" "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" 0.000985465
+cap "ppolyf_u_1k_GR4QPH_0/a_4120_n2122#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1880_n2122#" 50.8736
+cap "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1880_n2122#" 29.4407
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1400_n2122#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1880_n2122#" -126.6
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n440_n2122#" "ppolyf_u_1k_GR4QPH_0/a_4120_n2122#" 6.48259
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n440_n2122#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n920_n2122#" -126.6
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1400_n2122#" "ppolyf_u_1k_GR4QPH_0/a_4120_n2122#" 3.2413
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1400_n2122#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n920_n2122#" -126.6
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_40_n2122#" "ppolyf_u_1k_GR4QPH_0/a_4120_n2122#" 3.2413
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_40_n2122#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n920_n2122#" 29.4206
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_40_n2122#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n440_n2122#" 27.8211
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_40_n2122#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1400_n2122#" 21.6477
+cap "ppolyf_u_1k_GR4QPH_0/a_4120_n2122#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n920_n2122#" 6.48259
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_40_n2122#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n920_n2122#" 0.00240528
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n440_n2122#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_40_n2122#" 0.0139861
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_40_n2122#" "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" 17.6169
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_40_n2122#" "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_40_n2122#" 0.0688102
+cap "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_40_n2122#" 15.5573
+cap "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_520_n2122#" "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" 3.2413
+cap "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_40_n2122#" "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" 17.022
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_1000_n2122#" "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" 1.78428
+cap "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_520_n2122#" "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_40_n2122#" -126.6
+cap "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_520_n2122#" "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_1000_n2122#" -126.6
+cap "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_520_n2122#" 3.2413
+cap "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_1000_n2122#" 68.7023
+cap "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" "ppolyf_u_1k_GR4QPH_0/a_n11720_2000#" 13.8925
+cap "ppolyf_u_1k_9VNAQZ_0/a_40_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" 33.6164
+cap "ppolyf_u_1k_9VNAQZ_0/a_40_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" -0.681175
+cap "ppolyf_u_1k_9VNAQZ_0/a_40_2000#" "ppolyf_u_1k_GR4QPH_0/a_n11720_2000#" 40.9604
+cap "ppolyf_u_1k_9VNAQZ_0/a_40_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" -0.681175
+cap "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" -838.385
+cap "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" 24.35
+cap "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" 15.0087
+cap "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" 27.527
+cap "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" -816.201
+cap "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" -0.370418
+cap "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" -59.9658
+cap "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" 14.5601
+cap "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" -0.0361714
+cap "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" 26.4339
+cap "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" -772.243
+cap "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_1000_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" -59.9658
+cap "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" 13.7312
+cap "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_520_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" -0.0361714
+cap "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_520_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" -0.370418
+cap "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n440_2000#" -373.642
+cap "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n440_2000#" -483.075
+cap "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" -0.0361714
+cap "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" 15.8376
+cap "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" 25.443
+cap "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" -0.370418
+cap "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" -882.343
+cap "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_1000_2000#" "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" 3.37367
+cap "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" 12.4537
+cap "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_520_2000#" -0.370418
+cap "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" 25.1442
+cap "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_1000_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" -119.932
+cap "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" -706.101
+cap "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n440_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" -299.984
+cap "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_520_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" -0.0361714
+cap "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" 17.1152
+cap "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" -948.485
+cap "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n440_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" -556.733
+cap "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" 26.7327
+cap "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" -0.368644
+cap "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" -0.0358513
+cap "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_1000_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" -114.274
+cap "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" -624.482
+cap "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" 23.9052
+cap "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n440_2000#" -221.722
+cap "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_1000_2000#" 3.5049
+cap "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" 11.0963
+cap "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_520_2000#" -0.0358513
+cap "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_520_2000#" -0.368644
+cap "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" 18.4725
+cap "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" -0.0358513
+cap "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n440_2000#" -634.995
+cap "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" -1007.75
+cap "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" -0.368644
+cap "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" 28.103
+cap "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_520_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" -0.0358513
+cap "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" 9.73895
+cap "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_1000_2000#" "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" 3.5049
+cap "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n440_2000#" -143.46
+cap "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" -555.611
+cap "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_1000_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" -114.274
+cap "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_520_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" -0.368644
+cap "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" 22.5349
+cap "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1880_2000#" 0.00769538
+cap "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" "ppolyf_u_1k_GR4QPH_0/a_4120_2000#" 29.4733
+cap "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "ppolyf_u_1k_GR4QPH_0/a_4120_2000#" 19.1126
+cap "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" -1076.62
+cap "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n440_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" -713.257
+cap "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1400_2000#" 0.00110999
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1400_2000#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1880_2000#" -222.478
+cap "ppolyf_u_1k_GR4QPH_0/a_4120_2000#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1880_2000#" 31.9197
+cap "ppolyf_u_1k_GR4QPH_0/a_4120_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_1000_2000#" 43.428
+cap "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_520_2000#" "ppolyf_u_1k_GR4QPH_0/a_4120_2000#" -0.737923
+cap "ppolyf_u_1k_GR4QPH_0/a_4120_2000#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1400_2000#" 3.2413
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n920_2000#" "ppolyf_u_1k_GR4QPH_0/a_4120_2000#" 3.66058
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n440_2000#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n920_2000#" -163.153
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n920_2000#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1400_2000#" -563.679
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n440_2000#" "ppolyf_u_1k_GR4QPH_0/a_4120_2000#" 0.039398
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1880_2000#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1400_2000#" -315.093
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1400_2000#" "ppolyf_u_1k_GR4QPH_0/a_4120_2000#" 5.74389
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n920_2000#" "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" 3.17126
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1400_2000#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n440_2000#" -0.66778
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1400_2000#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1880_2000#" -395.508
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1400_2000#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n920_2000#" -525.474
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n440_2000#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n920_2000#" -124.942
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n440_2000#" "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" 0.00370408
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1400_2000#" "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" 8.06364
+cap "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_n920_2000#" 11.9352
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_1480_2000#" "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_n1400_2000#" -162.048
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_1480_2000#" "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" 6.72095
+cap "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_n440_2000#" "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_n920_2000#" -10.9621
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_1480_2000#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_1000_2000#" -100.277
+cap "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_n1400_2000#" "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_n920_2000#" -269.405
+cap "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_n1400_2000#" 31.3271
+cap "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_n920_2000#" "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_n440_2000#" -826.603
+cap "ppolyf_u_1k_GR4QPH_0/a_11320_2000#" "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_n1400_2000#" 38.7396
+cap "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_n920_2000#" "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_n1400_2000#" -630.187
+cap "ppolyf_u_1k_GR4QPH_0/a_11320_2000#" "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_n920_2000#" 39.6778
+cap "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_1000_2000#" "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_n920_2000#" -45.2384
+cap "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_1000_2000#" "ppolyf_u_1k_GR4QPH_0/a_11320_2000#" 64.5903
+cap "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_n920_2000#" "ppolyf_u_1k_GR4QPH_0/a_11320_2000#" 0.245339
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1400_2000#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1880_2000#" -11.4784
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1880_2000#" "ppolyf_u_1k_GR4QPH_0/a_4120_2000#" 1.44401
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1400_2000#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1880_2000#" -315.093
+cap "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1880_2000#" 1.08664
+cap "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1880_2000#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1400_2000#" -295.231
+cap "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_1480_2000#" 0.421073
+merge "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n440_n2122#" "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_1000_n2122#" -1011.94 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -106536 -4724 0 0 0 0 0 0 0 0
+merge "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_1000_n2122#" "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#"
+merge "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" "2R_01,2R_02,2R_11,2R_12,2R_1"
+merge "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_1480_2000#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1880_2000#" -1944.6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -817338 -10062 0 0 0 0 0 0 0 0
+merge "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1880_2000#" "2R_T0,2R_T0"
+merge "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n440_n2122#" "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_1000_n2122#" -1011.94 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -106536 -4724 0 0 0 0 0 0 0 0
+merge "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_1000_n2122#" "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#"
+merge "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" "2R_11,2R_12,2R_21,2R_22,2R_2"
+merge "ppolyf_u_1k_GR4QPH_0/a_4120_2000#" "ppolyf_u_1k_GR4QPH_0/a_11320_2000#" -1443 0 0 0 0 0 0 -56448 -1856 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -101458 -5968 0 0 0 0 0 0 0 0
+merge "ppolyf_u_1k_GR4QPH_0/a_11320_2000#" "m1_21579_4591#"
+merge "m1_21579_4591#" "ppolyf_u_1k_GR4QPH_0/a_n11720_2000#"
+merge "ppolyf_u_1k_GR4QPH_0/a_n11720_2000#" "dac_therm_3_bits_0/VSUBS"
+merge "dac_therm_3_bits_0/VSUBS" "m1_n1661_4591#"
+merge "m1_n1661_4591#" "ppolyf_u_1k_GR4QPH_0/a_11320_n2122#"
+merge "ppolyf_u_1k_GR4QPH_0/a_11320_n2122#" "m1_21579_419#"
+merge "m1_21579_419#" "ppolyf_u_1k_GR4QPH_0/a_4120_n2122#"
+merge "ppolyf_u_1k_GR4QPH_0/a_4120_n2122#" "dac_r2r_5_bits_0/VSUBS"
+merge "dac_r2r_5_bits_0/VSUBS" "ppolyf_u_1k_9VNAQZ_0/VSUBS"
+merge "ppolyf_u_1k_9VNAQZ_0/VSUBS" "ppolyf_u_1k_9VNAQZ_0/a_n440_n2122#"
+merge "ppolyf_u_1k_9VNAQZ_0/a_n440_n2122#" "ppolyf_u_1k_GR4QPH_0/a_n11720_n2122#"
+merge "ppolyf_u_1k_GR4QPH_0/a_n11720_n2122#" "a_14360_170#"
+merge "a_14360_170#" "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#"
+merge "ppolyf_u_1k_GR4QPH_0/a_n11932_n2334#" "GND"
+merge "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_40_n2122#" "B[4]" -361.7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -112200 -1348 0 0 0 0 0 0 0 0
+merge "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n440_2000#" "2R_T3,2R_T3" -252.742 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -40296 -1844 0 0 0 0 0 0 0 0
+merge "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_40_n2122#" "B[3]" -373 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -112200 -1348 0 0 0 0 0 0 0 0
+merge "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_1000_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" -1238.53 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -383822 -6578 0 0 0 0 0 0 0 0
+merge "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" "2R_02,2R_02"
+merge "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n440_2000#" "2R_4,2R_4" -222.316 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -40296 -1844 0 0 0 0 0 0 0 0
+merge "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_40_n2122#" "B[2]" -373 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -112200 -1348 0 0 0 0 0 0 0 0
+merge "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_1000_n2122#" "T[6]" -346.587 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -112200 -1348 0 0 0 0 0 0 0 0
+merge "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_520_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" -641.187 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -225290 -4224 0 0 0 0 0 0 0 0
+merge "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "2R_01,2R_01"
+merge "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_1000_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" -1161.05 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -382365 -6578 0 0 0 0 0 0 0 0
+merge "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" "2R_32,2R_32"
+merge "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1400_n2122#" "T[1]" -258.239 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -112200 -1348 0 0 0 0 0 0 0 0
+merge "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_n440_n2122#" "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_n1400_n2122#" -818.937 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -80592 -3688 0 0 0 0 0 0 0 0
+merge "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_n1400_n2122#" "ppolyf_u_1k_9VNAQZ_0/a_40_n2122#"
+merge "ppolyf_u_1k_9VNAQZ_0/a_40_n2122#" "2R_0G,2R_01,2R_02,2R_0"
+merge "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_40_n2122#" "B[1]" -373 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -112200 -1348 0 0 0 0 0 0 0 0
+merge "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_520_n2122#" "T[5]" -258.239 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -112200 -1348 0 0 0 0 0 0 0 0
+merge "dac_r2r_5_bits_0/dac_sub_r2r_0/ppolyf_u_1k_RUZ9QZ_0/a_40_n2122#" "B[0]" -373.015 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -112200 -1348 0 0 0 0 0 0 0 0
+merge "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_40_n2122#" "T[4]" -315.619 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -112200 -1348 0 0 0 0 0 0 0 0
+merge "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_40_n2122#" "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" -920.239 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3422 0 0 0 0 0 0 0 0
+merge "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" "DAC_5_3_OUT"
+merge "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_1000_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" -1229 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -382365 -6578 0 0 0 0 0 0 0 0
+merge "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" "2R_42,2R_42"
+merge "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n440_n2122#" "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_1000_n2122#" -1017.32 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -106766 -4734 0 0 0 0 0 0 0 0
+merge "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_1000_n2122#" "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#"
+merge "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_520_n2122#" "2R_21,2R22,2R_31,2R_32,2R_3"
+merge "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n440_n2122#" "T[3]" -304.486 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -112200 -1348 0 0 0 0 0 0 0 0
+merge "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n920_n2122#" "T[2]" -258.239 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -112200 -1348 0 0 0 0 0 0 0 0
+merge "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n440_2000#" "2R_2,2R2" -222.316 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -40296 -1844 0 0 0 0 0 0 0 0
+merge "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_520_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" -474.595 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -225290 -4224 0 0 0 0 0 0 0 0
+merge "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "2R_11,2R_11"
+merge "ppolyf_u_1k_9VNAQZ_0/a_40_2000#" "ppolyf_u_1k_9VNAQZ_0/a_n440_2000#" -400.739 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -36432 -1768 0 0 0 0 0 0 0 0
+merge "ppolyf_u_1k_9VNAQZ_0/a_n440_2000#" "2R_0G,2R_0G"
+merge "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_1000_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" -1160.27 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -383822 -6578 0 0 0 0 0 0 0 0
+merge "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" "2R_12,2R_12"
+merge "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1880_n2122#" "T[0]" -330.06 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -112200 -1348 0 0 0 0 0 0 0 0
+merge "dac_r2r_5_bits_0/dac_sub_r2r_1/ppolyf_u_1k_RUZ9QZ_0/a_n440_2000#" "2R_1,2R_1" -222.316 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -40296 -1844 0 0 0 0 0 0 0 0
+merge "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_1000_2000#" "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_n1400_2000#" -1426.18 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -499670 -6924 0 0 0 0 0 0 0 0
+merge "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_n1400_2000#" "2R_T6,2R_T6"
+merge "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n440_2000#" "2R_3,2R_3" -222.316 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -40296 -1844 0 0 0 0 0 0 0 0
+merge "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_520_2000#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n920_2000#" -614.714 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -328480 -4604 0 0 0 0 0 0 0 0
+merge "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n920_2000#" "2R_T2,2R_T2"
+merge "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_1000_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" -1160.88 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -383822 -6578 0 0 0 0 0 0 0 0
+merge "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n1400_2000#" "2R_22,2R22"
+merge "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_n440_2000#" "2R_T4,2R_T4" -220.049 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -39790 -1822 0 0 0 0 0 0 0 0
+merge "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_520_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" -474.599 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -225290 -4224 0 0 0 0 0 0 0 0
+merge "dac_r2r_5_bits_0/dac_sub_r2r_2/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "2R_21,2R21"
+merge "dac_therm_3_bits_0/dac_sub_therm1_0/ppolyf_u_1k_9VZ9QZ_0/a_n920_2000#" "2R_T5,2R_T5" -610.108 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -255870 -4425 0 0 0 0 0 0 0 0
+merge "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_1000_2000#" "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1400_2000#" -896.485 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -583090 -7344 0 0 0 0 0 0 0 0
+merge "dac_therm_3_bits_0/dac_sub_therm2_0/ppolyf_u_1k_9D8AQZ_0/a_n1400_2000#" "2R_T1,2R_T1"
+merge "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_520_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" -475.085 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -225290 -4224 0 0 0 0 0 0 0 0
+merge "dac_r2r_5_bits_0/dac_sub_r2r_3/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "2R_31,2R_31"
+merge "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_520_2000#" "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" -474.562 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -225290 -4224 0 0 0 0 0 0 0 0
+merge "dac_r2r_5_bits_0/dac_sub_r2r_4/ppolyf_u_1k_RUZ9QZ_0/a_n920_2000#" "2R_41,2R_41"

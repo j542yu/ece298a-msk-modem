@@ -10,10 +10,24 @@ lab=B[4:0]}
 N 150 -460 270 -460 {
 lab=#net1}
 N 1120 -460 1990 -460 {
-lab=DAC_OUT}
+lab=DAC_5_3_OUT}
 N 1080 -260 1920 -260 {bus=true
 lab=T[6:0]}
 N 170 -430 170 -370 {
+lab=GND}
+N 210 -150 230 -150 {
+lab=GND}
+N 230 -180 230 -150 {
+lab=GND}
+N 160 -150 210 -150 {
+lab=GND}
+N 230 -150 270 -150 {
+lab=GND}
+N 160 -210 270 -210 {
+lab=#net2}
+N 290 -180 290 -150 {
+lab=GND}
+N 270 -150 290 -150 {
 lab=GND}
 C {dac_sub_r2r.sym} 350 -430 0 0 {name=x1}
 C {dac_sub_r2r.sym} 520 -430 0 0 {name=x2}
@@ -43,17 +57,36 @@ C {bus_tap.sym} 1670 -260 0 0 {name=l12 lab=[4]}
 C {bus_tap.sym} 1800 -260 0 0 {name=l13 lab=[5]}
 C {bus_tap.sym} 1920 -260 0 0 {name=l14 lab=[6]}
 C {ipin.sym} 1080 -260 0 0 {name=p2 lab=T[6:0]}
-C {opin.sym} 1990 -460 0 0 {name=p3 lab=DAC_OUT}
+C {opin.sym} 1990 -460 0 0 {name=p3 lab=DAC_5_3_OUT}
 C {symbols/ppolyf_u_1k.sym} 150 -370 0 1 {name=R2
-W=20e-6
-L=2e-6
+W=2e-6
+L=20e-6
 model=ppolyf_u_1k
 spiceprefix=X
 m=1}
 C {symbols/ppolyf_u_1k.sym} 150 -430 0 1 {name=R3
-W=20e-6
-L=2e-6
+W=2e-6
+L=20e-6
 model=ppolyf_u_1k
 spiceprefix=X
 m=1}
 C {gnd.sym} 170 -370 0 0 {name=l15 lab=GND}
+C {symbols/ppolyf_u_1k.sym} 210 -180 0 1 {name=R4
+W=2e-6
+L=20e-6
+model=ppolyf_u_1k
+spiceprefix=X
+m=1}
+C {symbols/ppolyf_u_1k.sym} 270 -180 0 1 {name=R5
+W=2e-6
+L=20e-6
+model=ppolyf_u_1k
+spiceprefix=X
+m=1}
+C {gnd.sym} 210 -150 0 0 {name=l16 lab=GND}
+C {symbols/ppolyf_u_1k.sym} 160 -180 0 1 {name=R7
+W=2e-6
+L=20e-6
+model=ppolyf_u_1k
+spiceprefix=X
+m=1}
