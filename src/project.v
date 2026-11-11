@@ -31,14 +31,14 @@ module tt_um_example (
   assign uo_out = t_out[7:0];
 
   transmit_6_2 transmit_inst(
-    .in(uio_in[0]),
+    .in(ui_in[0]),
     .out(t_out),
     .clk(clk),
     .rst_n(rst_n),
-    .enable(uio_in[2])
+    .enable(uio_in[0])
   );
     
   // List all unused inputs to prevent warnings
-  wire _unused = &{ena, uio_in[7:1], ui_in[7:0], 1'b0};
+  wire _unused = &{ena, uio_in[7:1], ui_in[7:1], 1'b0};
 
 endmodule

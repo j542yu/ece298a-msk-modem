@@ -83,8 +83,8 @@ def check_5_3(dut, val):
 
 async def stream(dut, input):
     for i in input:
-        # Only change uio_in[0]
-        dut.uio_in.value = Arr(((int(dut.uio_in.value) >> 1) << 1) + int(i), 8)
+        # Only change ui_in[0]
+        dut.ui_in.value = Arr(((int(dut.ui_in.value) >> 1) << 1) + int(i), 8)
         # dut._log.info(dut.uo_out.value)
         await ClockCycles(dut.clk, 8)
 
@@ -109,7 +109,7 @@ async def mod_6_2_test(dut):
     
     accumulated = 0
 
-    dut.uio_in.value = Arr("00000100") # Enabling transmit
+    dut.uio_in.value = Arr("00000001") # Enabling transmit
     await ClockCycles(dut.clk, 1)
 
     dut._log.info("Inputting 10101010")
@@ -127,7 +127,7 @@ async def mod_6_2_test(dut):
     check_6_2(dut, cos_lut(input, False))
     
     dut._log.info("Enable transmit")
-    dut.uio_in.value = Arr("00000100")
+    dut.uio_in.value = Arr("00000001")
     await ClockCycles(dut.clk, 1)
     check_6_2(dut, cos_lut(input, False))
     
@@ -145,7 +145,7 @@ async def mod_6_2_test(dut):
     dut.rst_n.value = 0
     await ClockCycles(dut.clk, 10)
     dut.rst_n.value = 1
-    dut.uio_in.value = Arr("00000100")
+    dut.uio_in.value = Arr("00000001")
     await ClockCycles(dut.clk, 1)
     
     dut._log.info("Inputting 00001111")
@@ -173,7 +173,7 @@ async def mod_6_2_test(dut):
     dut.rst_n.value = 0
     await ClockCycles(dut.clk, 10)
     dut.rst_n.value = 1
-    dut.uio_in.value = Arr("00000100")
+    dut.uio_in.value = Arr("00000001")
     await ClockCycles(dut.clk, 1)
     
     dut._log.info("Inputting 101")
@@ -201,7 +201,7 @@ async def mod_6_2_test(dut):
     dut.rst_n.value = 0
     await ClockCycles(dut.clk, 10)
     dut.rst_n.value = 1
-    dut.uio_in.value = Arr("00000100")
+    dut.uio_in.value = Arr("00000001")
     await ClockCycles(dut.clk, 1)
     
     dut._log.info("Inputting 00000000")
@@ -223,7 +223,7 @@ async def mod_6_2_test(dut):
     dut.rst_n.value = 0
     await ClockCycles(dut.clk, 10)
     dut.rst_n.value = 1
-    dut.uio_in.value = Arr("00000100")
+    dut.uio_in.value = Arr("00000001")
     await ClockCycles(dut.clk, 1)
     
     dut._log.info("Inputting 1")
@@ -269,7 +269,7 @@ async def mod_5_3_test(dut):
 
     dut._log.info("Phase Accumulator Test")
 
-    dut.uio_in.value = Arr("00000100") # Enabling transmit
+    dut.uio_in.value = Arr("00000001") # Enabling transmit
     await ClockCycles(dut.clk, 1)
 
     dut._log.info("Inputting 10101010")
@@ -287,7 +287,7 @@ async def mod_5_3_test(dut):
     check_5_3(dut, cos_lut(input, False))
     
     dut._log.info("Enable transmit")
-    dut.uio_in.value = Arr("00000100")
+    dut.uio_in.value = Arr("00000001")
     await ClockCycles(dut.clk, 1)
     check_5_3(dut, cos_lut(input, False))
     
@@ -305,7 +305,7 @@ async def mod_5_3_test(dut):
     dut.rst_n.value = 0
     await ClockCycles(dut.clk, 10)
     dut.rst_n.value = 1
-    dut.uio_in.value = Arr("00000100")
+    dut.uio_in.value = Arr("00000001")
     await ClockCycles(dut.clk, 1)
     
     dut._log.info("Inputting 00001111")
@@ -333,7 +333,7 @@ async def mod_5_3_test(dut):
     dut.rst_n.value = 0
     await ClockCycles(dut.clk, 10)
     dut.rst_n.value = 1
-    dut.uio_in.value = Arr("00000100")
+    dut.uio_in.value = Arr("00000001")
     await ClockCycles(dut.clk, 1)
     
     dut._log.info("Inputting 101")
@@ -361,7 +361,7 @@ async def mod_5_3_test(dut):
     dut.rst_n.value = 0
     await ClockCycles(dut.clk, 10)
     dut.rst_n.value = 1
-    dut.uio_in.value = Arr("00000100")
+    dut.uio_in.value = Arr("00000001")
     await ClockCycles(dut.clk, 1)
     
     dut._log.info("Inputting 00000000")
@@ -383,7 +383,7 @@ async def mod_5_3_test(dut):
     dut.rst_n.value = 0
     await ClockCycles(dut.clk, 10)
     dut.rst_n.value = 1
-    dut.uio_in.value = Arr("00000100")
+    dut.uio_in.value = Arr("00000001")
     await ClockCycles(dut.clk, 1)
     
     dut._log.info("Inputting 1")
