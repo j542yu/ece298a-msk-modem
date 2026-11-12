@@ -59,8 +59,8 @@ PINS = {
     "bottom": [],
 
     "left": [
-        {"name": "T[6:0]", "direction": "OUTPUT"},
-        {"name": "B[4:0]", "direction": "OUTPUT"},
+        {"name": "T[6:0]", "direction": "OUTPUT", "spacing": 4.2},
+        {"name": "B[4:0]", "direction": "OUTPUT", "spacing": 14.3},
     ],
 
     "right": [],
@@ -95,14 +95,14 @@ SIDE_CONFIG = {
 
     "left": {
         "alignment": "top",
-        "spacing": 2.76,
+        "spacing": 14.3,
         "clearance": 8,
         "size": (1.0, 0.3),
     },
 
     "right": {
         "alignment": "top",
-        "spacing": 2.76,
+        "spacing": 14.3,
         "clearance": 8,
         "size": (1.0, 0.3),
     },
@@ -205,7 +205,10 @@ def expand_pins():
     Expand all buses and return pins grouped by side.
 
     Each resulting pin is represented by:
-        (name, direction)
+        (name, direction, spacing)
+
+    Spacing is inherited from the bus definition.
+    If unspecified, use the side's default spacing.
     """
 
     expanded = {}
@@ -216,9 +219,14 @@ def expand_pins():
         for pin in pins:
             names = expand_pin_name(pin["name"])
 
+            spacing = pin.get(
+                "spacing",
+                SIDE_CONFIG[side]["spacing"]
+            )
+
             for name in names:
                 expanded[side].append(
-                    (name, pin["direction"].upper())
+                    (name, pin["direction"].upper(), spacing)
                 )
 
     return expanded
@@ -230,7 +238,7 @@ def expand_pins():
 
 def calculate_pin_positions(
     side,
-    pin_count,
+    pins,
     width_um,
     height_um,
 ):
@@ -239,102 +247,67 @@ def calculate_pin_positions(
 
     Coordinates represent pin geometry centers.
 
-    Clearance is measured from the die boundary to the
-    outer edge of the first pin.
+    Each pin has its own spacing value, measured from
+    the previous pin's center.
 
     Returns:
         List of (x, y) coordinates in microns.
     """
 
-    if pin_count == 0:
+    if not pins:
         return []
 
     config = SIDE_CONFIG[side]
 
     alignment = config["alignment"].lower()
-    spacing = config["spacing"]
     clearance = config["clearance"]
 
     pin_width, pin_depth = config["size"]
 
-    positions = []
+    pin_count = len(pins)
 
+    # Calculate distance from the die edge to the first pin center.
     if side in ("top", "bottom"):
-
-        usable_length = width_um
-
-        # Distance from the die edge to the first pin center.
         start = clearance + pin_width / 2
-
-        if alignment == "left":
-            coordinates = [
-                start + i * spacing
-                for i in range(pin_count)
-            ]
-
-        elif alignment == "right":
-            coordinates = [
-                usable_length - start - i * spacing
-                for i in range(pin_count)
-            ]
-
-        else:
-            raise ValueError(
-                f"Invalid alignment '{alignment}' for {side}"
-            )
-
-        # Keep the pin geometry centered along the edge.
-        if side == "bottom":
-            y = pin_depth / 2
-        else:
-            y = height_um - pin_depth / 2
-
-        positions = [(x, y) for x in coordinates]
-
+        usable_length = width_um
     else:
-
+        start = clearance + pin_depth / 2
         usable_length = height_um
 
-        start = clearance + pin_depth / 2
+    # Calculate cumulative pin positions.
+    coordinates = [start]
 
-        if alignment == "bottom":
-            coordinates = [
-                start + i * spacing
-                for i in range(pin_count)
-            ]
+    for i in range(1, pin_count):
+        coordinates.append(
+            coordinates[-1] + pins[i - 1][2]
+        )
 
-        elif alignment == "top":
-            coordinates = [
-                usable_length - start - i * spacing
-                for i in range(pin_count)
-            ]
+    # Reverse placement direction for right/top alignment.
+    if alignment in ("right", "top"):
+        coordinates = [
+            usable_length - start - coordinate + start
+            for coordinate in coordinates
+        ]
 
-        else:
-            raise ValueError(
-                f"Invalid alignment '{alignment}' for {side}"
-            )
+    elif alignment not in ("left", "bottom"):
+        raise ValueError(
+            f"Invalid alignment '{alignment}' for {side}"
+        )
 
-        if side == "left":
-            x = pin_width / 2
-        else:
-            x = width_um - pin_width / 2
-
+    if side in ("top", "bottom"):
+        y = pin_depth / 2 if side == "bottom" else height_um - pin_depth / 2
+        positions = [(x, y) for x in coordinates]
+    else:
+        x = pin_width / 2 if side == "left" else width_um - pin_width / 2
         positions = [(x, y) for y in coordinates]
 
-    # Check that all pins fit inside the die boundary
-    # along the direction in which they are distributed.
+    # Check that all pins fit inside the die boundary.
     for x, y in positions:
-
         if side in ("top", "bottom"):
-            if x - pin_width / 2 < 0:
-                raise ValueError(f"Pin extends beyond die on {side}")
-            if x + pin_width / 2 > width_um:
+            if x - pin_width / 2 < 0 or x + pin_width / 2 > width_um:
                 raise ValueError(f"Pins do not fit on {side}")
-
         else:
-            if y - pin_depth / 2 < 0:
-                raise ValueError(f"Pin extends beyond die on {side}")
-            if y + pin_depth / 2 > height_um:
+            if y - pin_depth / 2 < 0 or y + pin_depth / 2 > height_um:
                 raise ValueError(f"Pins do not fit on {side}")
 
     return positions
@@ -357,7 +330,7 @@ def generate_pin_section(expanded_pins, width_um, height_um):
 
         positions = calculate_pin_positions(
             side,
-            len(pins),
+            pins,
             width_um,
             height_um,
         )
@@ -368,8 +341,7 @@ def generate_pin_section(expanded_pins, width_um, height_um):
         half_width = to_def_units(pin_width / 2)
         half_depth = to_def_units(pin_depth / 2)
 
-        for (name, direction), (x, y) in zip(pins, positions):
-
+        for (name, direction, spacing), (x, y) in zip(pins, positions):
             x_def = to_def_units(x)
             y_def = to_def_units(y)
 
@@ -407,7 +379,7 @@ def generate_nets_section(expanded_pins):
     all_names = []
 
     for side in ("top", "bottom", "left", "right"):
-        for name, _ in expanded_pins[side]:
+        for name, _, _ in expanded_pins[side]:
             all_names.append(name)
 
     lines = [f"NETS {len(all_names)} ;"]

@@ -30,47 +30,47 @@ PINS 16 ;
     - T[5] + NET T[5] + DIRECTION OUTPUT + USE SIGNAL
       + PORT
         + LAYER Metal4 ( -1000 -300 ) ( 1000 300 )
-        + PLACED ( 1000 378180 ) N ;
+        + PLACED ( 1000 375300 ) N ;
     - T[4] + NET T[4] + DIRECTION OUTPUT + USE SIGNAL
       + PORT
         + LAYER Metal4 ( -1000 -300 ) ( 1000 300 )
-        + PLACED ( 1000 372660 ) N ;
+        + PLACED ( 1000 366900 ) N ;
     - T[3] + NET T[3] + DIRECTION OUTPUT + USE SIGNAL
       + PORT
         + LAYER Metal4 ( -1000 -300 ) ( 1000 300 )
-        + PLACED ( 1000 367140 ) N ;
+        + PLACED ( 1000 358500 ) N ;
     - T[2] + NET T[2] + DIRECTION OUTPUT + USE SIGNAL
       + PORT
         + LAYER Metal4 ( -1000 -300 ) ( 1000 300 )
-        + PLACED ( 1000 361620 ) N ;
+        + PLACED ( 1000 350100 ) N ;
     - T[1] + NET T[1] + DIRECTION OUTPUT + USE SIGNAL
       + PORT
         + LAYER Metal4 ( -1000 -300 ) ( 1000 300 )
-        + PLACED ( 1000 356100 ) N ;
+        + PLACED ( 1000 341700 ) N ;
     - T[0] + NET T[0] + DIRECTION OUTPUT + USE SIGNAL
       + PORT
         + LAYER Metal4 ( -1000 -300 ) ( 1000 300 )
-        + PLACED ( 1000 350580 ) N ;
+        + PLACED ( 1000 333300 ) N ;
     - B[4] + NET B[4] + DIRECTION OUTPUT + USE SIGNAL
       + PORT
         + LAYER Metal4 ( -1000 -300 ) ( 1000 300 )
-        + PLACED ( 1000 345060 ) N ;
+        + PLACED ( 1000 324900 ) N ;
     - B[3] + NET B[3] + DIRECTION OUTPUT + USE SIGNAL
       + PORT
         + LAYER Metal4 ( -1000 -300 ) ( 1000 300 )
-        + PLACED ( 1000 339540 ) N ;
+        + PLACED ( 1000 296300 ) N ;
     - B[2] + NET B[2] + DIRECTION OUTPUT + USE SIGNAL
       + PORT
         + LAYER Metal4 ( -1000 -300 ) ( 1000 300 )
-        + PLACED ( 1000 334020 ) N ;
+        + PLACED ( 1000 267700 ) N ;
     - B[1] + NET B[1] + DIRECTION OUTPUT + USE SIGNAL
       + PORT
         + LAYER Metal4 ( -1000 -300 ) ( 1000 300 )
-        + PLACED ( 1000 328500 ) N ;
+        + PLACED ( 1000 239100 ) N ;
     - B[0] + NET B[0] + DIRECTION OUTPUT + USE SIGNAL
       + PORT
         + LAYER Metal4 ( -1000 -300 ) ( 1000 300 )
-        + PLACED ( 1000 322980 ) N ;
+        + PLACED ( 1000 210500 ) N ;
 END PINS
 SPECIALNETS 2 ;
     - VDD + USE POWER ;
