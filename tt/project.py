@@ -482,13 +482,12 @@ class Project:
             self.fetch_wokwi_files()
         self.check_ports()
         logging.info("creating include file")
-        # tiles = self.info.tiles
+        tiles = self.info.tiles
         tile_sizes = self.get_tile_sizes()
-        die_area = tile_sizes["custom"]
-        # def_suffix = self.tech.def_suffix
+        die_area = tile_sizes[tiles]
+        def_suffix = self.tech.def_suffix
         def_template = (
-            # f"dir::../tt/tech/{self.pdk}/def/tt_block_{tiles}_{def_suffix}.def"
-            f"dir::../tt/tech/{self.pdk}/def/tt_block_custom.def"
+            f"dir::../tt/tech/{self.pdk}/def/tt_block_{tiles}_{def_suffix}.def"
         )
         config = {
             "DESIGN_NAME": self.info.top_module,
