@@ -29,9 +29,10 @@ module tt_um_modulator (
   assign uio_out[3:0] = t_out[11:8];
   assign uo_out = t_out[7:0];
 
-  transmit_5_3 transmit_inst(
+  tt_um_transmit_5_3 transmit_inst(
     .in(ui_in[0]),
-    .out(t_out),
+    .B(t_out[4:0]),
+    .T(t_out[11:5]),
     .clk(clk),
     .rst_n(rst_n),
     .enable(ui_in[1])

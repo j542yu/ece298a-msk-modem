@@ -4,8 +4,9 @@
 *.fst
 *.fst.hier
 runs
-!runs/wokwi/final
-tt_submission
+!runs/wokwi/
+runs/wokwi/*
+!runs/wokwi/final/tt_submission
 src/user_config.json
 src/config_merged.json
 test/sim_build
@@ -17,3 +18,4 @@ test/gate_level_netlist.v
 ttsetup/
 magic-src/
 open-pdks/
+tt/.github/*
