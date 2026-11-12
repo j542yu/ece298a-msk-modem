@@ -7,12 +7,10 @@ module cos_lut (
 );
 
 reg [7:0] angle;
+assign angle = angle_in[7] ? (~angle_in + 1'b1) : angle_in;
+
 
 always@(*) begin
-
-  if (angle_in[7]) begin
-    angle <= 8'hFF - angle_in + 1;
-  end else angle <= angle_in;
 
   casez(angle)
     8'b000000??: cos = 8'hFF;

@@ -1,9 +1,8 @@
 `default_nettype none
 
-module tt_um_transmit_6_2 (
+module transmit_6_2 (
   input wire in,
-  output wire [2:0] T, // Correct output occurs one clock cycle after the input signal completes
-  output wire [5:0] B,
+  output wire [8:0] out, // Correct output occurs one clock cycle after the input signal completes
   input wire clk,
   input wire rst_n,
   input wire enable
@@ -19,9 +18,7 @@ reg [7:0] cos_out;
 
 cos_lut lut (.angle_in(phase[15:8]), .cos(cos_out));
 
-assign T = { {cos_out[7] & cos_out[6]}, {cos_out[7] & !cos_out[6]}, {!cos_out[7] & cos_out[6]}};
-
-assign B = cos_out[5:0];
+assign out = { {cos_out[7] & cos_out[6]}, {cos_out[7] & !cos_out[6]}, {!cos_out[7] & cos_out[6]}, {cos_out[5:0]} };
 
 always @(posedge clk or negedge rst_n) begin
   if (!rst_n) delay_en <= 0;
