@@ -44,7 +44,7 @@ x1 DAC_SCH_OUT B_5_3[4] B_5_3[3] B_5_3[2] B_5_3[1] B_5_3[0] T_5_3[6] T_5_3[5] T_
 
 * expanding   symbol:  dac_5_3_parax.sym # of pins=14
 ** sym_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/dac_5_3_parax.sym
-.include /home/j542yu/Documents/ece298a-msk-modem/mag/dac_5_3.sim.spice
+.include ../../mag/dac_5_3.sim.spice
 
 * expanding   symbol:  dac_5_3.sym # of pins=4
 ** sym_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/dac_5_3.sym

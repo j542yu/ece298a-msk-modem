@@ -5,7 +5,9 @@ K {type=subcircuit
 format="@name @pinlist @symname"
 template="name=x1"
 
-spice_sym_def=".include /home/j542yu/Documents/ece298a-msk-modem/mag/dac_5_3.sim.spice"}
+* assuming current dir is xschem/simulation and
+* mag/ is at same level as xschem/
+spice_sym_def=".include ../../mag/dac_5_3.sim.spice"}
 V {}
 S {}
 E {}
