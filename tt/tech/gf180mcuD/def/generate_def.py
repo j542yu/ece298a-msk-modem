@@ -50,10 +50,10 @@ DEFAULT_PIN_SIZE = {
 
 PINS = {
     "top": [
-        {"name": "enable", "direction": "INPUT"},
-        {"name": "in",     "direction": "INPUT"},
-        {"name": "rst_n",  "direction": "INPUT"},
         {"name": "clk",    "direction": "INPUT"},
+        {"name": "rst_n",  "direction": "INPUT"},
+        {"name": "in",     "direction": "INPUT"},
+        {"name": "enable", "direction": "INPUT"},
     ],
 
     "bottom": [],

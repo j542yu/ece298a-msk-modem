@@ -7,19 +7,19 @@ DIEAREA ( 0 0 ) ( 220000 400000 ) ;
 COMPONENTS 0 ;
 END COMPONENTS
 PINS 16 ;
-    - enable + NET enable + DIRECTION INPUT + USE SIGNAL
+    - clk + NET clk + DIRECTION INPUT + USE SIGNAL
       + PORT
         + LAYER Metal4 ( -300 -1000 ) ( 300 1000 )
         + PLACED ( 203700 399000 ) N ;
-    - in + NET in + DIRECTION INPUT + USE SIGNAL
-      + PORT
-        + LAYER Metal4 ( -300 -1000 ) ( 300 1000 )
-        + PLACED ( 198180 399000 ) N ;
     - rst_n + NET rst_n + DIRECTION INPUT + USE SIGNAL
       + PORT
         + LAYER Metal4 ( -300 -1000 ) ( 300 1000 )
+        + PLACED ( 198180 399000 ) N ;
+    - in + NET in + DIRECTION INPUT + USE SIGNAL
+      + PORT
+        + LAYER Metal4 ( -300 -1000 ) ( 300 1000 )
         + PLACED ( 192660 399000 ) N ;
-    - clk + NET clk + DIRECTION INPUT + USE SIGNAL
+    - enable + NET enable + DIRECTION INPUT + USE SIGNAL
       + PORT
         + LAYER Metal4 ( -300 -1000 ) ( 300 1000 )
         + PLACED ( 187140 399000 ) N ;
@@ -77,10 +77,10 @@ SPECIALNETS 2 ;
     - VSS + USE GROUND ;
 END SPECIALNETS
 NETS 16 ;
-    - enable ( PIN enable ) + USE SIGNAL ;
-    - in ( PIN in ) + USE SIGNAL ;
-    - rst_n ( PIN rst_n ) + USE SIGNAL ;
     - clk ( PIN clk ) + USE SIGNAL ;
+    - rst_n ( PIN rst_n ) + USE SIGNAL ;
+    - in ( PIN in ) + USE SIGNAL ;
+    - enable ( PIN enable ) + USE SIGNAL ;
     - T[6] ( PIN T[6] ) + USE SIGNAL ;
     - T[5] ( PIN T[5] ) + USE SIGNAL ;
     - T[4] ( PIN T[4] ) + USE SIGNAL ;
