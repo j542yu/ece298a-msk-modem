@@ -6,9 +6,8 @@ module cos_lut (
   output reg [7:0] cos
 );
 
-reg [7:0] angle;
+wire [7:0] angle;
 assign angle = angle_in[7] ? (~angle_in + 1'b1) : angle_in;
-
 
 always@(*) begin
 

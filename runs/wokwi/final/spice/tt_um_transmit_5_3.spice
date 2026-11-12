@@ -1,0 +1,1320 @@
+* NGSPICE file created from tt_um_transmit_5_3.ext - technology: gf180mcuD
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__fillcap_64 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__fillcap_64 VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__fillcap_8 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__fillcap_8 VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__filltie abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__filltie VDD VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__nor2_2 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__nor2_2 A1 A2 ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__or2_1 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__or2_1 A1 A2 Z VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__oai31_1 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__oai31_1 A1 A2 A3 B ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__fillcap_4 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__fillcap_4 VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__oai21_4 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__oai21_4 A1 A2 B ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__nor3_4 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__nor3_4 A1 A2 A3 ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__endcap abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__endcap VDD VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__fill_2 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__fill_2 VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__fillcap_16 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__fillcap_16 VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__xor2_2 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__xor2_2 A1 A2 Z VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__fill_1 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__fill_1 VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__xnor2_1 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__xnor2_1 A1 A2 ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__xor2_1 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__xor2_1 A1 A2 Z VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__oai21_1 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__oai21_1 A1 A2 B ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__nand2_2 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__nand2_2 A1 A2 ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__aoi22_4 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__aoi22_4 A1 A2 B1 B2 ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__oai21_2 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__oai21_2 A1 A2 B ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__oai32_4 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__oai32_4 A1 A2 A3 B1 B2 ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__fillcap_32 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__fillcap_32 VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__buf_2 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__buf_2 I Z VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__aoi21_1 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__aoi21_1 A1 A2 B ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__clkinv_4 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__clkinv_4 I ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__nor2_1 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__nor2_1 A1 A2 ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__aoi22_1 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__aoi22_1 A1 A2 B1 B2 ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__or3_4 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__or3_4 A1 A2 A3 Z VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__buf_4 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__buf_4 I Z VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__nand3_4 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__nand3_4 A1 A2 A3 ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__nand2_1 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__nand2_1 A1 A2 ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__nor3_2 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__nor3_2 A1 A2 A3 ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__clkbuf_1 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__clkbuf_1 I Z VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__nor4_4 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__nor4_4 A1 A2 A3 A4 ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__dffrnq_1 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__dffrnq_1 D RN CLK Q VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__nand3_2 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__nand3_2 A1 A2 A3 ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__or2_4 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__or2_4 A1 A2 Z VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__clkbuf_2 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__clkbuf_2 I Z VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__oai211_1 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__oai211_1 A1 A2 B C ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__dffrnq_2 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__dffrnq_2 D RN CLK Q VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__oai211_2 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__oai211_2 A1 A2 B C ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__nor2_4 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__nor2_4 A1 A2 ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__nand4_2 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__nand4_2 A1 A2 A3 A4 ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__oai221_4 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__oai221_4 A1 A2 B1 B2 C ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__clkinv_1 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__clkinv_1 I ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__oai221_1 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__oai221_1 A1 A2 B1 B2 C ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__xor3_1 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__xor3_1 A1 A2 A3 Z VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__inv_2 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__inv_2 I ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__clkbuf_16 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__clkbuf_16 I Z VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__nand3_1 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__nand3_1 A1 A2 A3 ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__nand4_4 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__nand4_4 A1 A2 A3 A4 ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__or4_2 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__or4_2 A1 A2 A3 A4 Z VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__buf_1 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__buf_1 I Z VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__aoi211_2 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__aoi211_2 A1 A2 B C ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__dffrnq_4 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__dffrnq_4 D RN CLK Q VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__and4_2 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__and4_2 A1 A2 A3 A4 Z VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__aoi21_2 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__aoi21_2 A1 A2 B ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__aoi211_1 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__aoi211_1 A1 A2 B C ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__buf_8 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__buf_8 I Z VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__dlyb_1 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__dlyb_1 I Z VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__nand4_1 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__nand4_1 A1 A2 A3 A4 ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__and2_2 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__and2_2 A1 A2 Z VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__or4_4 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__or4_4 A1 A2 A3 A4 Z VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__and3_2 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__and3_2 A1 A2 A3 Z VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__xor2_4 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__xor2_4 A1 A2 Z VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 I Z VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__buf_3 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__buf_3 I Z VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__oai22_1 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__oai22_1 A1 A2 B1 B2 ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__nor3_1 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__nor3_1 A1 A2 A3 ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__nand2_4 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__nand2_4 A1 A2 ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__oai31_4 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__oai31_4 A1 A2 A3 B ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__or3_1 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__or3_1 A1 A2 A3 Z VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__and3_1 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__and3_1 A1 A2 A3 Z VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__aoi21_4 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__aoi21_4 A1 A2 B ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__or3_2 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__or3_2 A1 A2 A3 Z VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__aoi221_4 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__aoi221_4 A1 A2 B1 B2 C ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__and2_1 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__and2_1 A1 A2 Z VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__oai211_4 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__oai211_4 A1 A2 B C ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__oai31_2 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__oai31_2 A1 A2 A3 B ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__mux2_2 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__mux2_2 I0 I1 S Z VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__aoi211_4 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__aoi211_4 A1 A2 B C ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__xnor2_2 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__xnor2_2 A1 A2 ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__or4_1 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__or4_1 A1 A2 A3 A4 Z VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__aoi222_2 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__aoi222_2 A1 A2 B1 B2 C1 C2 ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__aoi22_2 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__aoi22_2 A1 A2 B1 B2 ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__and3_4 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__and3_4 A1 A2 A3 Z VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__aoi221_1 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__aoi221_1 A1 A2 B1 B2 C ZN VDD VNW VPW VSS
+.ends
+
+* Black-box entry subcircuit for gf180mcu_fd_sc_mcu7t5v0__clkbuf_8 abstract view
+.subckt gf180mcu_fd_sc_mcu7t5v0__clkbuf_8 I Z VDD VNW VPW VSS
+.ends
+
+.subckt tt_um_transmit_5_3 B[0] B[1] B[2] B[3] B[4] T[0] T[1] T[2] T[3] T[4] T[5]
++ T[6] VGND VPWR clk enable in rst_n
+XFILLER_10_317 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_64
+XFILLER_10_306 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XTAP_TAPCELL_ROW_9_104 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XTAP_TAPCELL_ROW_15_139 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_363_ _388_/B _515_/C _496_/B2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_2
+X_432_ _387_/Z _420_/Z _432_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__or2_1
+X_501_ _504_/A2 _501_/A2 _501_/A3 _501_/B _511_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai31_1
+XTAP_TAPCELL_ROW_20_164 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_18_247 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+X_346_ _346_/A1 _336_/Z _346_/B _364_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_4
+X_415_ _392_/Z _321_/Z _415_/A3 _501_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor3_4
+XPHY_EDGE_ROW_0_Left_23 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+XFILLER_6_129 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XTAP_TAPCELL_ROW_8_99 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_11_412 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_14_294 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+X_329_ _330_/A2 _378_/A1 _329_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__xor2_2
+XFILLER_20_253 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_20_242 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+X_594_ _592_/Z _605_/A2 _596_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__xnor2_1
+XFILLER_13_348 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_12_381 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+X_577_ _581_/A1 _589_/A2 _577_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__xor2_1
+XTAP_TAPCELL_ROW_2_68 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_22_167 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_22_101 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XTAP_TAPCELL_ROW_9_105 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_500_ _500_/A1 _500_/A2 _500_/B _510_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_1
+X_362_ _330_/Z _480_/A2 _515_/C VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_2
+XFILLER_13_167 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_431_ _412_/B _519_/A1 _486_/B _431_/B2 _531_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__aoi22_4
+XTAP_TAPCELL_ROW_20_165 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_18_237 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_2_314 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_414_ _338_/Z _533_/A2 _515_/B _538_/A3 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_2
+X_345_ _369_/B _533_/C _340_/Z _377_/B _497_/A1 _391_/A4 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai32_4
+XPHY_EDGE_ROW_21_Right_21 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+XFILLER_20_413 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XPHY_EDGE_ROW_12_Right_12 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+X_328_ _576_/A1 _331_/A2 _331_/B _330_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_1
+XFILLER_11_298 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XFILLER_7_236 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+Xload_slew20 _474_/B _412_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_593_ _577_/Z _593_/A2 _593_/B _605_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__aoi21_1
+XPHY_EDGE_ROW_6_Right_6 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+X_576_ _576_/A1 _576_/A2 _620_/Q _581_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_1
+X_361_ _505_/A1 _500_/A2 _495_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_2
+X_430_ _430_/I _456_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__clkinv_4
+XTAP_TAPCELL_ROW_9_106 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_559_ _614_/Q _615_/Q _569_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_1
+XTAP_TAPCELL_ROW_14_130 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_8_172 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XTAP_TAPCELL_ROW_20_166 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_14_411 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+X_344_ wire34/I _412_/B _491_/A1 _504_/A2 _518_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__aoi22_1
+X_413_ _338_/Z _533_/A2 _526_/A3 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_2
+XFILLER_5_142 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_20_403 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XFILLER_17_282 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_64
+XFILLER_14_252 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_20_244 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_327_ _327_/A1 _420_/A2 _321_/Z _369_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__or3_4
+Xload_slew21 _325_/A1 _327_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_4
+XFILLER_20_34 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_16_303 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XPHY_EDGE_ROW_16_Left_39 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+X_592_ _585_/B _590_/Z _592_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__xor2_1
+XTAP_TAPCELL_ROW_6_90 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_575_ _575_/A1 _575_/A2 _575_/B _589_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__aoi21_1
+XTAP_TAPCELL_ROW_17_150 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_16_177 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_8_387 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+XFILLER_22_169 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_360_ _404_/A1 _502_/A3 _386_/A1 _498_/A3 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand3_4
+X_558_ _615_/Q _558_/A2 _615_/D VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__xor2_1
+XTAP_TAPCELL_ROW_14_131 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_5_324 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+X_489_ _504_/A2 _460_/B _497_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+XTAP_TAPCELL_ROW_20_167 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XPHY_EDGE_ROW_19_Left_42 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+X_412_ _412_/A1 _491_/A2 _412_/B _436_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_1
+X_343_ _533_/C _340_/Z _504_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_1
+XFILLER_15_209 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XPHY_EDGE_ROW_4_Left_27 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+XFILLER_7_408 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+X_326_ _327_/A1 _420_/A2 _321_/Z _471_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor3_2
+XFILLER_20_234 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XFILLER_18_34 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+Xload_slew11 _466_/A3 _532_/B1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__clkbuf_1
+Xload_slew22 _364_/A1 _527_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_2
+XFILLER_3_400 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XFILLER_7_238 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_309_ _331_/A2 _309_/A2 _620_/Q _621_/Q _461_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor4_4
+X_591_ _604_/B _590_/Z _597_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+XPHY_EDGE_ROW_7_Left_30 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+XFILLER_13_6 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_21_384 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+X_574_ _575_/B _574_/A2 _620_/D VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__xor2_1
+XFILLER_22_104 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+X_557_ _614_/Q _557_/A2 _614_/D VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__xnor2_1
+XTAP_TAPCELL_ROW_14_132 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_626_ _626_/D _626_/RN _626_/CLK _626_/Q VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+X_488_ _488_/A1 _525_/A1 _488_/A3 _488_/A4 _490_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor4_4
+XFILLER_12_192 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XTAP_TAPCELL_ROW_3_70 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_4_380 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_8_174 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_342_ _330_/Z _404_/A2 _386_/A1 _498_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand3_2
+XFILLER_14_413 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XTAP_TAPCELL_ROW_11_113 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_411_ _439_/A2 _444_/B _446_/A4 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+XPHY_EDGE_ROW_20_Left_43 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+X_609_ _609_/A1 _607_/Z _609_/B _625_/D VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_1
+XFILLER_14_232 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_14_243 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+X_325_ _325_/A1 _492_/A1 _377_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__or2_4
+XFILLER_20_202 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XFILLER_18_46 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_9_291 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+Xload_slew23 _382_/A1 _476_/S VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__clkbuf_1
+XFILLER_19_346 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+Xclkload0 _620_/CLK clkload0/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__clkbuf_2
+XFILLER_3_412 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+X_308_ _575_/B _378_/A2 _533_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+X_590_ _623_/Q _598_/A3 _590_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__xor2_1
+XFILLER_22_308 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XFILLER_19_121 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_21_352 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XPHY_EDGE_ROW_19_Right_19 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+XFILLER_16_179 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_573_ _335_/B _576_/A2 _626_/Q _626_/D _574_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai211_1
+XFILLER_8_312 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_22_138 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_17_400 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+X_625_ _625_/D _626_/RN _626_/CLK _625_/Q VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__dffrnq_2
+XFILLER_5_348 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+X_487_ _487_/A1 _487_/A2 _488_/A4 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+X_556_ _614_/Q _557_/A2 _558_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_1
+XTAP_TAPCELL_ROW_14_133 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XTAP_TAPCELL_ROW_3_71 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_14_403 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+X_341_ _533_/C _338_/Z _519_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_2
+XFILLER_12_37 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+X_410_ _314_/Z _420_/A2 _464_/A2 _410_/ZN VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor3_4
+X_608_ _312_/B _609_/A1 _609_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+XTAP_TAPCELL_ROW_11_114 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_1_384 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+X_539_ _377_/B _387_/Z _539_/B _539_/C _540_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai211_2
+XFILLER_14_211 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+X_324_ _327_/A1 _492_/A1 _474_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_4
+XFILLER_20_247 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XTAP_TAPCELL_ROW_0_50 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_307_ _335_/B _301_/I _378_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_4
+Xload_slew35 wire34/I _431_/B2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__clkbuf_1
+XFILLER_16_317 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_64
+XFILLER_3_276 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+X_572_ _335_/B _572_/A2 _619_/D VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__xor2_1
+XFILLER_22_128 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+X_486_ _486_/A1 _486_/A2 _486_/B _487_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_1
+XFILLER_17_412 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+X_555_ _557_/A2 _555_/A2 _613_/D VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+XTAP_TAPCELL_ROW_14_134 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_624_ _624_/D _626_/RN _626_/CLK _624_/Q VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+XTAP_TAPCELL_ROW_3_72 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_340_ _566_/A1 _346_/A1 _336_/Z _340_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__or3_4
+X_538_ _541_/A1 _541_/A2 _538_/A3 _538_/B _539_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai31_1
+XTAP_TAPCELL_ROW_11_115 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_1_352 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+X_607_ _607_/A1 _606_/Z _607_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__xor2_1
+X_469_ _469_/A1 _506_/B _469_/A3 _542_/A3 _525_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand4_2
+X_323_ _599_/A1 _392_/A1 _323_/B1 _323_/B2 _323_/C _492_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai221_4
+XFILLER_6_411 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XTAP_TAPCELL_ROW_0_51 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_18_59 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_18_37 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+X_306_ _585_/B _604_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__clkinv_1
+Xload_slew36 rebuffer55/I _316_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_4
+XFILLER_18_381 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_19_80 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_15_384 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+XFILLER_12_387 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+X_571_ _561_/B _576_/A2 _572_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_1
+XPHY_EDGE_ROW_1_Right_1 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+XFILLER_8_314 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XTAP_TAPCELL_ROW_8_100 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_485_ _566_/A1 _533_/C _340_/Z _485_/B2 _485_/C _486_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai221_1
+XFILLER_16_92 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+X_554_ _612_/Q _561_/B _548_/Z _613_/Q _555_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai31_1
+XFILLER_12_162 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+X_623_ _623_/D _626_/RN _626_/CLK _623_/Q VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+XTAP_TAPCELL_ROW_3_73 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_4_372 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XTAP_TAPCELL_ROW_11_116 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_537_ _537_/A1 _537_/A2 _540_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+X_606_ _312_/B _604_/B _606_/A3 _606_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__xor3_1
+X_399_ _514_/A1 _444_/A2 _427_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+X_468_ _501_/A2 _478_/B _542_/A3 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_2
+XFILLER_11_408 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+X_322_ _323_/B1 _323_/B2 _464_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_4
+XTAP_TAPCELL_ROW_0_52 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+Xload_slew37 _319_/A3 wire34/I VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_305_ _624_/Q _599_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__inv_2
+XFILLER_10_94 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_15_352 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XPHY_EDGE_ROW_11_Left_34 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+X_570_ _548_/Z _560_/Z _570_/B _575_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_1
+XFILLER_12_300 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+Xclkbuf_0_clk clk clkbuf_0_clk/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__clkbuf_16
+XFILLER_8_304 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XPHY_EDGE_ROW_15_Right_15 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+XTAP_TAPCELL_ROW_22_180 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_484_ _444_/B _484_/A2 _487_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+X_553_ _626_/D _626_/Q _569_/A1 _557_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand3_1
+X_622_ _622_/D _626_/RN _626_/CLK _622_/Q VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+XTAP_TAPCELL_ROW_8_101 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_12_18 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_4_384 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XTAP_TAPCELL_ROW_11_117 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_1_321 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+X_398_ _398_/A1 _483_/B _500_/B _498_/A2 _444_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand4_2
+XFILLER_17_277 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+X_467_ _530_/B _486_/B _469_/A3 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+X_536_ _536_/A1 wire8/Z _531_/Z _535_/Z B[3] VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand4_4
+X_605_ _592_/Z _605_/A2 _600_/Z _605_/B _607_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai31_1
+XFILLER_2_107 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_13_61 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XTAP_TAPCELL_ROW_0_53 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+Xfanout40 _625_/Q _331_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_4
+X_321_ _323_/B2 _323_/B1 _321_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__or2_4
+XFILLER_6_413 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_18_39 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_519_ _519_/A1 _541_/A2 _532_/B2 _519_/A4 _519_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__or4_2
+Xload_slew38 _461_/A1 rebuffer55/I VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_2
+Xload_slew16 _410_/ZN _529_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_1
+X_304_ _622_/Q _581_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__clkinv_1
+XTAP_TAPCELL_ROW_6_85 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_21_72 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_12_312 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+X_483_ _340_/Z _483_/A2 _483_/B _484_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_1
+X_552_ _610_/Q _611_/Q _612_/Q _613_/Q _569_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__aoi211_2
+X_621_ _621_/D _626_/RN _626_/CLK _621_/Q VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__dffrnq_4
+XTAP_TAPCELL_ROW_22_181 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_12_164 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_466_ _480_/A2 _483_/A2 _466_/A3 _506_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand3_1
+XFILLER_17_212 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+X_535_ _535_/A1 _535_/A2 _535_/A3 _535_/A4 _535_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__and4_2
+X_604_ _590_/Z _599_/Z _604_/B _605_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_1
+X_397_ _483_/B _395_/Z _528_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_2
+XFILLER_9_400 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+Xfanout41 _619_/Q _309_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_4
+Xfanout30 _329_/Z _381_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_4
+X_320_ _312_/B _310_/Z _581_/B _323_/B2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__aoi21_2
+XTAP_TAPCELL_ROW_0_54 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_6_403 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+X_518_ _518_/A1 _518_/A2 _525_/A4 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+X_449_ _453_/A2 _454_/A2 T[0] VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_4
+Xload_slew39 _461_/A1 _496_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_1
+Xload_slew28 _330_/Z _515_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_4
+X_303_ _621_/Q _581_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__inv_2
+XTAP_TAPCELL_ROW_6_86 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_21_346 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_18_2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XFILLER_21_51 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+XFILLER_8_317 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_64
+XTAP_TAPCELL_ROW_17_146 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_551_ _612_/Q _551_/A2 _612_/D VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__xor2_1
+X_620_ _620_/D _620_/RN _620_/CLK _620_/Q VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__dffrnq_4
+XPHY_EDGE_ROW_5_Right_5 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+XTAP_TAPCELL_ROW_22_182 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_482_ _500_/A1 _340_/Z _506_/A2 _503_/B _482_/B2 _488_/A3 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai32_4
+XFILLER_17_279 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_396_ _500_/B _398_/A1 _425_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+X_534_ _538_/B _534_/A2 _534_/B _534_/C _535_/A4 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__aoi211_1
+X_465_ _321_/Z _504_/B1 _503_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_2
+X_603_ _609_/A1 _601_/Z _603_/B _624_/D VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_1
+XFILLER_1_345 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_9_412 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_4_172 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+Xfanout42 _618_/Q _331_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_8
+XFILLER_10_411 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XTAP_TAPCELL_ROW_0_55 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_1_142 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+Xfanout31 _545_/ZN _609_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__dlyb_1
+X_379_ _330_/Z _502_/A3 _483_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_1
+XFILLER_13_282 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+X_517_ _517_/A1 _517_/A2 _517_/A3 _517_/A4 _525_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand4_1
+X_448_ _448_/I _453_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__clkinv_4
+XFILLER_9_253 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_302_ _620_/Q _575_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__inv_2
+XFILLER_1_88 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XTAP_TAPCELL_ROW_6_87 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_12_314 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XTAP_TAPCELL_ROW_17_147 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XPHY_EDGE_ROW_15_Left_38 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+XFILLER_7_384 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+XTAP_TAPCELL_ROW_22_183 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XPHY_EDGE_ROW_20_Right_20 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+XFILLER_16_41 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_550_ _561_/B _548_/Z _551_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_1
+X_481_ _491_/A2 _532_/B2 _481_/A3 _482_/B2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor3_2
+XPHY_EDGE_ROW_11_Right_11 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+XFILLER_12_177 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_4_387 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+XFILLER_17_214 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_533_ _338_/Z _533_/A2 _533_/B _533_/C _534_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai211_1
+X_602_ _624_/Q _609_/A1 _603_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+X_464_ _314_/Z _464_/A2 _392_/Z _466_/A3 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor3_2
+X_395_ _500_/B _398_/A1 _395_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__and2_2
+Xclone71 _541_/B _460_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_4
+XPHY_EDGE_ROW_18_Left_41 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+Xfanout32 _545_/ZN _561_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__dlyb_1
+X_516_ _418_/B _516_/A2 _517_/A4 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+X_378_ _378_/A1 _378_/A2 _385_/A2 _493_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand3_4
+XTAP_TAPCELL_ROW_0_56 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_447_ _447_/A1 _447_/A2 _391_/Z _450_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor3_4
+XFILLER_8_2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XPHY_EDGE_ROW_3_Left_26 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+XFILLER_3_408 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+Xload_slew19 _471_/B _491_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__clkbuf_1
+X_301_ _301_/I _566_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__inv_2
+XFILLER_5_290 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_15_323 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+XTAP_TAPCELL_ROW_6_88 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_20_381 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XTAP_TAPCELL_ROW_17_148 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_15_164 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_15_142 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_7_352 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XTAP_TAPCELL_ROW_22_184 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XTAP_TAPCELL_ROW_22_173 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_480_ _533_/A2 _480_/A2 _481_/A3 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_1
+XTAP_TAPCELL_ROW_14_129 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_4_311 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_22_410 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+X_601_ _601_/A1 _600_/Z _601_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__xor2_1
+X_394_ _527_/A1 _485_/B2 _476_/S _398_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand3_1
+X_532_ _532_/A1 _460_/B _532_/B1 _532_/B2 _535_/A3 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__aoi22_1
+XTAP_TAPCELL_ROW_10_110 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_463_ _444_/B _463_/A2 _469_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+XFILLER_4_174 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+Xload_slew6 _456_/A3 _448_/I VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_4
+XFILLER_22_240 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+Xfanout44 input3/Z _626_/RN VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__dlyb_1
+X_515_ _566_/A1 _515_/A2 _515_/B _515_/C _516_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai211_1
+XFILLER_13_21 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XFILLER_10_413 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_377_ _485_/C _509_/A2 _377_/B _534_/C VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__aoi21_1
+XTAP_TAPCELL_ROW_0_57 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XTAP_TAPCELL_ROW_0_46 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_446_ _446_/A1 _446_/A2 _446_/A3 _446_/A4 _447_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand4_1
+X_300_ _335_/B _575_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__clkinv_1
+XFILLER_18_387 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+X_429_ _429_/A1 _543_/A1 _391_/Z _429_/A4 _430_/I VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__or4_4
+XFILLER_19_53 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+Xinput1 enable _626_/D VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__dlyb_1
+XTAP_TAPCELL_ROW_6_89 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_21_76 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_21_10 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XTAP_TAPCELL_ROW_17_149 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_21_168 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XFILLER_16_2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_7_331 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+XTAP_TAPCELL_ROW_22_174 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_17_408 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_4_356 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+XPHY_EDGE_ROW_9_Right_9 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+XFILLER_1_337 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+Xclone51 _329_/Z _505_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_4
+XFILLER_13_400 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XTAP_TAPCELL_ROW_10_111 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+Xload_slew7 _450_/A2 _456_/A3 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_4
+X_462_ _527_/B1 _493_/A2 _505_/B _463_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand3_1
+X_393_ _415_/A3 _464_/A2 _392_/Z _538_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor3_4
+X_600_ _585_/B _599_/Z _600_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__xor2_1
+X_531_ _531_/A1 _537_/A2 _531_/A3 _531_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__and3_2
+XFILLER_22_274 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+Xfanout45 input3/Z _620_/RN VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__dlyb_1
+XFILLER_10_403 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XTAP_TAPCELL_ROW_0_47 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+Xfanout12 _445_/B _486_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_4
+X_514_ _514_/A1 _514_/A2 _514_/B _517_/A3 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__aoi21_1
+X_376_ _501_/A2 _376_/A2 _509_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_2
+X_445_ wire34/Z _418_/B _445_/B _446_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__aoi21_1
+X_359_ _515_/A2 _500_/A1 _338_/Z _541_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor3_4
+X_428_ _428_/A1 _436_/A1 _428_/A3 _440_/A1 _429_/A4 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand4_1
+Xinput2 in _585_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__dlyb_1
+XFILLER_15_347 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_18_185 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_12_317 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_64
+XFILLER_21_103 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_21_114 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_8_107 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XTAP_TAPCELL_ROW_22_175 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XTAP_TAPCELL_ROW_3_69 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_4_324 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+X_461_ _461_/A1 _461_/A2 _474_/B _490_/A3 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_1
+X_530_ _495_/B _444_/B _530_/B _531_/A3 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_1
+XFILLER_13_412 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XTAP_TAPCELL_ROW_10_112 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_1_349 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_392_ _392_/A1 _599_/A1 _392_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__xor2_4
+XTAP_TAPCELL_ROW_0_48 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+Xfanout24 _333_/Z _385_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__clkbuf_4
+X_375_ _515_/B _475_/A2 _521_/B2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+XFILLER_13_286 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+X_513_ _483_/B _500_/B _485_/C _505_/B _514_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand4_1
+X_444_ _444_/A1 _444_/A2 _538_/A3 _444_/B _446_/A3 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai31_1
+XFILLER_8_290 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_358_ _619_/Q _566_/A1 _500_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+XFILLER_2_411 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+X_427_ _427_/A1 _517_/A1 _446_/A4 _429_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand3_1
+XPHY_EDGE_ROW_18_Right_18 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+Xinput3 rst_n input3/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__dlyb_1
+XFILLER_19_55 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_14_381 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_21_67 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_11_384 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+XTAP_TAPCELL_ROW_16_140 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_16_23 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XTAP_TAPCELL_ROW_22_176 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_20_192 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XPHY_EDGE_ROW_0_Right_0 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+XFILLER_21_2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XFILLER_17_207 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+X_460_ _461_/A1 _530_/B _460_/B _490_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_1
+X_391_ _391_/A1 _534_/B _534_/C _391_/A4 _391_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__or4_4
+XFILLER_4_37 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_589_ _621_/Q _589_/A2 _623_/Q _622_/Q _599_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai211_1
+XTAP_TAPCELL_ROW_0_49 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+Xfanout25 _333_/Z _388_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_3
+X_374_ _346_/B _515_/A2 _388_/B _338_/Z _475_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand4_4
+X_512_ _512_/A1 _511_/Z _512_/A3 B[1] VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand3_4
+X_443_ _444_/A1 _444_/B _542_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+X_357_ _575_/A1 _301_/I _480_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_4
+X_426_ _446_/A2 _426_/A2 _543_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+XFILLER_15_349 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_10_25 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_18_187 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_409_ _314_/Z _420_/A2 _508_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_1
+XFILLER_2_242 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XTAP_TAPCELL_ROW_19_160 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_12_308 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_15_124 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_11_352 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XFILLER_11_330 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+XTAP_TAPCELL_ROW_16_141 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XPHY_EDGE_ROW_10_Left_33 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+XTAP_TAPCELL_ROW_7_91 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XTAP_TAPCELL_ROW_22_177 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_19_282 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_64
+XFILLER_19_271 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XFILLER_16_411 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_14_2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+X_390_ _377_/B _387_/Z _390_/B1 _369_/B _391_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai22_1
+Xclone54 _332_/Z _502_/A3 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_588_ _609_/A1 _587_/Z _588_/B _622_/D VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_1
+Xfanout26 _332_/Z _404_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__clkbuf_4
+Xfanout15 _410_/ZN _444_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_3
+X_373_ _527_/A1 _485_/B2 _527_/A2 _376_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor3_1
+XFILLER_13_288 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_13_266 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+X_511_ _518_/A2 _511_/A2 _511_/A3 _511_/A4 _511_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__and4_2
+X_442_ _451_/A1 _456_/A2 _454_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_4
+XFILLER_2_413 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_6_229 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_356_ _346_/B _515_/A2 _485_/B2 _338_/Z _483_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand4_4
+X_425_ _496_/B2 _425_/A2 _425_/A3 _486_/B _426_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai31_4
+XTAP_TAPCELL_ROW_1_60 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_19_68 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_15_339 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+X_408_ _475_/A2 _493_/A2 _505_/B _386_/B _439_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand4_2
+X_339_ _566_/A1 _346_/A1 _336_/Z _382_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor3_2
+XTAP_TAPCELL_ROW_19_161 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_21_69 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_21_14 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XTAP_TAPCELL_ROW_16_142 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_16_6 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XTAP_TAPCELL_ROW_7_92 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XTAP_TAPCELL_ROW_22_178 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_17_209 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_587_ _577_/Z _587_/A2 _587_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__xor2_1
+XFILLER_9_408 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+Xfanout27 _332_/Z _485_/B2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_2
+X_372_ _495_/A2 _388_/B _485_/C VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_2
+X_510_ _412_/B _510_/A2 _510_/B _510_/C _511_/A4 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__aoi211_1
+XFILLER_13_212 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_441_ _450_/A1 _447_/A2 _391_/Z _441_/ZN VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor3_4
+XFILLER_5_400 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XFILLER_2_403 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+X_355_ _369_/B _369_/A1 _514_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_1
+X_424_ wire34/Z _444_/B _446_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+XTAP_TAPCELL_ROW_1_61 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XPHY_EDGE_ROW_14_Right_14 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+XFILLER_2_244 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_338_ _346_/A1 _336_/Z _338_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__or2_4
+X_407_ _530_/B _478_/B _428_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+XFILLER_20_387 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+XFILLER_20_310 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_15_126 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+Xmax_cap13 _418_/B _526_/B1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_4
+XFILLER_21_107 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XTAP_TAPCELL_ROW_16_143 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XTAP_TAPCELL_ROW_7_93 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_7_347 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XTAP_TAPCELL_ROW_22_179 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_16_37 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_16_413 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XTAP_TAPCELL_ROW_13_124 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XPHY_EDGE_ROW_4_Right_4 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+XFILLER_0_342 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XFILLER_16_287 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+X_586_ _584_/Z _593_/A2 _587_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+X_371_ _502_/A3 _515_/C _461_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_1
+XFILLER_1_139 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_440_ _440_/A1 _440_/A2 _539_/C _440_/A4 _450_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand4_2
+Xfanout17 _541_/B _478_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_4
+X_569_ _569_/A1 _569_/A2 _569_/B _576_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__aoi21_1
+XFILLER_13_268 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_5_412 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+X_423_ _566_/A1 _533_/C _425_/A3 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_1
+X_354_ _541_/A1 _501_/A2 _369_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_2
+XTAP_TAPCELL_ROW_1_62 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_337_ _346_/A1 _336_/Z _386_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_4
+X_406_ wire34/Z _478_/B _444_/A1 _514_/A1 _517_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__aoi22_4
+XFILLER_21_16 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_19_400 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XTAP_TAPCELL_ROW_16_144 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_6_370 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XTAP_TAPCELL_ROW_7_94 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_22_70 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+XFILLER_16_403 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XTAP_TAPCELL_ROW_13_125 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XPHY_EDGE_ROW_14_Left_37 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+XFILLER_3_384 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+XFILLER_16_244 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_0_376 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+X_585_ _598_/A3 _585_/A2 _585_/B _593_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_1
+Xfanout29 _329_/Z _404_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_8
+XFILLER_12_2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+Xfanout18 _538_/B _514_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_4
+X_370_ _534_/B _391_/A4 _542_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_1
+X_568_ _301_/I _616_/Q _617_/Q _569_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand3_1
+X_499_ _500_/A1 _340_/Z _505_/B _533_/B _507_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai211_1
+XFILLER_18_317 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_64
+XPHY_EDGE_ROW_17_Left_40 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+X_422_ _425_/A2 _486_/B _517_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+X_353_ _364_/B _485_/B2 _340_/Z _515_/B _501_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai31_4
+XFILLER_19_49 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XPHY_EDGE_ROW_2_Left_25 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+X_336_ _336_/A1 _619_/Q _346_/B _336_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__and3_2
+X_405_ _527_/B1 _505_/C _444_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_2
+XFILLER_19_412 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_11_72 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_7_349 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XTAP_TAPCELL_ROW_16_145 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_14_172 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+X_319_ _319_/A1 _622_/Q _319_/A3 _323_/B1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor3_4
+XFILLER_6_382 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XTAP_TAPCELL_ROW_7_95 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+Xclkbuf_1_0__f_clk clkbuf_0_clk/Z _626_/CLK VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__clkbuf_16
+XTAP_TAPCELL_ROW_21_170 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_14_6 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XTAP_TAPCELL_ROW_13_126 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_3_352 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XTAP_TAPCELL_ROW_10_107 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+Xclone69 _625_/Q _312_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_1
+XTAP_TAPCELL_ROW_4_74 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_584_ _585_/B _598_/A3 _585_/A2 _584_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__or3_1
+XFILLER_8_411 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_13_259 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_498_ _340_/Z _498_/A2 _498_/A3 _508_/B1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand3_1
+X_567_ _301_/I _616_/Q _617_/Q _570_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__and3_1
+X_421_ _395_/Z _420_/Z _526_/B2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_1
+XFILLER_17_384 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+X_352_ _340_/Z _533_/A2 _504_/B2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_2
+XFILLER_14_50 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_619_ _619_/D _626_/RN _626_/CLK _619_/Q VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__dffrnq_2
+X_335_ _336_/A1 _301_/I _335_/B _346_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__aoi21_4
+X_404_ _404_/A1 _404_/A2 _480_/A2 _505_/C VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand3_2
+XFILLER_14_387 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+XFILLER_14_310 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_20_302 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XPHY_EDGE_ROW_10_Right_10 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+XFILLER_11_346 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+X_318_ _392_/A1 _599_/A1 _323_/C _420_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_4
+XTAP_TAPCELL_ROW_21_171 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XTAP_TAPCELL_ROW_13_127 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_3_320 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+XFILLER_13_408 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XTAP_TAPCELL_ROW_10_108 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_583_ _585_/B _598_/A3 _585_/A2 _593_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor3_1
+XTAP_TAPCELL_ROW_4_75 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XPHY_EDGE_ROW_8_Right_8 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+XFILLER_21_282 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_64
+X_566_ _566_/A1 _566_/A2 _618_/D VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__xor2_1
+X_497_ _497_/A1 _503_/B _497_/B _528_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_4
+X_351_ _515_/A2 _500_/A1 _533_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_4
+X_420_ _314_/Z _420_/A2 _321_/Z _420_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__or3_2
+XFILLER_17_352 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+X_618_ _618_/D _620_/RN _620_/CLK _618_/Q VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__dffrnq_4
+X_549_ _611_/Q _549_/A2 _611_/D VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__xnor2_1
+X_334_ _515_/A2 _502_/A3 _533_/C VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_4
+X_403_ _346_/B _498_/A3 _486_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_1
+XFILLER_20_314 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_14_174 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_317_ _312_/B _599_/A1 _323_/C VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+XFILLER_6_384 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_16_19 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XTAP_TAPCELL_ROW_21_172 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XTAP_TAPCELL_ROW_13_128 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XTAP_TAPCELL_ROW_10_109 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_0_335 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_4_107 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+X_582_ _621_/Q _622_/Q _589_/A2 _585_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor3_1
+XFILLER_22_206 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XFILLER_15_291 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XTAP_TAPCELL_ROW_4_76 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_8_413 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_565_ _617_/Q _562_/Z _617_/D VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__xor2_1
+X_496_ _496_/A1 _514_/A1 _445_/B _496_/B2 _529_/B _518_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__aoi221_4
+XFILLER_10_2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+X_350_ _575_/B _621_/Q _378_/A2 _515_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand3_2
+X_617_ _617_/D _620_/RN _620_/CLK _617_/Q VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+X_548_ _610_/Q _611_/Q _548_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__and2_1
+X_479_ _535_/A2 _479_/A2 _479_/A3 _479_/A4 _488_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand4_2
+X_402_ _464_/A2 _504_/B1 _506_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+XFILLER_17_150 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+X_333_ _621_/Q _333_/A2 _333_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__xor2_2
+XPHY_EDGE_ROW_6_Left_29 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+X_316_ _316_/A1 _319_/A1 _316_/B _316_/C _392_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai211_4
+XFILLER_10_381 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_3_344 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_19_212 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+XTAP_TAPCELL_ROW_4_77 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_581_ _581_/A1 _581_/A2 _581_/B _598_/A3 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__aoi21_2
+XFILLER_8_403 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XPHY_EDGE_ROW_9_Left_32 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+X_564_ _617_/Q _562_/Z _566_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+X_495_ _504_/B2 _495_/A2 _494_/Z _495_/B _512_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai31_2
+XFILLER_8_244 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_616_ _616_/D _620_/RN _620_/CLK _616_/Q VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+X_478_ _365_/Z _541_/A3 _478_/B _535_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_2
+X_547_ _610_/Q _561_/B _610_/D VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__xnor2_1
+XPHY_EDGE_ROW_22_Left_45 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+X_401_ _314_/Z _321_/Z _392_/Z _541_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor3_4
+X_332_ _581_/A1 _333_/A2 _332_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__xor2_2
+XTAP_TAPCELL_ROW_19_157 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_315_ _331_/B _623_/Q _316_/C VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+XFILLER_14_187 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_22_86 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XFILLER_19_279 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_21_400 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XFILLER_4_109 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_17_53 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_12_411 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+X_580_ _622_/Q _609_/A1 _588_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+XTAP_TAPCELL_ROW_4_78 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_563_ _616_/Q _563_/A2 _616_/D VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__xor2_1
+XPHY_EDGE_ROW_17_Right_17 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+X_494_ _541_/A1 _501_/A3 _494_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__or2_1
+X_615_ _615_/D _620_/RN _620_/CLK _615_/Q VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+X_477_ _477_/I _541_/A3 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__clkinv_1
+X_546_ _610_/Q _626_/D _626_/Q _549_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand3_1
+XFILLER_4_281 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_14_314 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_400_ _314_/Z _392_/Z _504_/B1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_4
+X_331_ _576_/A1 _331_/A2 _620_/Q _331_/B _333_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai31_4
+XFILLER_20_317 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_64
+XTAP_TAPCELL_ROW_19_158 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_529_ _529_/A1 _538_/A3 _529_/B _537_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__aoi21_2
+XFILLER_9_384 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+X_314_ _623_/Q _314_/A2 _314_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__xor2_4
+XFILLER_6_354 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+XFILLER_6_387 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+XFILLER_19_236 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XTAP_TAPCELL_ROW_12_120 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_21_412 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_6_173 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_0_327 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XFILLER_0_305 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XTAP_TAPCELL_ROW_4_79 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_0_168 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_5_408 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+X_562_ _616_/Q _563_/A2 _562_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__and2_1
+X_493_ _500_/B _493_/A2 _503_/A1 _501_/A3 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand3_1
+XFILLER_7_290 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_614_ _614_/D _620_/RN _620_/CLK _614_/Q VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+X_476_ _533_/A2 _476_/I1 _476_/S _477_/I VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__mux2_2
+XFILLER_14_22 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+X_545_ _626_/D _626_/Q _545_/ZN VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+XFILLER_1_400 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XTAP_TAPCELL_ROW_1_58 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_330_ _575_/B _330_/A2 _330_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__xor2_4
+Xrebuffer50 _385_/A2 _500_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_8
+XTAP_TAPCELL_ROW_19_159 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_1_230 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_528_ _528_/A1 _444_/B _528_/B _528_/C _536_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__aoi211_4
+X_459_ _473_/A1 _459_/A2 _495_/B _490_/A4 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_2
+XFILLER_9_352 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+X_313_ _623_/Q _314_/A2 _325_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__xnor2_2
+XFILLER_6_322 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XFILLER_20_148 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_22_99 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_19_204 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_11_137 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_3_336 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XTAP_TAPCELL_ROW_12_121 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_12_413 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_0_339 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_21_276 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XPHY_EDGE_ROW_3_Right_3 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+X_492_ _492_/A1 _386_/B _504_/C VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_1
+Xclkbuf_1_1__f_clk clkbuf_0_clk/Z _620_/CLK VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__clkbuf_16
+X_561_ _569_/A1 _569_/A2 _561_/B _563_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__aoi21_1
+XFILLER_5_36 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_17_346 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+X_613_ _613_/D _620_/RN _620_/CLK _613_/Q VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+XFILLER_1_412 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XTAP_TAPCELL_ROW_1_59 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_5_206 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+X_475_ _485_/C _475_/A2 _519_/A4 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_2
+X_544_ _544_/A1 _544_/A2 B[4] VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_2
+Xwire4 wire4/I T[6] VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_8
+X_458_ _497_/A1 _509_/A2 _395_/Z _459_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand3_1
+X_527_ _527_/A1 _527_/A2 _420_/Z _527_/B1 _377_/B _528_/C VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai32_4
+X_389_ _369_/B _390_/B1 _529_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_2
+XFILLER_19_408 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+X_312_ _622_/Q _310_/Z _312_/B _314_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_4
+XFILLER_6_378 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_19_238 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_3_348 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_15_400 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XTAP_TAPCELL_ROW_12_122 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_2_370 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XFILLER_6_131 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_12_403 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XFILLER_15_274 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_21_200 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XPHY_EDGE_ROW_13_Left_36 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+X_560_ _612_/Q _613_/Q _614_/Q _615_/Q _560_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__or4_1
+X_491_ _491_/A1 _491_/A2 _509_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+XPHY_EDGE_ROW_22_Right_22 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+XPHY_EDGE_ROW_13_Right_13 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+XTAP_TAPCELL_ROW_5_80 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_474_ _504_/B2 _474_/A2 _474_/B _479_/A3 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_1
+X_612_ _612_/D _626_/RN _620_/CLK _612_/Q VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+X_543_ _543_/A1 _543_/A2 _543_/A3 _544_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor3_2
+Xrebuffer52 _381_/A2 _527_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_8
+Xwire5 wire5/I T[5] VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_8
+XFILLER_14_317 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_64
+X_526_ _530_/B _528_/A1 _526_/A3 _526_/B1 _526_/B2 wire8/I VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai32_4
+X_457_ _493_/A2 _386_/B _473_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+X_388_ _527_/A1 _340_/Z _388_/B _390_/B1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_1
+X_311_ _331_/B _622_/Q _316_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+XPHY_EDGE_ROW_1_Left_24 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+X_509_ _377_/B _509_/A2 _509_/B _510_/C VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_1
+XFILLER_11_139 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_19_228 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XFILLER_15_412 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XTAP_TAPCELL_ROW_12_123 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_2_382 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_18_283 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XFILLER_21_212 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_64
+X_490_ _490_/A1 _490_/A2 _490_/A3 _490_/A4 B[0] VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand4_4
+XFILLER_12_289 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_4_411 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XTAP_TAPCELL_ROW_5_81 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_473_ _473_/A1 _473_/A2 _501_/B _479_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_1
+X_611_ _611_/D _626_/RN _626_/CLK _611_/Q VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+X_542_ _542_/A1 _542_/A2 _542_/A3 _542_/A4 _543_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand4_1
+XFILLER_16_381 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+Xrebuffer53 _625_/Q _336_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_8
+XTAP_TAPCELL_ROW_18_151 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_13_384 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+XFILLER_13_340 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+X_456_ _456_/A1 _456_/A2 _456_/A3 wire4/I VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor3_4
+X_387_ _493_/A2 _505_/B _386_/B _387_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__and3_1
+X_525_ _525_/A1 _525_/A2 _525_/A3 _525_/A4 B[2] VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__or4_4
+XFILLER_9_344 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+X_310_ _331_/A2 _576_/A1 _620_/Q _621_/Q _310_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__or4_4
+X_508_ _508_/A1 _519_/A4 _508_/B1 _444_/B _508_/C1 _460_/B _511_/A3 VPWR VPWR VGND
++ VGND gf180mcu_fd_sc_mcu7t5v0__aoi222_2
+XFILLER_10_387 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+X_439_ _514_/A1 _439_/A2 _486_/B _444_/A1 _440_/A4 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__aoi22_4
+XFILLER_22_36 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XTAP_TAPCELL_ROW_21_168 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_10_151 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_15_221 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_14_26 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XTAP_TAPCELL_ROW_5_82 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XPHY_EDGE_ROW_7_Right_7 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+X_472_ _515_/B _498_/A3 _515_/C _473_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand3_1
+X_541_ _541_/A1 _541_/A2 _541_/A3 _541_/B _542_/A4 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai31_1
+X_610_ _610_/D _626_/RN _626_/CLK _610_/Q VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+Xrebuffer76 _327_/A1 _415_/A3 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_8
+XFILLER_13_352 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+X_386_ _386_/A1 _505_/B _386_/B _530_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_4
+X_524_ _524_/A1 _524_/A2 _524_/A3 _525_/A3 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand3_1
+X_455_ _430_/I _456_/A2 _456_/A3 wire5/I VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor3_4
+XFILLER_9_312 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XTAP_TAPCELL_ROW_18_152 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_18_411 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+X_369_ _369_/A1 _369_/A2 _369_/B _534_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__aoi21_2
+Xwire34 wire34/I wire34/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_1
+X_438_ wire34/I _514_/A1 _444_/A1 _526_/B1 _440_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__aoi22_2
+X_507_ _486_/B _507_/A2 _528_/B _507_/C _512_/A3 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__aoi211_2
+XTAP_TAPCELL_ROW_21_169 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_19_208 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_2_384 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_4_413 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XTAP_TAPCELL_ROW_5_83 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_471_ _501_/A2 _471_/A2 _471_/B _479_/A4 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_1
+X_540_ _540_/A1 _540_/A2 _544_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_2
+XFILLER_22_342 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+Xrebuffer66 _576_/A1 _335_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_8
+Xwire8 wire8/I wire8/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__clkbuf_1
+Xrebuffer55 rebuffer55/I _319_/A3 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_8
+XFILLER_17_136 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+X_523_ _541_/A1 _445_/B _523_/B1 _444_/B _524_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__aoi22_1
+X_385_ _404_/A1 _385_/A2 _480_/A2 _386_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand3_4
+XFILLER_1_279 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_454_ _448_/I _454_/A2 T[4] VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_4
+XTAP_TAPCELL_ROW_18_153 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_22_172 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XFILLER_22_150 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+X_506_ _500_/B _506_/A2 _506_/B _506_/C _507_/C VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai211_1
+X_368_ _541_/A2 _532_/A1 _365_/Z _369_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor3_2
+X_299_ _331_/B _319_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__clkinv_1
+X_437_ _444_/A2 _526_/B1 _539_/C VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_2
+XPHY_EDGE_ROW_5_Left_28 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+XFILLER_18_231 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_7_400 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XFILLER_9_72 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_20_270 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XFILLER_4_403 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XPHY_EDGE_ROW_8_Left_31 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+XFILLER_22_2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XTAP_TAPCELL_ROW_5_84 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_470_ _483_/B _476_/I1 _505_/C _471_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand3_1
+X_599_ _599_/A1 _599_/A2 _599_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__xor2_1
+XFILLER_4_244 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_22_376 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+Xrebuffer56 _620_/Q _378_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_8
+Xrebuffer67 _514_/A1 _495_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_8
+X_384_ _338_/Z _476_/I1 _474_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_1
+X_522_ _515_/C _395_/Z _523_/B1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+X_453_ _456_/A1 _453_/A2 _456_/A2 T[3] VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__and3_4
+XTAP_TAPCELL_ROW_18_154 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XTAP_TAPCELL_ROW_2_63 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XPHY_EDGE_ROW_21_Left_44 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+XFILLER_18_413 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_367_ _498_/A3 _500_/B _491_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+X_505_ _505_/A1 _527_/A2 _505_/B _505_/C _508_/C1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai211_1
+XTAP_TAPCELL_ROW_15_135 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_436_ _436_/A1 _531_/A1 _432_/Z _436_/A4 _447_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand4_4
+Xwire14 _501_/B _418_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_4
+XFILLER_6_158 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_21_408 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+X_419_ _314_/Z _420_/A2 _321_/Z _445_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor3_4
+XFILLER_7_412 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_20_83 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+Xrebuffer46 _618_/Q _346_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_8
+Xrebuffer68 _331_/A2 _301_/I VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_8
+X_598_ _623_/Q _624_/Q _598_/A3 _606_/A3 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand3_1
+Xrebuffer57 _310_/Z _497_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_8
+X_383_ _386_/A1 _505_/B _532_/B2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_2
+X_521_ _532_/A1 _460_/B _486_/B _521_/B2 _524_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__aoi22_1
+X_452_ _456_/A1 _452_/A2 T[2] VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_4
+XTAP_TAPCELL_ROW_18_155 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_16_193 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XTAP_TAPCELL_ROW_2_64 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_9_348 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_22_163 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_10_314 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_8_381 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_18_403 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XTAP_TAPCELL_ROW_15_136 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_366_ _378_/A1 _378_/A2 _404_/A2 _500_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand3_4
+X_435_ _521_/B2 _526_/A3 _486_/B _436_/A4 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_2
+XFILLER_5_340 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+X_504_ _471_/B _504_/A2 _504_/B1 _504_/B2 _504_/C _506_/C VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__aoi221_1
+XFILLER_5_384 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+XFILLER_2_354 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+XFILLER_2_387 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+X_418_ _439_/A2 _538_/A3 _418_/B _440_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_2
+X_349_ _346_/B _404_/A1 _404_/A2 _338_/Z _527_/B1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand4_4
+XTAP_TAPCELL_ROW_8_96 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_14_280 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_18_94 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_18_50 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_1_408 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XFILLER_6_64 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_597_ _592_/Z _605_/A2 _597_/B _601_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_1
+X_520_ _532_/B1 _541_/A3 _494_/Z _478_/B _412_/B _519_/Z _524_/A3 VPWR VPWR VGND VGND
++ gf180mcu_fd_sc_mcu7t5v0__aoi222_2
+Xrebuffer58 _430_/I _451_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_8
+Xrebuffer47 _441_/ZN _456_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__clkbuf_8
+X_382_ _382_/A1 _483_/A2 _503_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+XTAP_TAPCELL_ROW_18_156 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XTAP_TAPCELL_ROW_2_65 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_451_ _451_/A1 _452_/A2 T[1] VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_4
+XFILLER_22_120 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+X_503_ _503_/A1 _503_/A2 _503_/B _510_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__aoi21_1
+X_365_ _378_/A1 _378_/A2 _404_/A2 _365_/Z VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__and3_1
+XTAP_TAPCELL_ROW_15_137 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_434_ _526_/A3 _486_/B _535_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+XTAP_TAPCELL_ROW_9_102 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_5_352 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XTAP_TAPCELL_ROW_20_162 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XTAP_TAPCELL_ROW_12_118 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_2_322 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XFILLER_18_223 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XPHY_EDGE_ROW_16_Right_16 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+X_348_ _515_/A2 _500_/A1 _364_/A1 _541_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor3_4
+X_417_ _439_/A2 _418_/B _537_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+XTAP_TAPCELL_ROW_8_97 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_2_174 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_20_251 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_19_384 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+XPHY_EDGE_ROW_2_Right_2 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+XFILLER_16_387 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+X_596_ _609_/A1 _596_/A2 _596_/B _623_/D VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_1
+XFILLER_4_247 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_20_2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+Xrebuffer48 _309_/A2 _576_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_8
+X_381_ _388_/B _381_/A2 _346_/B _505_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand3_4
+XFILLER_13_324 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_16
+XTAP_TAPCELL_ROW_2_66 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_450_ _450_/A1 _450_/A2 _452_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_2
+X_579_ _609_/A1 _577_/Z _579_/B _621_/D VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__oai21_1
+X_502_ _321_/Z _505_/A1 _502_/A3 _338_/Z _503_/A2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand4_1
+X_433_ _531_/A1 _432_/Z _543_/A3 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+XTAP_TAPCELL_ROW_9_103 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+X_364_ _364_/A1 _500_/A2 _364_/B _388_/B _532_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__aoi211_4
+XTAP_TAPCELL_ROW_15_138 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_13_165 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_15_408 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+XTAP_TAPCELL_ROW_12_119 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XTAP_TAPCELL_ROW_20_163 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_18_235 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+X_416_ _514_/A1 _538_/A3 _418_/B _444_/A1 _428_/A3 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__aoi22_2
+XFILLER_2_378 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+X_347_ _500_/A1 _527_/A2 _412_/A1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nor2_2
+XTAP_TAPCELL_ROW_8_98 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_20_411 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_11_400 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_8
+XFILLER_21_208 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_18_63 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_2
+XFILLER_18_52 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XFILLER_19_352 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_32
+XFILLER_18_96 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XPHY_EDGE_ROW_12_Left_35 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__endcap
+XFILLER_16_311 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+X_595_ _623_/Q _609_/A1 _596_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+XFILLER_0_410 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+Xrebuffer49 _404_/A1 _364_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__buf_8
+XFILLER_13_2 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fillcap_4
+X_380_ _505_/A1 _500_/A1 _476_/I1 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_2
+XFILLER_15_53 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+XTAP_TAPCELL_ROW_2_67 VPWR VGND gf180mcu_fd_sc_mcu7t5v0__filltie
+XFILLER_16_174 VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__fill_1
+X_578_ _621_/Q _609_/A1 _579_/B VPWR VPWR VGND VGND gf180mcu_fd_sc_mcu7t5v0__nand2_1
+.ends
+
