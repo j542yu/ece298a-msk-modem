@@ -8,4 +8,4 @@
 4x4: "0 0 1440.32 736.96"
 4x6: "0 0 1440.32 1148.56"
 4x8: "0 0 1440.32 1560.16"
-custom: "0 0 240 100" # Custom for local hardening of modulator
+custom: "0 0 160 100" # Custom for local hardening of modulator
