@@ -1,6 +1,3 @@
-/xschem/symbols
-/xschem/tests
-xschemrc
 .venv/
 /xschem/simulation/*.ngspice
 /xschem/simulation/*.raw
