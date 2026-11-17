@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: © 2024 Tiny Tapeout
+# SPDX-FileCopyrightText: © 2026 Gracia Xia, Judy Yu
 # SPDX-License-Identifier: Apache-2.0
 
 import cocotb
@@ -11,7 +11,7 @@ def cos_lut(val, delay = True):
     j = 8
     k = 8
     n = 8
-    m = 8
+
     IF_FS = 0.04 # IF-Fs ratio
     if_inc = round((1 << (k + j)) * IF_FS)
     inc = (1 << (k+j)) / (2*2*n)
@@ -108,7 +108,7 @@ async def mod_5_3_test(dut):
     input = Arr("10101010")
     await stream(dut, input)
     
-    # check(dut, 0x06) # All values are off by one clock cycle due to a delay
+    # All values are off by one clock cycle due to a delay
     check_5_3(dut, cos_lut(input))
     
     dut._log.info("Disable transmit")
@@ -127,7 +127,6 @@ async def mod_5_3_test(dut):
     input = Arr("11")
     await stream(dut, input)
     
-    # assert dut.uo_out.value == 0x25, f"Expected 0x25, got {dut.uo_out.value}"
     check_5_3(dut, 0x25)
     
     dut._log.info("Reset")

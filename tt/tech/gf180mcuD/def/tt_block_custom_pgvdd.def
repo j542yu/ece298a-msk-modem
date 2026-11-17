@@ -3,74 +3,74 @@ DIVIDERCHAR "/" ;
 BUSBITCHARS "[]" ;
 DESIGN tt_um_transmit_5_3 ;
 UNITS DISTANCE MICRONS 2000 ;
-DIEAREA ( 0 0 ) ( 220000 400000 ) ;
+DIEAREA ( 0 0 ) ( 240000 300000 ) ;
 COMPONENTS 0 ;
 END COMPONENTS
 PINS 16 ;
     - clk + NET clk + DIRECTION INPUT + USE SIGNAL
       + PORT
         + LAYER Metal4 ( -300 -1000 ) ( 300 1000 )
-        + PLACED ( 203700 399000 ) N ;
+        + PLACED ( 223700 299000 ) N ;
     - rst_n + NET rst_n + DIRECTION INPUT + USE SIGNAL
       + PORT
         + LAYER Metal4 ( -300 -1000 ) ( 300 1000 )
-        + PLACED ( 198180 399000 ) N ;
+        + PLACED ( 218180 299000 ) N ;
     - in + NET in + DIRECTION INPUT + USE SIGNAL
       + PORT
         + LAYER Metal4 ( -300 -1000 ) ( 300 1000 )
-        + PLACED ( 192660 399000 ) N ;
+        + PLACED ( 212660 299000 ) N ;
     - enable + NET enable + DIRECTION INPUT + USE SIGNAL
       + PORT
         + LAYER Metal4 ( -300 -1000 ) ( 300 1000 )
-        + PLACED ( 187140 399000 ) N ;
+        + PLACED ( 207140 299000 ) N ;
     - T[6] + NET T[6] + DIRECTION OUTPUT + USE SIGNAL
       + PORT
         + LAYER Metal4 ( -1000 -300 ) ( 1000 300 )
-        + PLACED ( 1000 383700 ) N ;
+        + PLACED ( 1000 283700 ) N ;
     - T[5] + NET T[5] + DIRECTION OUTPUT + USE SIGNAL
       + PORT
         + LAYER Metal4 ( -1000 -300 ) ( 1000 300 )
-        + PLACED ( 1000 375300 ) N ;
+        + PLACED ( 1000 275300 ) N ;
     - T[4] + NET T[4] + DIRECTION OUTPUT + USE SIGNAL
       + PORT
         + LAYER Metal4 ( -1000 -300 ) ( 1000 300 )
-        + PLACED ( 1000 366900 ) N ;
+        + PLACED ( 1000 266900 ) N ;
     - T[3] + NET T[3] + DIRECTION OUTPUT + USE SIGNAL
       + PORT
         + LAYER Metal4 ( -1000 -300 ) ( 1000 300 )
-        + PLACED ( 1000 358500 ) N ;
+        + PLACED ( 1000 258500 ) N ;
     - T[2] + NET T[2] + DIRECTION OUTPUT + USE SIGNAL
       + PORT
         + LAYER Metal4 ( -1000 -300 ) ( 1000 300 )
-        + PLACED ( 1000 350100 ) N ;
+        + PLACED ( 1000 250100 ) N ;
     - T[1] + NET T[1] + DIRECTION OUTPUT + USE SIGNAL
       + PORT
         + LAYER Metal4 ( -1000 -300 ) ( 1000 300 )
-        + PLACED ( 1000 341700 ) N ;
+        + PLACED ( 1000 241700 ) N ;
     - T[0] + NET T[0] + DIRECTION OUTPUT + USE SIGNAL
       + PORT
         + LAYER Metal4 ( -1000 -300 ) ( 1000 300 )
-        + PLACED ( 1000 333300 ) N ;
+        + PLACED ( 1000 233300 ) N ;
     - B[4] + NET B[4] + DIRECTION OUTPUT + USE SIGNAL
       + PORT
         + LAYER Metal4 ( -1000 -300 ) ( 1000 300 )
-        + PLACED ( 1000 324900 ) N ;
+        + PLACED ( 1000 224900 ) N ;
     - B[3] + NET B[3] + DIRECTION OUTPUT + USE SIGNAL
       + PORT
         + LAYER Metal4 ( -1000 -300 ) ( 1000 300 )
-        + PLACED ( 1000 296300 ) N ;
+        + PLACED ( 1000 196300 ) N ;
     - B[2] + NET B[2] + DIRECTION OUTPUT + USE SIGNAL
       + PORT
         + LAYER Metal4 ( -1000 -300 ) ( 1000 300 )
-        + PLACED ( 1000 267700 ) N ;
+        + PLACED ( 1000 167700 ) N ;
     - B[1] + NET B[1] + DIRECTION OUTPUT + USE SIGNAL
       + PORT
         + LAYER Metal4 ( -1000 -300 ) ( 1000 300 )
-        + PLACED ( 1000 239100 ) N ;
+        + PLACED ( 1000 139100 ) N ;
     - B[0] + NET B[0] + DIRECTION OUTPUT + USE SIGNAL
       + PORT
         + LAYER Metal4 ( -1000 -300 ) ( 1000 300 )
-        + PLACED ( 1000 210500 ) N ;
+        + PLACED ( 1000 110500 ) N ;
 END PINS
 SPECIALNETS 2 ;
     - VDD + USE POWER ;
