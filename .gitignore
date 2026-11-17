@@ -1,6 +1,13 @@
 /xschem/symbols
 /xschem/tests
 xschemrc
-.venv/
+**/venv/
+**/__pycache__/
 /xschem/simulation/*.ngspice
 /xschem/simulation/*.raw
+magic-src/
+open-pdks/
+runs/
+src/*.json
+test/results.xml
+test/sim_build/

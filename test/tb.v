@@ -6,9 +6,9 @@
 */
 module tb ();
 
-  // Dump the signals to a FST file. You can view it with gtkwave or surfer.
+  // Dump the signals to a VCD file. You can view it with gtkwave or surfer.
   initial begin
-    $dumpfile("tb.fst");
+    $dumpfile("tb.vcd");
     $dumpvars(0, tb);
     #1;
   end
@@ -22,13 +22,19 @@ module tb ();
   wire [7:0] uo_out;
   wire [7:0] uio_out;
   wire [7:0] uio_oe;
+
+  // Debug
+  // reg [7:0] golden_cos_out;
+  // wire [15:0] phase_debug;
+  // wire [7:0] cos_out_debug;
+
 `ifdef GL_TEST
   wire VPWR = 1'b1;
   wire VGND = 1'b0;
 `endif
 
   // Replace tt_um_example with your module name:
-  tt_um_example user_project (
+  tt_um_modulator user_project (
 
       // Include power ports for the Gate Level test:
 `ifdef GL_TEST
@@ -43,7 +49,12 @@ module tb ();
       .uio_oe (uio_oe),   // IOs: Enable path (active high: 0=input, 1=output)
       .ena    (ena),      // enable - goes high when design is selected
       .clk    (clk),      // clock
-      .rst_n  (rst_n)     // not reset
+      .rst_n  (rst_n)//,     // not reset
+
+      // Debug
+      // .golden_cos_out(golden_cos_out)
+      // .phase_debug(phase_debug),
+      // .cos_out_debug(cos_out_debug)
   );
 
 endmodule
