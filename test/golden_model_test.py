@@ -90,21 +90,21 @@ async def msk_golden_model_test(dut):
         j=8,
         m=8,
 
-        # For IF/sample_freq = 0.04
+        # For IF/sample_freq = 0.1
         f_s=50_000_000,
-        f_if=2_000_000,
+        f_if=5_000_000,
 
         seed=20061128,
     )
 
     dut._log.info(f"Starting Golden Model Test for: \n"
-                  f"    IF == {params.f_if/1e6} MHz\n"
-                  f"    Sampling freq == {params.f_s/1e6} MHz\n"
+                  f"    IF (f_if) == {params.f_if/1e6} MHz\n"
+                  f"    Sampling freq (f_s) == {params.f_s/1e6} MHz\n"
                   f"    LUT output width == {params.n} bits\n"
                   f"    LUT input (address) width == {params.k} bits\n"
                   f"    Accumulator width == {params.k} + {params.j} bits\n"
                   f"    Samples / symbol == {params.m}\n"
-                  f"    IF/sample_freq == {params.f_if/params.f_s}\n"
+                  f"    f_if/f_s == {params.f_if/params.f_s}\n"
                   f"    Seed for pseudorandom input bit stream: {params.seed}\n"
                   )
 
