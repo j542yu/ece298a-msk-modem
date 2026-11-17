@@ -13,22 +13,24 @@ module tt_um_modulator (
     output wire [7:0] uio_oe,   // IOs: Enable path (active high: 0=input, 1=output)
     input  wire       ena,      // always 1 when the design is powered, so you can ignore it
     input  wire       clk,      // clock
-    input  wire       rst_n,     // reset_n - low to reset
+    input  wire       rst_n//,     // reset_n - low to reset
 
     // Debug
-    input wire [7:0] golden_cos_out //,
+    // Using {ui_in[7:2], uio_in[5:4]} to inject golden_cos_out instead
+    // input wire [7:0] golden_cos_out, 
+     
+    // Debug unused in golden_model_test.py
     // output wire [15:0] phase_debug,
     // output wire [7:0] cos_out_debug
 );
 
-  // All output pins must be assigned. If not used, assign to 0.
-  // assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
-  // assign uio_out = 0;
-
-  assign uio_oe = 8'b11111111;
+  // Using uio_out[3:0] for part of RTL output
+  // Using uio_in[5:4] for part of golden model output for testing
+  // (full 8 bits is {ui_in[7:2], uio_in[5:4]})
+  assign uio_oe = 8'b11001111;
   
   // 5_3
-  assign uio_out[7:4] = 0;
+  assign uio_out[7:6] = 0;
 
   wire [11:0] t_out;
   assign uio_out[3:0] = t_out[11:8];
@@ -48,6 +50,8 @@ module tt_um_modulator (
   );
     
   // List all unused inputs to prevent warnings
-  wire _unused = &{golden_cos_out, ena, uio_in[7:0], ui_in[7:2], 1'b0};
+  // Using {ui_in[7:2], uio_in[5:4]} to inject golden_cos_out instead
+  wire _unused = &{ena, uio_in[7:6], uio_in[3:0], 1'b0};
+                   
 
 endmodule

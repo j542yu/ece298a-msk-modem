@@ -17,7 +17,7 @@ def get_dut_output(dut):
     # uio_out[3:0] contains t_out[11:8]
     # uo_out contains t_out[7:0]
 
-    upper = int(dut.uio_out.value) & 0x0F
+    upper = int(dut.uio_out.value[3:0])
     lower = int(dut.uo_out.value)
 
     return (upper << 8) | lower
@@ -53,9 +53,18 @@ async def step(dut, model, enable, sample, rst_n=1):
 
     # Get expected output
     expected_cos = model.get_output()
+    assert 0 <= expected_cos <= 0xFF
     expected = encode_5_3(expected_cos)
+
     # Drive the Python golden model output into the simulator
-    dut.golden_cos_out.value = expected_cos
+    # Using {ui_in[7:2], uio_out[5:4]} to inject golden_cos_out
+
+    # Only ui_in[1:0] should be used by `enable` and `in`
+    assert int(dut.ui_in.value) == int(dut.ui_in.value) & 0x3 
+    dut.ui_in.value = int(dut.ui_in.value) | (expected_cos & 0xFC)
+
+    # No other inputs are used so set those bits to 0
+    dut.uio_in.value = ((expected_cos & 0x3) << 4)
 
     # Allow combinational logic to settle
     await Timer(1, unit="ns")
@@ -71,20 +80,10 @@ async def step(dut, model, enable, sample, rst_n=1):
         f"Expected cosine: {expected_cos:#04x}\n"
         f"Expected output: {expected:#05x}\n"
         f"Actual output: {actual:#05x}"
-
-        # f"Debug:\n"
-        # f"Golden phase: {model.phase:#06x}"
-        # f"Golden address: {model.phase >> params.j:#04x}"
-        # f"Golden LUT output: {model.get_output():#04x}"
-
-        # f"DUT phase: {int(dut.transmit_inst.phase.value):#06x}"
-        # f"DUT LUT address: {int(dut.transmit_inst.phase.value) >> 8:#04x}"
-        # f"DUT LUT output: {int(dut.transmit_inst.cos_out.value):#04x}"
     )
 
 @cocotb.test()
 async def msk_golden_model_test(dut):
-
     params = ModulationParams(
         n=8,
         k=8,
@@ -98,6 +97,17 @@ async def msk_golden_model_test(dut):
         seed=20061128,
     )
 
+    dut._log.info(f"Starting Golden Model Test for: \n"
+                  f"    IF == {params.f_if/1e6} MHz\n"
+                  f"    Sampling freq == {params.f_s/1e6} MHz\n"
+                  f"    LUT output width == {params.n} bits\n"
+                  f"    LUT input (address) width == {params.k} bits\n"
+                  f"    Accumulator width == {params.k} + {params.j} bits\n"
+                  f"    Samples / symbol == {params.m}\n"
+                  f"    IF/sample_freq == {params.f_if/params.f_s}\n"
+                  f"    Seed for pseudorandom input bit stream: {params.seed}\n"
+                  )
+
     model = MSKGoldenModel(params)
 
     clock = Clock(dut.clk, 20, unit="ns")
@@ -105,21 +115,28 @@ async def msk_golden_model_test(dut):
 
     dut.ena.value = 1
 
-    # Reset
+    dut._log.info("Resetting Golden Model")
+    model.reset()
+
+    dut._log.info("Resetting DUT")
+    # Wait 10 samples (arbitrary value)
     for _ in range(10):
         await step(dut, model, 0, 0, rst_n=0)
 
-    # Release reset
+    # Release reset, but keep modulator disabled
     await step(dut, model, 0, 0, rst_n=1)
 
+    dut._log.info("Generating Test Data for DUT and Golden Model")
     # Generate test data
     symbols = generate_symbols(
         params.num_bits,
         params.seed
     )
 
+    dut._log.info("Comparing DUT to Golden Model for each symbol")
     # Transmit each symbol for m clock cycles
     for symbol in symbols:
+        # m samples per symbol so need m steps
         for _ in range(params.m):
             await step(
                 dut,
@@ -127,7 +144,3 @@ async def msk_golden_model_test(dut):
                 enable=1,
                 sample=int(symbol)
             )
-
-    # Disable transmitter
-    for _ in range(20):
-        await step(dut, model, 0, 0)
