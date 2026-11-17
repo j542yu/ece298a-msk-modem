@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: © 2026 Gracia Xia, Judy Yu
+# SPDX-License-Identifier: Apache-2.0
+
 # Python golden model
 import sys
 from pathlib import Path
@@ -87,8 +90,11 @@ async def msk_golden_model_test(dut):
         k=8,
         j=8,
         m=8,
+
+        # For IF/sample_freq = 0.04
         f_s=50_000_000,
         f_if=2_000_000,
+
         seed=20061128,
     )
 
