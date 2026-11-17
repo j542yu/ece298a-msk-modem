@@ -41,7 +41,6 @@ parameter IF_OFFSET = 16'h199A;
 // Registers and Wires
 
 reg [15:0] phase;
-reg delay_en; // Shifted enable to ensure that input has enough time to update and avoid errors at the beginning of transmission
 reg [7:0] cos_out;
 
 cos_lut lut (.angle_in(phase[15:8]), .cos(cos_out));
@@ -61,18 +60,33 @@ assign B = {cos_out[4:0]};
 // assign phase_debug = phase;
 // assign cos_out_debug = cos_out;
 
-always @(posedge clk or negedge rst_n) begin
-  if (!rst_n) delay_en <= 0;
-  else delay_en <= enable;
+// Two stage FF synchronizer to protect against metastability
+reg in_meta, in_sync;
+reg enable_meta, enable_sync;
+
+always @(posedge clk) begin
+  if (!rst_n) begin
+    in_meta <= 1'b0;
+    in_sync <= 1'b0;
+
+    enable_meta <= 1'b0;
+    enable_sync <= 1'b0;
+  end else begin
+    in_meta <= in;
+    in_sync <= in_meta;
+
+    enable_meta <= enable;
+    enable_sync <= enable_meta;
+  end
 end
 
 // Phase accumulator
 always @(posedge clk or negedge rst_n) begin
   if (!rst_n) begin
     phase <= 16'b0;
-  end else if (delay_en && enable) begin
-    // Sampling frequency will be chosen to allow for 8 samples per symbol
-    if (in) begin
+  end else if (enable_sync) begin
+    // 0x800 is the integer code of pi / (2*m) where m = 8 samples / symbol
+    if (in_sync) begin
       phase <= phase + IF_OFFSET + 16'h0800;
     end else begin
       phase <= phase + IF_OFFSET - 16'h0800;

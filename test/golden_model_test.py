@@ -7,7 +7,7 @@ from pathlib import Path
 
 import cocotb
 from cocotb.clock import Clock
-from cocotb.triggers import RisingEdge, Timer
+from cocotb.triggers import RisingEdge, Timer, ClockCycles
 
 sys.path.append(str(Path(__file__).resolve().parent.parent / "python_experiments"))
 
@@ -110,7 +110,9 @@ async def msk_golden_model_test(dut):
 
     model = MSKGoldenModel(params)
 
-    clock = Clock(dut.clk, 20, unit="ns")
+    dut._log.info(f"Setting clock period to 1/f_s == {1/(params.f_s/1e9)} ns")
+    # Set the clock period to correspond with f_s
+    clock = Clock(dut.clk, 1/(params.f_s/1e9), unit="ns")
     cocotb.start_soon(clock.start())
 
     dut.ena.value = 1
@@ -135,6 +137,26 @@ async def msk_golden_model_test(dut):
 
     dut._log.info("Comparing DUT to Golden Model for each symbol")
     # Transmit each symbol for m clock cycles
+    for symbol in symbols:
+        # m samples per symbol so need m steps
+        for _ in range(params.m):
+            await step(
+                dut,
+                model,
+                enable=1,
+                sample=int(symbol)
+            )
+
+    dut._log.info("Disabling modulator to verify phase resets")
+    for _ in range(5):
+        await step(dut, model, 0, 0, rst_n=1)
+
+    dut._log.info("Re-enabling modulator with new input")
+    params.seed=20261117
+    symbols = generate_symbols(
+        params.num_bits,
+        params.seed
+    )
     for symbol in symbols:
         # m samples per symbol so need m steps
         for _ in range(params.m):

@@ -127,7 +127,7 @@ async def mod_5_3_test(dut):
     input = Arr("11")
     await stream(dut, input)
     
-    check_5_3(dut, 0x25)
+    check_5_3(dut, cos_lut(input))
     
     dut._log.info("Reset")
     dut.ena.value = 1
@@ -143,19 +143,19 @@ async def mod_5_3_test(dut):
     input = Arr("00001111")
     await stream(dut, input)
     
-    check_5_3(dut, 0x0)
+    check_5_3(dut, cos_lut(input))
         
     dut._log.info("Inputting 11110000")
     input = Arr("11110000")
     await stream(dut, input)
     
-    check_5_3(dut, 0xE2)
+    check_5_3(dut, cos_lut(input))
     
     dut._log.info("Inputting 101")
     input = Arr("101")
     await stream(dut, input)
     
-    check_5_3(dut, 0x7C)
+    check_5_3(dut, cos_lut(input))
     
     dut._log.info("Reset")
     dut.ena.value = 1
@@ -171,19 +171,19 @@ async def mod_5_3_test(dut):
     input = Arr("101")
     await stream(dut, input)
     
-    check_5_3(dut, 0xD3)
+    check_5_3(dut, cos_lut(input))
     
     dut._log.info("Inputting 110")
     input = Arr("110")
     await stream(dut, input)
     
-    check_5_3(dut, 0x14)
+    check_5_3(dut, cos_lut(input))
     
     dut._log.info("Inputting 00")
     input = Arr("00")
     await stream(dut, input)
     
-    check_5_3(dut, 0x06)
+    check_5_3(dut, cos_lut(input))
     
     dut._log.info("Reset")
     dut.ena.value = 1
@@ -227,16 +227,16 @@ async def mod_5_3_test(dut):
     input = Arr("1")
     await stream(dut, input)
     
-    check_5_3(dut, 0xF4)
+    check_5_3(dut, cos_lut(input))
     
     dut._log.info("Inputting 0")
     input = Arr("0")
     await stream(dut, input)
     
-    check_5_3(dut, 0xA7)
+    check_5_3(dut, cos_lut(input))
     
     dut._log.info("Inputting 1")
     input = Arr("1")
     await stream(dut, input)
     
-    check_5_3(dut, 0x5D)
+    check_5_3(dut, cos_lut(input))
