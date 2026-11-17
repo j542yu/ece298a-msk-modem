@@ -4,11 +4,11 @@ module tt_um_transmit_5_3(
   inout VPWR,
   inout VGND,
 `endif
-  input in,
-  output[4:0] B,
-  output[6:0] T,
   input clk,
   input rst_n,
-  input enable
+  input enable,
+  input in,
+  output[4:0] B,
+  output[6:0] T
 );
 endmodule
