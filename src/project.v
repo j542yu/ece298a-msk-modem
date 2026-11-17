@@ -13,7 +13,12 @@ module tt_um_modulator (
     output wire [7:0] uio_oe,   // IOs: Enable path (active high: 0=input, 1=output)
     input  wire       ena,      // always 1 when the design is powered, so you can ignore it
     input  wire       clk,      // clock
-    input  wire       rst_n     // reset_n - low to reset
+    input  wire       rst_n,     // reset_n - low to reset
+
+    // Debug
+    input wire [7:0] golden_cos_out //,
+    // output wire [15:0] phase_debug,
+    // output wire [7:0] cos_out_debug
 );
 
   // All output pins must be assigned. If not used, assign to 0.
@@ -30,15 +35,19 @@ module tt_um_modulator (
   assign uo_out = t_out[7:0];
 
   tt_um_transmit_5_3 transmit_inst(
-    .in(ui_in[0]),
-    .B(t_out[4:0]),
-    .T(t_out[11:5]),
     .clk(clk),
     .rst_n(rst_n),
-    .enable(ui_in[1])
+    .enable(ui_in[1]),
+    .in(ui_in[0]),
+
+    .B(t_out[4:0]),
+    .T(t_out[11:5])//,
+
+    // .phase_debug(phase_debug),
+    // .cos_out_debug(cos_out_debug)
   );
     
   // List all unused inputs to prevent warnings
-  wire _unused = &{ena, uio_in[7:0], ui_in[7:2], 1'b0};
+  wire _unused = &{golden_cos_out, ena, uio_in[7:0], ui_in[7:2], 1'b0};
 
 endmodule

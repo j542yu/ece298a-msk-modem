@@ -1,7 +1,7 @@
 import numpy as np
 import math
 
-import lut_logic
+from lut_logic import cosine_lut
 
 def generate_symbols(num_bits, seed):
     rng = np.random.default_rng(seed)
@@ -40,7 +40,7 @@ def phase_accumulator(symbol_samples, params):
     # Keep track of accumulating phase
     phase = 0
 
-    for i, samples in enumerate(symbol_samples):
+    for i, _ in enumerate(symbol_samples):
         phase_stream[i] = phase
 
         phase += sample_to_phase(symbol_samples[i], params)
@@ -54,14 +54,14 @@ def phase_accumulator(symbol_samples, params):
 def modulate_msk(symbols, params):
     symbol_samples = np.repeat(symbols, params.m)
 
-    # Need someway to model doing arithmetic in k + j bits
+    # Need some way to model doing arithmetic in k + j bits
     # then using only k bits to access LUT...
     phase_stream = phase_accumulator(symbol_samples, params)
 
     # Truncate addresses to k bits (assuming starting from k + j bits)
     lut_addresses = phase_stream >> params.j
 
-    lut = lut_logic.cosine_lut(params)
+    lut = cosine_lut(params)
 
     output = np.asarray(lut)[lut_addresses]
 

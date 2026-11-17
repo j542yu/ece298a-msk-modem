@@ -3,21 +3,13 @@ from vcdvcd import VCDVCD
 
 
 def get_signal_transitions(vcd, signal):
-    """
-    Extract transitions from either:
-      - 1-bit signal
-      - individual bit of bus
-
-    Returns (timestamp, bit_value) pairs
-    """
-
     bus_name, bit_index = signal
 
     tv = vcd[bus_name].tv
     transitions = []
+    previous_value = None
 
     for timestamp, value in tv:
-
         value = str(value).lower()
 
         if any(bit in value for bit in "xz"):
@@ -38,7 +30,10 @@ def get_signal_transitions(vcd, signal):
                 f"{bus_name} is not a 1-bit signal or valid bus tap"
             )
 
-        transitions.append((timestamp, bit_value))
+        # Only record actual transitions of this signal.
+        if bit_value != previous_value:
+            transitions.append((timestamp, bit_value))
+            previous_value = bit_value
 
     return transitions
 
@@ -49,26 +44,13 @@ def vcd_to_spice(
     output_file,
     vdd=3.3,
 ):
-    """
-    Convert individual VCD signals and bus taps into SPICE PWL sources.
-
-    signals is a dictionary:
-        SPICE node name: (VCD signal name, bit index)
-
-    Use bit_index=None for individual 1-bit signals.
-    """
-
     vcd = VCDVCD(vcd_file, store_tvs=True)
-
-    # VCD timestamp resolution in seconds.
     tick_seconds = float(vcd.timescale["factor"])
 
     with open(output_file, "w") as f:
-
         f.write("* Generated from Cocotb VCD\n\n")
 
         for spice_name, signal in signals.items():
-
             transitions = get_signal_transitions(vcd, signal)
 
             if not transitions:
@@ -79,20 +61,24 @@ def vcd_to_spice(
             f.write(f"* Signal: {spice_name}\n")
             f.write(f"V{spice_name} {spice_name} 0 PWL(\n")
 
-            for timestamp, bit_value in transitions:
+            rise_fall_time = 1e-12  # 1 ps
 
+            for i, (timestamp, bit_value) in enumerate(transitions):
                 t = float(timestamp) * tick_seconds
                 voltage = vdd * bit_value
 
-                f.write(
-                    f"+ {t:.12e} {voltage:.6f}\n"
-                )
+                if i > 0:
+                    # Hold the previous voltage until just before this transition.
+                    previous_voltage = vdd * transitions[i - 1][1]
+                    f.write(
+                        f"+ {t - rise_fall_time:.12e} "
+                        f"{previous_voltage:.6f}\n"
+                    )
 
-            f.write(")\n\n")
-
+                # Apply the new voltage at the VCD transition time.
+                f.write(f"+ {t:.12e} {voltage:.6f}\n")
 
 if __name__ == "__main__":
-
     signals = {
         "clk": ("tb.clk", None),
         "rst_n": ("tb.rst_n", None),

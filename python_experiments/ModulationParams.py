@@ -52,7 +52,7 @@ class ModulationParams:
     # Bit widths
     n: int = 8
     k: int = 8
-    j: int = 0
+    j: int = 8
     m: int = 8
 
     # Signal
@@ -60,7 +60,7 @@ class ModulationParams:
     seed: int = 10086 # for generating bitstream
 
     # Sampling rate (bottle-necked by accumulator speed?)
-    f_s: int = 1_000_000  # Hz
+    f_s: int = 50_000_000  # Hz
 
     """
     Intermediate frequency (IF)
@@ -78,11 +78,11 @@ class ModulationParams:
 
     Together, f_s/(4 * m) < f_if < f_s/2 - f_s/(4 * m)
 
-    For f_s = 1MHz (picked arbitrary value, need to see simulation results)
-    31.25kHz < f_if < 468.75 kHz
+    For f_s = 50 MHz
+    1_562_500 Hz < f_if < 23_437_500 Hz
 
     https://en.wikipedia.org/wiki/Intermediate_frequency
     Since a higher IF means less samples per carrier cycle, that makes the
     output waveform more distorted. Thus, pick something low.
     """
-    f_if: int = 40_000 # Hz
+    f_if: int = 2_000_000 # Hz

@@ -21,7 +21,15 @@ def cosine_code(angle_rad, n):
         raise ValueError("n must be >= 1")
 
     max_code = (1 << n) - 1
-    return round((math.cos(angle_rad) + 1) * max_code / 2)
+
+    # To avoid slightly different values from floating point
+    # rounding at equivalent angles (e.g., pi/2 and 3pi/2)
+    cos_val = math.cos(angle_rad)
+
+    if abs(cos_val) < 1e-12:
+        cos_val = 0.0
+
+    return round((cos_val + 1) * max_code / 2)
      
 def cosine_lut(params):
     """

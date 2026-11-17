@@ -1,12 +1,17 @@
 `default_nettype none
 
 module tt_um_transmit_5_3 (
-  input wire in,
-  output wire [4:0] B,
-  output wire [6:0] T, // Correct output occurs one clock cycle after the input signal completes
   input wire clk,
   input wire rst_n,
-  input wire enable
+  input wire enable,  
+  input wire in,
+
+  output wire [4:0] B,
+  output wire [6:0] T //, // Correct output occurs one clock cycle after the input signal completes
+
+  // Debug
+  // output wire [15:0] phase_debug,
+  // output wire [7:0] cos_out_debug
 );
 
 parameter I_F_OFFSET = 16'h0A3D; // 0.04 * 256,  IF/sample_freq = 0.04, 8 samples per symbol
@@ -30,6 +35,10 @@ assign T = {
 
 assign B = {cos_out[4:0]};
 
+// Debug
+// assign phase_debug = phase;
+// assign cos_out_debug = cos_out;
+
 always @(posedge clk or negedge rst_n) begin
   if (!rst_n) delay_en <= 0;
   else delay_en <= enable;
@@ -40,7 +49,7 @@ always @(posedge clk or negedge rst_n) begin
   if (!rst_n) begin
     phase <= 16'b0;
   end else if (delay_en && enable) begin
-    // Sampling frequency will be chosen to allow for 8 samples per symbol?
+    // Sampling frequency will be chosen to allow for 8 samples per symbol
     if (in) begin
       phase <= phase + I_F_OFFSET + 16'h0800;
     end else begin
