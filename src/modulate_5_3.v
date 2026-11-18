@@ -65,7 +65,7 @@ assign B = {cos_out[4:0]};
 reg in_meta, in_sync;
 reg enable_meta, enable_sync;
 
-always @(posedge clk) begin
+always @(posedge clk or negedge rst_n) begin
   if (!rst_n) begin
     in_meta <= 1'b0;
     in_sync <= 1'b0;

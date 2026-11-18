@@ -54,16 +54,6 @@ async def step(dut, model, enable, sample, rst_n=1):
     assert 0 <= expected_cos <= 0xFF
     expected = encode_5_3(expected_cos)
 
-    # Drive the Python golden model output into the simulator
-    # Using {ui_in[7:2], uio_out[5:4]} to inject golden_cos_out
-
-    # Only ui_in[1:0] should be used by `enable` and `in`
-    assert int(dut.ui_in.value) == int(dut.ui_in.value) & 0x3 
-    dut.ui_in.value = int(dut.ui_in.value) | (expected_cos & 0xFC)
-
-    # No other inputs are used so set those bits to 0
-    dut.uio_in.value = ((expected_cos & 0x3) << 4)
-
     # Allow combinational logic to settle
     await Timer(1, unit="ns")
 

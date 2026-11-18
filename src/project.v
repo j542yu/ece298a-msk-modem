@@ -27,10 +27,12 @@ module tt_um_modulator (
   // Using uio_out[3:0] for part of RTL output
   // Using uio_in[5:4] for part of golden model output for testing
   // (full 8 bits is {ui_in[7:2], uio_in[5:4]})
-  assign uio_oe = 8'b11001111;
+  // 
+  // Changing to all output for gds hardening
+  assign uio_oe = 8'b11111111;
   
   // 5_3
-  assign uio_out[7:6] = 0;
+  assign uio_out[7:4] = 0;
 
   wire [11:0] t_out;
   assign uio_out[3:0] = t_out[11:8];
@@ -51,7 +53,7 @@ module tt_um_modulator (
     
   // List all unused inputs to prevent warnings
   // Using {ui_in[7:2], uio_in[5:4]} to inject golden_cos_out instead
-  wire _unused = &{ena, uio_in[7:6], uio_in[3:0], 1'b0};
+  wire _unused = &{ena, ui_in[7:2], uio_in[7:0], 1'b0};
                    
 
 endmodule
