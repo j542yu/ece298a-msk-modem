@@ -11,4 +11,4 @@ runs/
 src/*.json
 test/results.xml
 test/sim_build/
-src/*_obj_dir
+**/*_obj_dir
