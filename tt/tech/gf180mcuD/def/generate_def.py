@@ -59,8 +59,8 @@ PINS = {
     "bottom": [],
 
     "left": [
-        {"name": "T[6:0]", "direction": "OUTPUT", "spacing": 4.2},
-        {"name": "B[4:0]", "direction": "OUTPUT", "spacing": 14.3},
+        {"name": "T[6:0]", "direction": "OUTPUT", "spacing": 4.5},
+        {"name": "B[4:0]", "direction": "OUTPUT", "spacing": 14.5},
     ],
 
     "right": [],
@@ -82,14 +82,14 @@ SIDE_CONFIG = {
     "top": {
         "alignment": "right",
         "spacing": 2.76,
-        "clearance": 8,
+        "clearance": 14,
         "size": (0.3, 1.0),
     },
 
     "bottom": {
         "alignment": "right",
         "spacing": 2.76,
-        "clearance": 8,
+        "clearance": 14,
         "size": (0.3, 1.0),
     },
 
