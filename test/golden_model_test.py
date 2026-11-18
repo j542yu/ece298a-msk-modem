@@ -23,18 +23,16 @@ def get_dut_output(dut):
     return (upper << 8) | lower
 
 def encode_5_3(cos_code):
-    c7 = (cos_code >> 7) & 1
-    c6 = (cos_code >> 6) & 1
-    c5 = (cos_code >> 5) & 1
+    cos_out_7_5 = cos_code >> 5
 
     T = (
-        ((c7 & c6 & c5) << 6) |
-        ((c7 & c6 & (1-c5)) << 5) |
-        ((c7 & (1-c6) & c5) << 4) |
-        ((c7 & (1-c6) & (1-c5)) << 3) |
-        (((1-c7) & c6 & c5) << 2) |
-        (((1-c7) & c6 & (1-c5)) << 1) |
-        ((1-c7) & (1-c6) & c5)
+        ((cos_out_7_5 >= 7) << 6) |
+        ((cos_out_7_5 >= 6) << 5) |
+        ((cos_out_7_5 >= 5) << 4) |
+        ((cos_out_7_5 >= 4) << 3) |
+        ((cos_out_7_5 >= 3) << 2) |
+        ((cos_out_7_5 >= 2) << 1) |
+        (cos_out_7_5 >= 1)
     )
 
     B = cos_code & 0b11111

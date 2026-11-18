@@ -45,14 +45,15 @@ reg [7:0] cos_out;
 
 cos_lut lut (.angle_in(phase[15:8]), .cos(cos_out));
 
-assign T = { 
-  {cos_out[7] & cos_out[6] & cos_out[5]}, 
-  {cos_out[7] & cos_out[6] & !cos_out[5]}, 
-  {cos_out[7] & !cos_out[6] & cos_out[5]}, 
-  {cos_out[7] & !cos_out[6] & !cos_out[5]}, 
-  {!cos_out[7] & cos_out[6] & cos_out[5]}, 
-  {!cos_out[7] & cos_out[6] & !cos_out[5]},
-  {!cos_out[7] & !cos_out[6] & cos_out[5]}};
+assign T = {
+    (cos_out[7:5] >= 3'd7),
+    (cos_out[7:5] >= 3'd6),
+    (cos_out[7:5] >= 3'd5),
+    (cos_out[7:5] >= 3'd4),
+    (cos_out[7:5] >= 3'd3),
+    (cos_out[7:5] >= 3'd2),
+    (cos_out[7:5] >= 3'd1)
+};
 
 assign B = {cos_out[4:0]};
 
