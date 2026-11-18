@@ -3,34 +3,58 @@
 * mixed signal simulation using Verilator and d_cosim
 * Edited SPICE exported by Xschem to avoid brackets in node names
 
-*x2 DAC_SCH_OUT b4 b3 b2 b1 b0 t6 t5 t4 t3 t2 t1 t0 0 dac_5_3
-**** begin user architecture code
+* ------ DAC -----
+x2 dac_out b4 b3 b2 b1 b0 t6 t5 t4 t3 t2 t1 t0 0 dac_5_3
 
+* simulate tt output path
+* R1 dac_out mixed_out 500
+* C1 dac_out 0 5p
+
+* ----- PDK models -----
 .include /usr/local/share/pdk/gf180mcuD/libs.tech/ngspice/design.ngspice
 .lib /usr/local/share/pdk/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical
 .lib /usr/local/share/pdk/gf180mcuD/libs.tech/ngspice/sm141064.ngspice res_typical
 
+* ----- stimulus for digital logic -----
+.include ./modulator_5_3_stimuli.spice
 
-.include ../modulator_5_3_stimuli.spice
-
-
+* ----- simulation ------
 .option wnflag=1
 
 .control
-    tran 1n 15us
-    edisplay
-    eprint b4 b3 b2 b1 b0 t6 t5 t4 t3 t2 t1 t0
+    tran 1n 2us
+    * plot dac_ideal mixed_out in
+    plot dac_out in
     write mixed.raw
 .endc
 
 
-
+* ----- digital logic -----
 adut [ clk rst_n enable in ] [ b4 b3 b2 b1 b0 t6 t5 t4 t3 t2 t1 t0 ] null
 + dut
-.model dut d_cosim simulation="modulate_5_3.so"
-**** end user architecture code
-**.ends
+.model dut d_cosim simulation="./modulate_5_3.so"
 
+* ----- ideal DAC output from digital -----
+.model ideal_dac_bridge dac_bridge(out_low=0 out_high=3.3)
+
+a_b0 [b0] [vb0] ideal_dac_bridge
+a_b1 [b1] [vb1] ideal_dac_bridge
+a_b2 [b2] [vb2] ideal_dac_bridge
+a_b3 [b3] [vb3] ideal_dac_bridge
+a_b4 [b4] [vb4] ideal_dac_bridge
+
+a_t0 [t0] [vt0] ideal_dac_bridge
+a_t1 [t1] [vt1] ideal_dac_bridge
+a_t2 [t2] [vt2] ideal_dac_bridge
+a_t3 [t3] [vt3] ideal_dac_bridge
+a_t4 [t4] [vt4] ideal_dac_bridge
+a_t5 [t5] [vt5] ideal_dac_bridge
+a_t6 [t6] [vt6] ideal_dac_bridge
+
+Bideal dac_ideal 0 V = (32*(V(vt0)+V(vt1)+V(vt2)+V(vt3)+V(vt4)+V(vt5)+V(vt6)) + V(vb0)+2*V(vb1)+4*V(vb2)+8*V(vb3)+16*V(vb4))/256
+
+
+* ----- DAC subckts -----
 * expanding   symbol:  dac_5_3.sym # of pins=4
 ** sym_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/dac_5_3.sym
 ** sch_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/dac_5_3.sch

@@ -7,7 +7,7 @@ template="name=x1"
 
 * assuming current dir is xschem/simulation and
 * mag/ is at same level as xschem/
-spice_sym_def=".include ../../mag/tt_um_transmit_5_3.sim.spice"}
+spice_sym_def=".include ../../mag/tt_um_transmit_5_3_noextres.spice"}
 V {}
 S {}
 E {}
