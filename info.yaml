@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title:        "MSK Modem"      # Project title
+  title:        "MSK Modulator"      # Project title
   author:       "Judy Yu, Gracia Xia"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "Minimum Shift Keying Modulator"      # One line description of what your project does
