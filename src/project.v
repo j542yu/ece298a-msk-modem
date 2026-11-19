@@ -1,11 +1,11 @@
 /*
- * Copyright (c) 2024 Your Name
+ * Copyright (c) 2024 Gracia Xia, Judy Yu
  * SPDX-License-Identifier: Apache-2.0
  */
 
 `default_nettype none
 
-module tt_um_example (
+module tt_um_ece298_msk_modulator (
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
     input  wire [7:0] uio_in,   // IOs: Input path
@@ -16,12 +16,31 @@ module tt_um_example (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-  // All output pins must be assigned. If not used, assign to 0.
-  assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
-  assign uio_out = 0;
-  assign uio_oe  = 0;
+  assign uio_oe = 8'b11111111;
+  
+  // 5_3
+  assign uio_out[7:4] = 0;
 
+  wire [11:0] t_out;
+  assign uio_out[3:0] = t_out[11:8];
+  assign uo_out = t_out[7:0];
+
+  tt_um_transmit_5_3 transmit_inst(
+    .clk(clk),
+    .rst_n(rst_n),
+    .enable(ui_in[1]),
+    .in(ui_in[0]),
+
+    .B(t_out[4:0]),
+    .T(t_out[11:5])//,
+
+    // .phase_debug(phase_debug),
+    // .cos_out_debug(cos_out_debug)
+  );
+    
   // List all unused inputs to prevent warnings
-  wire _unused = &{ena, clk, rst_n, 1'b0};
+  // Using {ui_in[7:2], uio_in[5:4]} to inject golden_cos_out instead
+  wire _unused = &{ena, ui_in[7:2], uio_in[7:0], 1'b0};
+                   
 
 endmodule

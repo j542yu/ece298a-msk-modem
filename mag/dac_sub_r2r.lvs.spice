@@ -1,0 +1,18 @@
+* NGSPICE file created from dac_sub_r2r.ext - technology: gf180mcuD
+
+.subckt ppolyf_u_1k_RUZ9QZ a_n920_2000# a_520_2000# a_n1400_n2122# a_40_n2122# a_n440_2000#
++ a_1000_n2122# a_n440_n2122# a_n920_n2122# a_n1400_2000# a_40_2000# a_520_n2122#
++ a_1000_2000# VSUBS
+X0 a_40_2000# a_40_n2122# VSUBS ppolyf_u_1k r_width=2u r_length=20u
+X1 a_n1400_2000# a_n1400_n2122# VSUBS ppolyf_u_1k r_width=2u r_length=20u
+X2 a_1000_2000# a_1000_n2122# VSUBS ppolyf_u_1k r_width=2u r_length=20u
+X3 a_520_2000# a_520_n2122# VSUBS ppolyf_u_1k r_width=2u r_length=20u
+X4 a_n440_2000# a_n440_n2122# VSUBS ppolyf_u_1k r_width=2u r_length=20u
+X5 a_n920_2000# a_n920_n2122# VSUBS ppolyf_u_1k r_width=2u r_length=20u
+.ends
+
+.subckt dac_sub_r2r R_node_in in R_node_out
+Xppolyf_u_1k_RUZ9QZ_0 net2 net2 R_node_in in net1 R_node_out R_node_in R_node_in net3
++ net1 R_node_out net3 VSUBS ppolyf_u_1k_RUZ9QZ
+.ends
+

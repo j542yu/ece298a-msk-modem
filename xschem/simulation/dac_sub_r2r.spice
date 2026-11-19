@@ -1,0 +1,11 @@
+** sch_path: /home/j542yu/Documents/ece298a-msk-modem/xschem/dac_sub_r2r.sch
+.subckt dac_sub_r2r in R_node_out R_node_in VGND
+*.PININFO in:I R_node_out:B R_node_in:B VGND:B
+XR7 in net1 VGND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
+XR1 net1 R_node_in VGND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
+XR2 net2 R_node_in VGND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
+XR3 R_node_out net2 VGND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
+XR4 net3 R_node_in VGND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
+XR5 R_node_out net3 VGND ppolyf_u_1k r_width=2e-6 r_length=20e-6 m=1
+.ends
+.end

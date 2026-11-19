@@ -1,0 +1,30 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 1794378006
+<< metal1 >>
+rect 189 4661 2950 4761
+rect 189 4361 563 4661
+rect 669 4461 2480 4561
+rect 669 4361 1043 4461
+rect 1149 4361 1949 4407
+rect 2110 4360 2480 4461
+rect 2580 4360 2950 4661
+rect 189 189 1489 235
+rect 1629 -111 2003 189
+rect 2109 -111 2483 189
+rect 2589 -111 2963 189
+use ppolyf_u_1k_9VZ9QZ  ppolyf_u_1k_9VZ9QZ_0
+timestamp 1794362495
+transform 1 0 1576 0 1 2298
+box -1400 -2122 1400 2122
+<< labels >>
+flabel metal1 1629 -111 2003 189 0 FreeSans 1600 0 0 0 T[4]
+port 0 nsew
+flabel metal1 2109 -111 2483 189 0 FreeSans 1600 0 0 0 T[5]
+port 1 nsew
+flabel metal1 2589 -111 2963 189 0 FreeSans 1600 0 0 0 T[6]
+port 2 nsew
+flabel metal1 189 189 1489 235 0 FreeSans 800 0 0 0 DAC_5_3_OUT
+port 3 nsew
+<< end >>
